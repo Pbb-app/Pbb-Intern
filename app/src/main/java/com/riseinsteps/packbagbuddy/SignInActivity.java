@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ public class SignInActivity extends AppCompatActivity {
     private EditText firstName, lastName, username, password, confirmPassword, emailID, phoneNumber;
     private Button btnLogin, btnSignUp;
     private FirebaseAuth mAuth;
+    private TextView skipForNow;
 
 
     @Override
@@ -36,6 +38,7 @@ public class SignInActivity extends AppCompatActivity {
         phoneNumber = findViewById(R.id.et_PhoneNumber);
         btnLogin = findViewById(R.id.btnLogin);
         btnSignUp = findViewById(R.id.btnSignUp);
+        skipForNow = findViewById(R.id.tv_Skip);
 
         // setting  up a login button
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +90,24 @@ public class SignInActivity extends AppCompatActivity {
                         }
                     });
                 }
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignInActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        skipForNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
