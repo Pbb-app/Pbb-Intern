@@ -66,14 +66,6 @@
             android:textColor="#000000"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvOr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="------Or SignIn with------"
-            android:textSize="18dp" />
 
         <ImageButton
             android:id="@+id/ibtnGoogle"
