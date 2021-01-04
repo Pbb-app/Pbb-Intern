@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "617487239332",
+    "project_id": "packbagbuddy-ff673",
+    "storage_bucket": "packbagbuddy-ff673.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617487239332:android:0c4e988a83df12239dbe31",
+        "android_client_info": {
+          "package_name": "com.riseinsteps.packbagbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617487239332-fns6jms0ih0nre6l9ttfq97o1o8n86th.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riseinsteps.packbagbuddy",
+            "certificate_hash": "541bea8fc88bb0700d729bc656fbece849574e48"
+          }
+        },
+        {
+          "client_id": "617487239332-i2ok3fjtl1tj6rilinvm6k9jbjded5vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYlOhxC_T54mKAQZQe_NfEeXfObKIQjrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617487239332-i2ok3fjtl1tj6rilinvm6k9jbjded5vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
