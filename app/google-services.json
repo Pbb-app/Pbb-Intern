@@ -1,20 +1,21 @@
 {
   "project_info": {
-    "project_number": "617487239332",
-    "project_id": "packbagbuddy-ff673",
-    "storage_bucket": "packbagbuddy-ff673.appspot.com"
+    "project_number": "606301727735",
+    "firebase_url": "https://packbagbuddy-fcee6-default-rtdb.firebaseio.com",
+    "project_id": "packbagbuddy-fcee6",
+    "storage_bucket": "packbagbuddy-fcee6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:617487239332:android:0c4e988a83df12239dbe31",
+        "mobilesdk_app_id": "1:606301727735:android:c0dd093314ac4a80dc1cf2",
         "android_client_info": {
           "package_name": "com.riseinsteps.packbagbuddy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "617487239332-fns6jms0ih0nre6l9ttfq97o1o8n86th.apps.googleusercontent.com",
+          "client_id": "606301727735-j4agpciefpc47632gbao08mp5cm0arov.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.riseinsteps.packbagbuddy",
@@ -22,20 +23,20 @@
           }
         },
         {
-          "client_id": "617487239332-i2ok3fjtl1tj6rilinvm6k9jbjded5vj.apps.googleusercontent.com",
+          "client_id": "606301727735-s1216eumj347uamlq2kajefgm2tkc0up.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBYlOhxC_T54mKAQZQe_NfEeXfObKIQjrk"
+          "current_key": "AIzaSyArr9qL9QH8dGdhYwCmBLkSn1kkmg3MfUo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "617487239332-i2ok3fjtl1tj6rilinvm6k9jbjded5vj.apps.googleusercontent.com",
+              "client_id": "606301727735-s1216eumj347uamlq2kajefgm2tkc0up.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

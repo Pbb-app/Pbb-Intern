@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
     android:fillViewport="false">
 
@@ -66,14 +67,29 @@
             android:textColor="#000000"
             android:textStyle="bold" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40sp"
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/ibtnGoogle"
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:background="#ffffff" />
+            android:baselineAligned="false">
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/ibtnFB"
@@ -81,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:background="#ffffff"/>
+            android:background="#ffffff" />
 
         <TextView
             android:id="@+id/tv_Skip"
