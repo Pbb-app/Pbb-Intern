@@ -198,6 +198,7 @@
                     android:layout_height="match_parent"
                     android:text="@string/login"
                     android:textColor="#244EDF"
+                    android:layout_marginStart="8dp"
                     android:textStyle="bold" />
 
             </LinearLayout>

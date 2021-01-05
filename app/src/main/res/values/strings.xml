@@ -28,4 +28,9 @@
     <string name="signup">SIGNUP</string>
     <string name="skip">SKIP>>></string>
     <string name="horizontal_line"><hr></hr></string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="create_one">Create One</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
 </resources>

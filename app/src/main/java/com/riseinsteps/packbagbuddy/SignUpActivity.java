@@ -31,9 +31,9 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText firstName, lastName, username, password, confirmPassword, emailID, phoneNumber;
     private Button btnSignUp;
     private LinearLayout btnLogin;
-    private FirebaseAuth mAuth;
     private TextView skipForNow;
 
+    private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -86,6 +86,9 @@ public class SignUpActivity extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(phnNumber)) {
                     phoneNumber.setError("Phone Number Required");
                     return;
+                } else if (!pwd.equals(confPwd)) {
+                    confirmPassword.setError("Password not matched");
+                    return;
                 } else {
                     //getting a firebase instance
                     mAuth = FirebaseAuth.getInstance();
@@ -95,6 +98,7 @@ public class SignUpActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
                                 startActivity(intent);
+                                Toast.makeText(SignUpActivity.this, "Welcome " + fName + " " + lName, Toast.LENGTH_LONG).show();
                                 finish();
                             } else {
                                 String error = task.getException().toString();
@@ -171,11 +175,12 @@ public class SignUpActivity extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             GoogleSignInAccount acc = GoogleSignIn.getLastSignedInAccount(this);
+            String DisplayName = "";
             if (acc != null) {
-                String DisplayName = acc.getDisplayName();
-                Toast.makeText(this, "Welcome " + DisplayName, Toast.LENGTH_SHORT).show();
+                DisplayName = acc.getDisplayName();
             }
             startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+            Toast.makeText(this, "Welcome " + DisplayName, Toast.LENGTH_LONG).show();
             finish();
 
 
