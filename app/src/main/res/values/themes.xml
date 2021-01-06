@@ -17,9 +17,12 @@
     <style name="Theme.PackBagBuddy.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="Theme.PackBagBuddy.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.PackBagBuddy.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
 </resources>

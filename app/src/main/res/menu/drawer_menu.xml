@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <!--    showIn attribute is to set the view in navigation view -->
+
+    <!--    checkable Behaviour is single because we want to select only one item from the given menu-->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_explore"
+            android:title="@string/explore_india" />
+
+        <item
+            android:id="@+id/nav_find_us"
+            android:icon="@drawable/ic_find_us"
+            android:title="@string/find_us" />
+
+        <item
+            android:id="@+id/nav_create_tour"
+            android:icon="@drawable/ic_create_tour"
+            android:title="@string/create_tour" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share_app" />
+        </menu>
+
+    </item>
+
+
+</menu>
