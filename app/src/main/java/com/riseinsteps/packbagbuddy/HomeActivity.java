@@ -11,7 +11,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.riseinsteps.packbagbuddy.fragments.HomeFragment;
+import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
 
+//      ActionBarDrawerToggle is used to create the hamburger icon to switch the fragments
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.nav_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -41,6 +42,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    //   Overriding the default behaviour of back button
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {

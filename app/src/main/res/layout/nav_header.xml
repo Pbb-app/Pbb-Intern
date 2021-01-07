@@ -20,8 +20,6 @@
         android:id="@+id/tv_userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:text="@string/username"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -31,8 +29,6 @@
         android:id="@+id/tv_userContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:text="@string/phone_number"
         android:textColor="@color/black"
         android:textSize="16sp" />

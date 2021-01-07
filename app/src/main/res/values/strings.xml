@@ -42,4 +42,10 @@
 
     <string name="nav_drawer_open">Open Navigation Drawer</string>
     <string name="nav_drawer_close">Close Navigation Drawer</string>
+    <string name="adventure_trip">Adventure Trip</string>
+    <string name="view_more">View More</string>
+    <string name="popular_sports">Popular Sports</string>
+    <string name="flat_discount">Flat Discount</string>
+    <string name="zip_lining">Zip Lining</string>
+    <string name="see_all">See All</string>
 </resources>
