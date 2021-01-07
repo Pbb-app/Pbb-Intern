@@ -34,7 +34,6 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="home">Home</string>
     <string name="explore">Explore</string>
-    <string name="find_us">Find Us</string>
     <string name="explore_india">Explore India</string>
     <string name="create_tour">Create Tour</string>
     <string name="share_app">Share App</string>
@@ -48,4 +47,10 @@
     <string name="flat_discount">Flat Discount</string>
     <string name="zip_lining">Zip Lining</string>
     <string name="see_all">See All</string>
+    <string name="facebook_com">facebook.com</string>
+    <string name="find_us">Find Us</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="youtube">Youtube</string>
 </resources>

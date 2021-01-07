@@ -1,5 +1,6 @@
 package com.riseinsteps.packbagbuddy.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.riseinsteps.packbagbuddy.AdventureTripActivity;
+import com.riseinsteps.packbagbuddy.PopularSportActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.BannerAdapter;
@@ -31,7 +34,7 @@ public class HomeFragment extends Fragment {
     private BannerAdapter bannerAdapter;
     private TabLayout tablayout;
 
-    private LinearLayout adventureTrip, popularSport;
+    private LinearLayout layoutAdventureTrip, layoutPopularSport;
 
     private List<AdventureTripModel> adventureTripModelList;
     private RecyclerView adventureTripRecyclerView;
@@ -49,6 +52,26 @@ public class HomeFragment extends Fragment {
         setAdventureTripRecyclerView(view);
         setPopularSportRecyclerView(view);
         setBannerViewPager(view);
+
+
+        layoutAdventureTrip = view.findViewById(R.id.ll_adventure_trip);
+        layoutAdventureTrip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), AdventureTripActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
+
+        layoutPopularSport = view.findViewById(R.id.ll_adventure_trip);
+        layoutPopularSport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), PopularSportActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
 
         return view;
     }
