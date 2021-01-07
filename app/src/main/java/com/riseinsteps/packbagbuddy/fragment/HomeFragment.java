@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.BannerAdapter;
@@ -28,6 +29,7 @@ public class HomeFragment extends Fragment {
     private ViewPager viewPager;
     private List<BannerModel> bannerModelList;
     private BannerAdapter bannerAdapter;
+    private TabLayout tablayout;
 
     private LinearLayout adventureTrip, popularSport;
 
@@ -52,21 +54,24 @@ public class HomeFragment extends Fragment {
     }
 
     private void setBannerViewPager(View view) {
+        tablayout = view.findViewById(R.id.tab_indicator);
         bannerModelList = new ArrayList<>();
         bannerModelList.add(new BannerModel(1,
                 "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg"));
-        bannerModelList.add(new BannerModel(1,
+        bannerModelList.add(new BannerModel(2,
                 "https://www.packbagbuddy.com/wp-content/uploads/2019/09/16-1.jpg"));
-        bannerModelList.add(new BannerModel(1,
+        bannerModelList.add(new BannerModel(3,
                 "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-1-700x450.jpg"));
-        bannerModelList.add(new BannerModel(1,
+        bannerModelList.add(new BannerModel(4,
                 "https://www.packbagbuddy.com/wp-content/uploads/2019/06/hamta-700x450.jpg"));
-        bannerModelList.add(new BannerModel(1,
+        bannerModelList.add(new BannerModel(5,
                 "https://www.packbagbuddy.com/wp-content/uploads/2019/09/19-700x450.jpg"));
 
         viewPager = view.findViewById(R.id.vp_home_page_banner);
         bannerAdapter = new BannerAdapter(bannerModelList);
         viewPager.setAdapter(bannerAdapter);
+        tablayout.setupWithViewPager(viewPager);
+
 
     }
 

@@ -11,7 +11,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.riseinsteps.packbagbuddy.fragment.CreateTourFragment;
+import com.riseinsteps.packbagbuddy.fragment.ExploreIndiaFragment;
+import com.riseinsteps.packbagbuddy.fragment.FindUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
+import com.riseinsteps.packbagbuddy.fragment.ShareAppFragment;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
@@ -58,6 +62,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+                break;
+            case R.id.nav_explore:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploreIndiaFragment()).commit();
+                break;
+            case R.id.nav_create_tour:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateTourFragment()).commit();
+                break;
+            case R.id.nav_find_us:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FindUsFragment()).commit();
+                break;
+            case R.id.nav_share:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareAppFragment()).commit();
                 break;
         }
 
