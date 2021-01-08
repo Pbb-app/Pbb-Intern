@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".PopularSportActivity"></activity>
+        <activity android:name=".PopularSportDetailActivity"></activity>
+        <activity android:name=".AdventureTripDetailActivity" />
+        <activity android:name=".PopularSportActivity" />
         <activity android:name=".AdventureTripActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />

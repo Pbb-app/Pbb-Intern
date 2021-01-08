@@ -10,9 +10,12 @@ public class AdventureTripModel {
     private String tripImageURL;
     private String nameOfState;
     private int tripDiscountPercentage;
+    private String availabilityMonth;
+    private float rating;
 
-    public AdventureTripModel(int id, String tripName, String description,
-                              String days, int tripDefaultPrice, int tripSpecialPrice, String tripImageURL, String nameOfState, int tripDiscountPercentage) {
+    public AdventureTripModel(int id, String tripName, String description, String days, int tripDefaultPrice,
+                              int tripSpecialPrice, String tripImageURL,
+                              String nameOfState, int tripDiscountPercentage, String availabilityMonth, float rating) {
         this.id = id;
         this.tripName = tripName;
         this.description = description;
@@ -22,6 +25,8 @@ public class AdventureTripModel {
         this.tripImageURL = tripImageURL;
         this.nameOfState = nameOfState;
         this.tripDiscountPercentage = tripDiscountPercentage;
+        this.availabilityMonth = availabilityMonth;
+        this.rating = rating;
     }
 
     public int getTripDiscountPercentage() {
@@ -95,5 +100,21 @@ public class AdventureTripModel {
 
     public void setTripSpecialPrice(int tripSpecialPrice) {
         this.tripSpecialPrice = tripSpecialPrice;
+    }
+
+    public String getAvailabilityMonth() {
+        return availabilityMonth;
+    }
+
+    public void setAvailabilityMonth(String availabilityMonth) {
+        this.availabilityMonth = availabilityMonth;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 }
