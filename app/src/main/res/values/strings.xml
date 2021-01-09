@@ -53,4 +53,6 @@
     <string name="instagram">Instagram</string>
     <string name="twitter">Twitter</string>
     <string name="youtube">Youtube</string>
+    <string name="photos">Photos</string>
+    <string name="campfire">Campfire</string>
 </resources>
