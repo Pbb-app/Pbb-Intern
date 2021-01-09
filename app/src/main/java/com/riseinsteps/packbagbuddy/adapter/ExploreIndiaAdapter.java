@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.ExploreIndia;
 
@@ -33,13 +34,8 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
-        final ExploreIndia ob = modelList.get(position);
-        holder.location.setImageResource(ob.getImage_id());
-        holder.title.setText(ob.getTitle());
-        holder.days.setText(ob.getDays());
-        holder.availabilityMonth.setText(ob.getAvailabilityMonth());
-        holder.tripDefaultPrice.setText(ob.getTripDefaultPrice());
-        holder.tripSpecialPrice.setText(ob.getTripSpecialPrice());
+        holder.setData(modelList.get(position).getImage_id(), modelList.get(position).getTitle(),modelList.get(position)
+                .getDays(),modelList.get(position).getTripDefaultPrice(),modelList.get(position).getTripSpecialPrice(), modelList.get(position).getAvailabilityMonth());
 
     }
 
@@ -68,5 +64,15 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
         }
 
 
+        public void setData(String image_id, String titles, String day, int tripDefaultPrices, int tripSpecialPrices, String availabilityMonths)
+        {
+            Glide.with(itemView.getContext()).load(image_id).into(location);
+            title.setText(titles);
+            days.setText(day);
+            tripDefaultPrice.setText(Integer.toString(tripDefaultPrices));
+            tripSpecialPrice.setText(Integer.toString(tripSpecialPrices));
+            availabilityMonth.setText(availabilityMonths);
+
+        }
     }
 }

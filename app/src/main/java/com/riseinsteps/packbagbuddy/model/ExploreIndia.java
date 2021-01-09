@@ -2,7 +2,7 @@ package com.riseinsteps.packbagbuddy.model;
 
 public class ExploreIndia
 {
-    private int image_id;
+    private String image_id;
     private String title;
     private String days;
     private int tripDefaultPrice;
@@ -10,7 +10,7 @@ public class ExploreIndia
     private String availabilityMonth;
 
 
-    public ExploreIndia(int image_id, String title, String days, int tripDefaultPrice, int tripSpecialPrice , String availabilityMonth )
+    public ExploreIndia(String image_id, String title, String days, int tripDefaultPrice, int tripSpecialPrice , String availabilityMonth )
     {
         this.image_id=image_id;
         this.title=title;
@@ -19,10 +19,10 @@ public class ExploreIndia
         this.tripSpecialPrice=tripSpecialPrice;
         this.availabilityMonth=availabilityMonth;
     }
-    public  int getImage_id() {
-        return image_id;
-    }
 
+
+
+    public  String getImage_id() { return image_id; }
 
     public String getTitle() {
         return title;
