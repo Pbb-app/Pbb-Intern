@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="left"
+    app:cardCornerRadius="12dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    android:layout_marginBottom="17dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="187dp"
+            android:id="@+id/exploreIndiaImage"
+            android:layout_height="match_parent"
+            android:src="@drawable/a"
+            android:layout_marginRight="10dp">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:id="@+id/titleExp"
+                android:textSize="20sp">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_baseline_access_time_24">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/calender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/time"
+                    android:src="@drawable/ic_baseline_calendar_today_24">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 days - 3 days"
+                    android:id="@+id/timetext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/time">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/calendertime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timetext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/calender"
+                    android:text="OCT : 2019">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From Rs 7999"
+                    android:id="@+id/cost"
+                    android:layout_marginTop="9dp"
+                    android:layout_below="@+id/calendertime"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/actualcost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/calendertime"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/cost"
+                    android:text="6999"
+                    android:textStyle="bold|italic"></TextView>
+
+                <Button
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_below="@+id/cost"
+                    android:layout_marginTop="8dp"
+                    android:padding="3dp"
+                    android:text="@string/view_details"></Button>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
