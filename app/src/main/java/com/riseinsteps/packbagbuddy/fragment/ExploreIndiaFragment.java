@@ -35,13 +35,12 @@ public class ExploreIndiaFragment extends Fragment
         return view;
     }
 
-    private void setexploreIndiaRecyclerView(View view) {
+    private void setexploreIndiaRecyclerView(View view)
+    {
         exploreIndia = new ArrayList<>();
-        exploreIndia .add(new ExploreIndia("https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg", "KEDARNATH KEDARNATH","5",5,5,"OCTOBER"));
-        exploreIndia .add(new ExploreIndia("https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg", "KEDARNATH KEDARNATH","5",5,5,"OCTOBER"));
-        exploreIndia .add(new ExploreIndia("https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg", "KEDARNATH KEDARNATH","5",5,5,"OCTOBER"));
-        exploreIndia .add(new ExploreIndia("https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg", "KEDARNATH KEDARNATH","5",5,5,"OCTOBER"));
-
+        exploreIndia .add(new ExploreIndia("https://www.youtube.com/watch?v=77czO8sxABI", "KEDARNATH","Take in all the beauty and lushness of Barot and Rajgundha on this amazing 2N/3D trek. Camp under the stars, run free in the verdant meadows, drink fresh from the gurgling waterfalls and just take in all the visual grandeur that Mother Nature has to offer.",4f));
+        exploreIndia .add(new ExploreIndia("https://www.youtube.com/watch?v=77czO8sxABI", "KEDARNATH","Take in all the beauty and lushness of Barot and Rajgundha on this amazing 2N/3D trek. Camp under the stars, run free in the verdant meadows, drink fresh from the gurgling waterfalls and just take in all the visual grandeur that Mother Nature has to offer.",4f));
+        exploreIndia .add(new ExploreIndia("https://www.youtube.com/watch?v=77czO8sxABI", "KEDARNATH ","Take in all the beauty and lushness of Barot and Rajgundha on this amazing 2N/3D trek. Camp under the stars, run free in the verdant meadows, drink fresh from the gurgling waterfalls and just take in all the visual grandeur that Mother Nature has to offer.",4f));
 
 
         exploreIndiaRecyclerView = view.findViewById(R.id.rvww);

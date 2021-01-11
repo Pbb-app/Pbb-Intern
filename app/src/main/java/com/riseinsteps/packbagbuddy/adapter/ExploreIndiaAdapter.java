@@ -1,10 +1,13 @@
 package com.riseinsteps.packbagbuddy.adapter;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.riseinsteps.packbagbuddy.R;
@@ -34,9 +37,12 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
-        holder.setData(modelList.get(position).getImage_id(), modelList.get(position).getTitle(),modelList.get(position)
-                .getDays(),modelList.get(position).getTripDefaultPrice(),modelList.get(position).getTripSpecialPrice(), modelList.get(position).getAvailabilityMonth());
-
+        ExploreIndia ob = modelList.get(position);
+        String video_url = modelList.get(position).getVideourl();
+        holder.videourl.setVideoURI(Uri.parse(video_url));
+        holder.title.setText(ob.getTitle());
+        holder.description.setText(String.valueOf(ob.getDescription()));
+        holder.ratings.setRating(modelList.get(position).getRating());
     }
 
     @Override
@@ -46,33 +52,19 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        private ImageView location;
+        private VideoView videourl;
         private TextView title;
-        private  TextView days;
-        private TextView tripDefaultPrice;
-        private TextView tripSpecialPrice;
-        private TextView availabilityMonth;
+        private  TextView description;
+        private RatingBar ratings;
+
         public ViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            location =itemView.findViewById(R.id.exploreIndiaImage);
+            videourl =itemView.findViewById(R.id.exploreVideoView);
             title = itemView.findViewById(R.id.titleExp);
-            days=itemView.findViewById(R.id.timetext);
-            tripDefaultPrice= itemView.findViewById(R.id.cost);
-            tripSpecialPrice= itemView.findViewById(R.id.actualcost);
-            availabilityMonth=itemView.findViewById(R.id.calendertime);
+            description=itemView.findViewById(R.id.content);
+            ratings=itemView.findViewById(R.id.ratingbarExplore);
         }
 
-
-        public void setData(String image_id, String titles, String day, int tripDefaultPrices, int tripSpecialPrices, String availabilityMonths)
-        {
-            Glide.with(itemView.getContext()).load(image_id).into(location);
-            title.setText(titles);
-            days.setText(day);
-            tripDefaultPrice.setText(Integer.toString(tripDefaultPrices));
-            tripSpecialPrice.setText(Integer.toString(tripSpecialPrices));
-            availabilityMonth.setText(availabilityMonths);
-
-        }
     }
 }
