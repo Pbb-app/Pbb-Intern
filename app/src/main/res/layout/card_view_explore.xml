@@ -1,116 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="left"
-    app:cardCornerRadius="12dp"
-    android:background="@color/white"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
-    android:layout_marginBottom="17dp">
+    android:layout_gravity="start"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:padding="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="13dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/exploreIndiaImage"
-            android:layout_width="187dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/a"></ImageView>
+        <VideoView
+            android:id="@+id/exploreVideoView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"></VideoView>
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical">
 
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hello"
                 android:id="@+id/titleExp"
-                android:textSize="20sp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.017"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
             </TextView>
 
-            <RelativeLayout
+            <RatingBar
+                android:id="@+id/ratingbarExplore"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:numStars="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.904"
+                app:layout_constraintStart_toEndOf="@+id/titleExp"
+                app:layout_constraintTop_toTopOf="@+id/titleExp"
+                app:layout_constraintVertical_bias="0.0">
+
+            </RatingBar>
+
+            <TextView
+                android:id="@+id/content"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="jfkvfvkvjfkkdkdsldkcck"
+                android:textColor="#880061"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.008"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleExp"
+                app:layout_constraintVertical_bias="1.0">
 
-                <ImageView
-                    android:id="@+id/time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/ic_baseline_access_time_24">
-                </ImageView>
+            </TextView>
 
-                <ImageView
-                    android:id="@+id/calender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/time"
-                    android:src="@drawable/ic_baseline_calendar_today_24">
-                </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="3dp"
+                android:background="#3E010908"
+                android:text="View Details"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toEndOf="@+id/titleExp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingbarExplore"
+                app:layout_constraintVertical_bias="1.0">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4 days - 3 days"
-                    android:id="@+id/timetext"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/time">
-                </TextView>
+            </TextView>
 
-                <TextView
-                    android:id="@+id/calendertime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/timetext"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_toRightOf="@+id/calender"
-                    android:text="OCT : 2019">
-                </TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="From Rs 7999"
-                    android:id="@+id/cost"
-                    android:layout_marginTop="9dp"
-                    android:layout_below="@+id/calendertime"
-                    >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/actualcost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/calendertime"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_toRightOf="@+id/cost"
-                    android:text="6999"
-                    android:textStyle="bold|italic"></TextView>
-
-                <Button
-                    android:id="@+id/details"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cost"
-                    android:layout_marginTop="8dp"
-                    android:padding="3dp"
-                    android:text="@string/view_details"></Button>
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

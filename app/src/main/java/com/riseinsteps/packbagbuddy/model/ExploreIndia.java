@@ -2,45 +2,33 @@ package com.riseinsteps.packbagbuddy.model;
 
 public class ExploreIndia
 {
-    private String image_id;
+    private String videourl;
     private String title;
-    private String days;
-    private int tripDefaultPrice;
-    private int tripSpecialPrice;
-    private String availabilityMonth;
+    private String description;
+    private float rating;
 
-
-    public ExploreIndia(String image_id, String title, String days, int tripDefaultPrice, int tripSpecialPrice , String availabilityMonth )
+    public ExploreIndia(String videourl, String title, String description, float rating)
     {
-        this.image_id=image_id;
+        this.videourl=videourl;
         this.title=title;
-        this.days=days;
-        this.tripDefaultPrice=tripDefaultPrice;
-        this.tripSpecialPrice=tripSpecialPrice;
-        this.availabilityMonth=availabilityMonth;
+        this.description=description;
+        this.rating=rating;
+
     }
 
+    public float getRating() {
+        return rating;
+    }
 
-
-    public  String getImage_id() { return image_id; }
+    public String getVideourl() {
+        return videourl;
+    }
 
     public String getTitle() {
         return title;
     }
 
-    public String getDays() {
-        return days;
-    }
-
-    public int getTripDefaultPrice() {
-        return tripDefaultPrice;
-    }
-
-    public int getTripSpecialPrice() {
-        return tripSpecialPrice;
-    }
-
-    public String getAvailabilityMonth() {
-        return availabilityMonth;
+    public String getDescription() {
+        return description;
     }
 }
