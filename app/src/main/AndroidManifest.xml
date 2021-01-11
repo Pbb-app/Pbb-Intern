@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.riseinsteps.packbagbuddy">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".PopularSportDetailActivity"></activity>
+        <activity android:name=".ItineraryActivity"></activity>
+        <activity android:name=".PopularSportDetailActivity" />
         <activity android:name=".AdventureTripDetailActivity" />
         <activity android:name=".PopularSportActivity" />
         <activity android:name=".AdventureTripActivity" />
@@ -30,5 +29,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
