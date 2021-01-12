@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.riseinsteps.packbagbuddy.adapter.ExampleAdapter;
+import com.riseinsteps.packbagbuddy.adapter.ItineraryAdapter;
+import com.riseinsteps.packbagbuddy.model.ItineraryModel;
 
 import java.util.ArrayList;
 
@@ -21,22 +22,22 @@ public class ItineraryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary);
 
-        ArrayList<ExampleItem> exampleList = new ArrayList<>();
-        exampleList.add(new ExampleItem("Line 1"));
-        exampleList.add(new ExampleItem("Line 2"));
-        exampleList.add(new ExampleItem("Line 3"));
-        exampleList.add(new ExampleItem("Line 4"));
-        exampleList.add(new ExampleItem("Line 5"));
-        exampleList.add(new ExampleItem("Line 6"));
-        exampleList.add(new ExampleItem("Line 7"));
-        exampleList.add(new ExampleItem("Line 8"));
-        exampleList.add(new ExampleItem("Line 9"));
-        exampleList.add(new ExampleItem("Line 10"));
+        ArrayList<ItineraryModel> exampleList = new ArrayList<>();
+        exampleList.add(new ItineraryModel("Line 1"));
+        exampleList.add(new ItineraryModel("Line 2"));
+        exampleList.add(new ItineraryModel("Line 3"));
+        exampleList.add(new ItineraryModel("Line 4"));
+        exampleList.add(new ItineraryModel("Line 5"));
+        exampleList.add(new ItineraryModel("Line 6"));
+        exampleList.add(new ItineraryModel("Line 7"));
+        exampleList.add(new ItineraryModel("Line 8"));
+        exampleList.add(new ItineraryModel("Line 9"));
+        exampleList.add(new ItineraryModel("Line 10"));
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new ExampleAdapter(exampleList);
+        mAdapter = new ItineraryAdapter(exampleList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

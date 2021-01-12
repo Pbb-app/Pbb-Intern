@@ -1,9 +1,9 @@
-package com.riseinsteps.packbagbuddy;
+package com.riseinsteps.packbagbuddy.model;
 
-public class ExampleItem {
+public class ItineraryModel {
     private String mText1;
 
-    public ExampleItem(String text1){
+    public ItineraryModel(String text1){
         mText1 = text1;
     }
 

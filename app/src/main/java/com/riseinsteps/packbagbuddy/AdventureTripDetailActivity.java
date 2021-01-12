@@ -1,19 +1,23 @@
 package com.riseinsteps.packbagbuddy;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
+import com.riseinsteps.packbagbuddy.adapter.OtherTourDetailsAdapter;
+import com.riseinsteps.packbagbuddy.adapter.TourDetailsAdapter;
 import com.riseinsteps.packbagbuddy.adapter.TripDetailsAdapter;
 import com.riseinsteps.packbagbuddy.model.AdventureTripModel;
+import com.riseinsteps.packbagbuddy.model.OtherTourDetailsModel;
+import com.riseinsteps.packbagbuddy.model.TourDetailsModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.AVAILABILITYMONTH;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.DAYS;
 import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPNAME;
 
 public class AdventureTripDetailActivity extends AppCompatActivity {
@@ -22,8 +26,15 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
     private List<AdventureTripModel> modelList;
     private TripDetailsAdapter tripDetailsAdapter;
 
-    private TextView tripName, days, availabilityMonth, startingLocation, destination, minimumAge, totalSeats, quickFacts,
-            placesToVisit, accommodation, meals, transportation;
+    private RecyclerView tourDetailsRecyclerView;
+    private List<TourDetailsModel> tourDetailsModelList;
+    private TourDetailsAdapter tourDetailsAdapter;
+
+    private RecyclerView otherTourDetailsRecyclerView;
+    private List<OtherTourDetailsModel> otherTourDetailsModelList;
+    private OtherTourDetailsAdapter otherTourDetailsAdapter;
+
+    private TextView tripName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,34 +43,46 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
 
         setTripViewPager();
 
-        tripName = findViewById(R.id.tv_rip_detail_name);
-        days = findViewById(R.id.tv_trip_detail_num_of_days);
-        availabilityMonth = findViewById(R.id.tv_trip_detail_availability);
-        startingLocation = findViewById(R.id.tv_trip_detail_starting_location);
-        destination = findViewById(R.id.tv_trip_detail_destination);
-        minimumAge = findViewById(R.id.tv_trip_detail_min_age);
-        totalSeats = findViewById(R.id.tv_trip_detail_total_seats);
-        quickFacts = findViewById(R.id.tv_trip_detail_quick_facts);
-        placesToVisit = findViewById(R.id.tv_trip_detail_places_to_visit);
-        accommodation = findViewById(R.id.tv_trip_detail_accommodation);
-        meals = findViewById(R.id.tv_trip_detail_meals);
-        transportation = findViewById(R.id.tv_trip_detail_transportation);
-
-
+        tripName = findViewById(R.id.tv_trip_detail_name);
         tripName.setText(getIntent().getStringExtra(TRIPNAME));
-        days.setText(getIntent().getStringExtra(DAYS));
-        days.setText(getIntent().getStringExtra(DAYS));
-        availabilityMonth.setText(getIntent().getStringExtra(AVAILABILITYMONTH));
-        startingLocation.setText(getIntent().getStringExtra(DAYS));
-        destination.setText(getIntent().getStringExtra(DAYS));
-        minimumAge.setText(getIntent().getStringExtra(DAYS));
-        totalSeats.setText(getIntent().getStringExtra(DAYS));
-        quickFacts.setText(getIntent().getStringExtra(DAYS));
-        placesToVisit.setText(getIntent().getStringExtra(DAYS));
-        accommodation.setText(getIntent().getStringExtra(DAYS));
-        meals.setText(getIntent().getStringExtra(DAYS));
-        transportation.setText(getIntent().getStringExtra(DAYS));
 
+
+        setTourDetailsRecyclerVie();
+
+        setOtherTourDetailsRecyclerView();
+
+    }
+
+    private void setOtherTourDetailsRecyclerView() {
+        otherTourDetailsRecyclerView = findViewById(R.id.rv_other_tour_details);
+        otherTourDetailsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        otherTourDetailsModelList = new ArrayList<>();
+        otherTourDetailsModelList.add(new OtherTourDetailsModel("Tour Duration", "5 Days, 4 Nights"));
+        otherTourDetailsModelList.add(new OtherTourDetailsModel("Places to Visit", "1. GuptKashi\n2. Vishwanath Temple\n" +
+                "3. Manikarnik Kund\n4. Kedarnath Temple"));
+        otherTourDetailsModelList.add(new OtherTourDetailsModel("Accommodation", "1. Accommodation in room as given at hotel in Guptkashi and Rishikesh and all taxes on Double and triple sharing basis\n" +
+                "2. Accommodation in Kedarnath 5 Pax in Single Room"));
+        otherTourDetailsModelList.add(new OtherTourDetailsModel("Meal", "Breakfast will be Provided\n" +
+                "P.S. : Food will not be provided while traveling."));
+        otherTourDetailsModelList.add(new OtherTourDetailsModel("Transportation", "Private Car"));
+
+        otherTourDetailsAdapter = new OtherTourDetailsAdapter(otherTourDetailsModelList);
+        otherTourDetailsRecyclerView.setAdapter(otherTourDetailsAdapter);
+    }
+
+    private void setTourDetailsRecyclerVie() {
+        tourDetailsRecyclerView = findViewById(R.id.rv_trip_detail);
+        tourDetailsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        tourDetailsModelList = new ArrayList<>();
+        tourDetailsModelList.add(new TourDetailsModel("https://www.flaticon.com/svg/vstatic/svg/1124/1124602.svg?token=exp=1610480404~hmac=dfeca12bbc243fec5246c0379355b7d9"
+                , "5 Days, 4 Nights"));
+        tourDetailsModelList.add(new TourDetailsModel("https://www.flaticon.com/svg/vstatic/svg/1077/1077114.svg?token=exp=1610480476~hmac=f9e7144a9ffb1146a7905145e35bd9bc"
+                , "Min Age: 7+"));
+        tourDetailsModelList.add(new TourDetailsModel("https://www.flaticon.com/svg/vstatic/svg/747/747310.svg?token=exp=1610480528~hmac=ac54bcdb93945cc3b8daca95dc111288",
+                "Availability: OCT-NOV"));
+
+        tourDetailsAdapter = new TourDetailsAdapter(tourDetailsModelList);
+        tourDetailsRecyclerView.setAdapter(tourDetailsAdapter);
     }
 
     private void setTripViewPager() {

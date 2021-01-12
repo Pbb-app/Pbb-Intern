@@ -5,29 +5,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.riseinsteps.packbagbuddy.ExampleItem;
-import com.riseinsteps.packbagbuddy.R;
-
-import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder>{
+import com.riseinsteps.packbagbuddy.R;
+import com.riseinsteps.packbagbuddy.model.ItineraryModel;
 
-    private ArrayList<ExampleItem> mExampleList;
+import java.util.ArrayList;
 
-    public static class ExampleViewHolder extends RecyclerView.ViewHolder{
+public class ItineraryAdapter extends RecyclerView.Adapter<ItineraryAdapter.ExampleViewHolder> {
 
-        public TextView mTextView1;
+    private final ArrayList<ItineraryModel> mExampleList;
 
-        public ExampleViewHolder(@NonNull View itemView) {
-            super(itemView);
-            mTextView1 = itemView.findViewById(R.id.textview);
-        }
-    }
-
-    public ExampleAdapter(ArrayList<ExampleItem> exampleList){
+    public ItineraryAdapter(ArrayList<ItineraryModel> exampleList) {
         mExampleList = exampleList;
     }
 
@@ -41,7 +31,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
 
     @Override
     public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
-        ExampleItem currentItem = mExampleList.get(position);
+        ItineraryModel currentItem = mExampleList.get(position);
 
         holder.mTextView1.setText(currentItem.getText1());
 
@@ -50,5 +40,15 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     @Override
     public int getItemCount() {
         return mExampleList.size();
+    }
+
+    public static class ExampleViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView mTextView1;
+
+        public ExampleViewHolder(@NonNull View itemView) {
+            super(itemView);
+            mTextView1 = itemView.findViewById(R.id.textview);
+        }
     }
 }
