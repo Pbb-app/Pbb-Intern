@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.tabs.TabLayout;
 import com.riseinsteps.packbagbuddy.AdventureTripActivity;
 import com.riseinsteps.packbagbuddy.PopularSportActivity;
 import com.riseinsteps.packbagbuddy.R;
@@ -32,7 +31,6 @@ public class HomeFragment extends Fragment {
     private ViewPager viewPager;
     private List<BannerModel> bannerModelList;
     private BannerAdapter bannerAdapter;
-    private TabLayout tablayout;
 
     private LinearLayout layoutAdventureTrip, layoutPopularSport;
 
@@ -77,7 +75,6 @@ public class HomeFragment extends Fragment {
     }
 
     private void setBannerViewPager(View view) {
-        tablayout = view.findViewById(R.id.tab_indicator);
         bannerModelList = new ArrayList<>();
         bannerModelList.add(new BannerModel(1,
                 "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg"));
@@ -93,7 +90,6 @@ public class HomeFragment extends Fragment {
         viewPager = view.findViewById(R.id.vp_home_page_banner);
         bannerAdapter = new BannerAdapter(bannerModelList);
         viewPager.setAdapter(bannerAdapter);
-        tablayout.setupWithViewPager(viewPager);
 
 
     }
