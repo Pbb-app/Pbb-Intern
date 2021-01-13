@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_1"
+    tools:context=".TourDetails">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/td_View1"
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/td_1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tour Details"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/ic_ms_mybookings"
+                android:drawablePadding="10dp"
+                android:textColor="@color/green"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/td_2"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Departure and Return Location"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_3"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delhi"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/td_View2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+
+            <TextView
+                android:id="@+id/td_4"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Reporting Time"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_5"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00 PM IST"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_6"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Reporting Place"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_7"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delhi/Airport/Station/Hotel/Home"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+
+            <View
+                android:id="@+id/td_View3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+
+
+            <TextView
+                android:id="@+id/td_8"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Price Includes"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_9"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accommodation in random as given at hotel in guptakashi and Rishikesh and all taxes on Double and triple sharing basis"
+
+
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/td_10"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accommodation in kedarnath 5 Pax in Single Room"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/td_11"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sightseening by Private AC Vehical at Guptkashi and Rishikesh"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/td_12"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast at Guptkashi and Rishikesh"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/td_13"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toll Tax and Parking Charge of Vehical"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+            <View
+                android:id="@+id/td_View4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#EFF4EE"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/td_14"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why Book With Us?"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/td_15"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Best Price Guarantee"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_td_bpg"
+                android:drawablePadding="10dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/td_View5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+
+
+            <TextView
+                android:id="@+id/td_16"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hassle Free and Secure Payment"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_td_security"
+                android:drawablePadding="10dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/td_View6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+
+
+            <TextView
+                android:id="@+id/td_17"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Best Customer Support"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_td_support_agent"
+                android:drawablePadding="10dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+
+            <View
+                android:id="@+id/td_View7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+
+
+            <TextView
+                android:id="@+id/td_18"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hand-Picked Tours and Activities"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_td_star"
+                android:drawablePadding="10dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/td_View8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="#EFF4EE" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/gotquestion_td"
+            android:layout_marginTop="10dp"
+            />
+
+        <View
+            android:id="@+id/td_View0"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+
+    </LinearLayout>
+
+</ScrollView>
