@@ -1,18 +1,16 @@
 package com.riseinsteps.packbagbuddy.model;
 
-public class ExploreIndia
-{
+public class ExploreIndia {
     private String videourl;
     private String title;
     private String description;
     private float rating;
 
-    public ExploreIndia(String videourl, String title, String description, float rating)
-    {
-        this.videourl=videourl;
-        this.title=title;
-        this.description=description;
-        this.rating=rating;
+    public ExploreIndia(String videourl, String title, String description, float rating) {
+        this.videourl = videourl;
+        this.title = title;
+        this.description = description;
+        this.rating = rating;
 
     }
 

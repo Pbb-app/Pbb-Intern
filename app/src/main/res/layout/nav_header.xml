@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:text="@string/username"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_userContact"

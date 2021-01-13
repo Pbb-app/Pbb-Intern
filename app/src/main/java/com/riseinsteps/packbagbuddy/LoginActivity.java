@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //setting up the forgot Password
-        
+
 
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.

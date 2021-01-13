@@ -4,26 +4,22 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.bumptech.glide.Glide;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.ExploreIndia;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapter.ViewHolder>
-{
+public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapter.ViewHolder> {
     private List<ExploreIndia> modelList;
 
-    public ExploreIndiaAdapter(List<ExploreIndia> modelList)
-    {
+    public ExploreIndiaAdapter(List<ExploreIndia> modelList) {
         this.modelList = modelList;
     }
 
@@ -35,8 +31,7 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position)
-    {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ExploreIndia ob = modelList.get(position);
         String video_url = modelList.get(position).getVideourl();
         holder.videourl.setVideoURI(Uri.parse(video_url));
@@ -50,20 +45,18 @@ public class ExploreIndiaAdapter extends RecyclerView.Adapter<ExploreIndiaAdapte
         return modelList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder
-    {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         private VideoView videourl;
         private TextView title;
-        private  TextView description;
+        private TextView description;
         private RatingBar ratings;
 
-        public ViewHolder(@NonNull View itemView)
-        {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            videourl =itemView.findViewById(R.id.exploreVideoView);
+            videourl = itemView.findViewById(R.id.exploreVideoView);
             title = itemView.findViewById(R.id.titleExp);
-            description=itemView.findViewById(R.id.content);
-            ratings=itemView.findViewById(R.id.ratingbarExplore);
+            description = itemView.findViewById(R.id.content);
+            ratings = itemView.findViewById(R.id.ratingbarExplore);
         }
 
     }
