@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
+        <activity android:name=".LeaveYourInfo"></activity>
         <activity android:name=".ItineraryActivity" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />

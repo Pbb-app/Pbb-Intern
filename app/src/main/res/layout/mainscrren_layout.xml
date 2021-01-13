@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/ACCOUNT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY ACCOUNT"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_Dashboard"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_ms_dashboard"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ACCOUNT"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_EditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_ms_editprofile"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_Dashboard"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_ChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_unlock"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_EditProfile"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/ms_TOURBOOKING"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOUR BOOKING"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_ChangePassword"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_MyBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Bookings"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_ms_mybookings"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/ms_TOURBOOKING"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_Invoices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invoices"
+            android:drawableLeft="@drawable/ic_ms_invoices"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_MyBookings"
+            android:textColor="@color/darkgreen"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_Reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:drawableLeft="@drawable/ic_ms_reviews"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_Invoices"
+            android:textColor="@color/darkgreen"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_WishList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wish List"
+            android:drawableLeft="@drawable/ic_ms_wishlist"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/ms_Reviews"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/ms_View1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_WishList"
+            android:background="@color/gray" />
+        <TextView
+            android:id="@+id/ms_Signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signout"
+            android:drawableLeft="@drawable/ic_unlock"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/ms_View1"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+        <View
+            android:id="@+id/ms_View2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_Signout"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/ms_NeedHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need Help?"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_View2"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_call"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 78741 27809"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_call"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_NeedHelp"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/ms_mail"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Us"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/ms_call"
+            android:textColor="@color/darkgreen"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ms_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Booking"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_mail"
+            android:textColor="@color/darkgreen"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/ms_View3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_Cancel"
+            android:background="@color/gray" />
+        <View
+            android:id="@+id/ms_View4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ms_View3"
+            android:background="@color/gray"
+            android:paddingBottom="30dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -38,39 +38,24 @@
             android:title="Register as Partner" />
 
         <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_logout"
-            android:title="Logout" />
+            android:id="@+id/nav_find_us"
+            android:icon="@drawable/ic_find_us"
+            android:title="@string/find_us" />
 
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_contact_us"
+            android:title="Contact Us" />
 
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share_app" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-
-            <item
-                android:id="@+id/nav_find_us"
-                android:icon="@drawable/ic_find_us"
-                android:title="@string/find_us" />
-
-            <item
-                android:id="@+id/nav_contact_us"
-                android:icon="@drawable/ic_contact_us"
-                android:title="Contact Us" />
-
-            <item
-                android:id="@+id/nav_about_us"
-                android:icon="@drawable/ic_about_us"
-                android:title="About Us" />
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_share"
-                android:title="@string/share_app" />
-
-
-        </menu>
-
-    </item>
 
 
 </menu>

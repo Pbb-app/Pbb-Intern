@@ -57,4 +57,18 @@
     <string name="campfire">Campfire</string>
     <string name="view_details">view details</string>
     <string name="title">Title</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="no">No</string>
+    <string name="city">City</string>
+    <string name="web">Web</string>
+    <string name="comp">Comp</string>
+    <string name="website">Website</string>
+    <string name="company_name">Company Name</string>
+    <string name="company_description">Company Description</string>
+    <string name="submit">Submit</string>
+    <string name="reason">Reason</string>
+    <string name="pay">Pay</string>
+    <string name="order">Order</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -1,4 +1,21 @@
 package com.riseinsteps.packbagbuddy.fragment;
 
-public class CancelBookingFragment {
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.riseinsteps.packbagbuddy.R;
+
+public class CancelBookingFragment extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_cancel_booking, container, false);
+    }
 }

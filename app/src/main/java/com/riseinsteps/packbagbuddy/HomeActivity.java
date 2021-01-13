@@ -11,11 +11,15 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.riseinsteps.packbagbuddy.fragment.AboutUsFragment;
+import com.riseinsteps.packbagbuddy.fragment.CancelBookingFragment;
+import com.riseinsteps.packbagbuddy.fragment.ContactUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.CreateTourFragment;
 import com.riseinsteps.packbagbuddy.fragment.ExploreIndiaFragment;
 import com.riseinsteps.packbagbuddy.fragment.FindUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
-import com.riseinsteps.packbagbuddy.fragment.ShareAppFragment;
+import com.riseinsteps.packbagbuddy.fragment.MyAccountFragment;
+import com.riseinsteps.packbagbuddy.fragment.RegisterAsPartnerFragment;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
@@ -69,11 +73,27 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_create_tour:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateTourFragment()).commit();
                 break;
+            case R.id.nav_myAccount:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
+                break;
+            case R.id.nav_cancel_booking:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CancelBookingFragment()).commit();
+                break;
+
+            case R.id.nav_register_as_partner:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RegisterAsPartnerFragment()).commit();
+                break;
             case R.id.nav_find_us:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FindUsFragment()).commit();
                 break;
+            case R.id.nav_contact_us:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUsFragment()).commit();
+                break;
+            case R.id.nav_about_us:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutUsFragment()).commit();
+                break;
             case R.id.nav_share:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareAppFragment()).commit();
+                //setting the function of sharing this app
                 break;
         }
 
