@@ -59,7 +59,6 @@
     <string name="title">Title</string>
     <string name="register">Register</string>
     <string name="name">Name</string>
-    <string name="no">No</string>
     <string name="city">City</string>
     <string name="web">Web</string>
     <string name="comp">Comp</string>
@@ -71,4 +70,5 @@
     <string name="pay">Pay</string>
     <string name="order">Order</string>
     <string name="cancel">Cancel</string>
+    <string name="at_packbagbuddy_we_re_all_about_ensuring_you_get_the_best_experience_you_can_through_your_tours">At PackBagBuddy, we’re all about ensuring you get the best experience you can through your tours.</string>
 </resources>
