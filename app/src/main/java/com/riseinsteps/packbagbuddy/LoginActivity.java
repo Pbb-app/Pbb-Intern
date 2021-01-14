@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
     private Button btnLogin;
     private LinearLayout btnSignUp;
-    private TextView skipForNow, ForgotPwd;
+    private TextView skipForNow, forgotPwd;
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
@@ -43,7 +43,15 @@ public class LoginActivity extends AppCompatActivity {
 
         email = findViewById(R.id.et_emailAddress);
         password = findViewById(R.id.et_password);
+        forgotPwd= findViewById(R.id.tv_ForgotPassword);
 
+        //forgot password activity
+        forgotPwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,passwordreset.class));
+            }
+        });
         //setting up the login button
         btnLogin = findViewById(R.id.btn_Login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
