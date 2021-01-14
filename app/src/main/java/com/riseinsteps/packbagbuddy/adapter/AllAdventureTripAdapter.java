@@ -32,6 +32,10 @@ public class AllAdventureTripAdapter extends RecyclerView.Adapter<AllAdventureTr
     public static final String RATING = "com.riseinsteps.packbagbuddy.RATING";
     public static final String TRIPDISCOUNTPERCENTAGE = "com.riseinsteps.packbagbuddy.TRIPDISCOUNTPERCENTAGE";
 
+    public static final String IMAGEURL = "com.riseinsteps.packbagbuddy.IMAGEURL";
+    public static final String SPORTNAME = "com.riseinsteps.packbagbuddy.SPORTNAME";
+    public static final String NUMBEROFTOURS = "com.riseinsteps.packbagbuddy.NUMBEROFTOURS";
+
     private List<AdventureTripModel> modelList;
 
     public AllAdventureTripAdapter(List<AdventureTripModel> modelList) {
