@@ -5,16 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".ItineraryActivity">
 
-    <TextView
-        android:id="@+id/tvItinerary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="ITINERARY"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"></TextView>
+  <TextView
+      android:id="@+id/tvItinerary"
+      android:textSize="20dp"
+      android:text="ITINERARY"
+      android:textStyle="bold"
+      android:gravity="center"
+      android:textColor="#000000"
+      android:drawableStart="@drawable/ic_train"
+      android:drawableLeft="@drawable/ic_train"
+      android:layout_marginTop="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"></TextView>
 
 
     <androidx.recyclerview.widget.RecyclerView
