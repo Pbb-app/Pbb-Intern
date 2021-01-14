@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LegalPolicyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/search_home_page_bg">
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageLegalPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sunrise_image"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/legalPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp"
+                android:text="Legal Policies"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"></TextView>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/legal1"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/textlegal"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/legal2"
+            android:clickable="true"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/textlegal2"
+            android:textColor="@color/teal_700" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/legal3"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/textlegal3"
+            android:textColor="@color/teal_700"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/teal_700"
+            android:text="@string/legal4"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/textlegal4"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/teal_700"
+            android:text="@string/legal5"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/textlegal5"
+            ></TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
