@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     public static final int RC_SIGN_IN = 101;
@@ -34,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView skipForNow, forgotPwd;
 
     private FirebaseAuth mAuth;
+    private FirebaseUser user;
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -45,6 +47,13 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.et_password);
         forgotPwd= findViewById(R.id.tv_ForgotPassword);
 
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null)
+        {
+            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+            this.finish();
+        }
         //forgot password activity
         forgotPwd.setOnClickListener(new View.OnClickListener() {
             @Override
