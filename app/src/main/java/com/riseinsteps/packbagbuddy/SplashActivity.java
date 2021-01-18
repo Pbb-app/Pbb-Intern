@@ -6,12 +6,13 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private ImageView appLogo;
+    private LinearLayout layout;
     private Animation animation;
 
     @Override
@@ -22,10 +23,10 @@ public class SplashActivity extends AppCompatActivity {
         // for hiding the status bar from the top
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        appLogo = findViewById(R.id.appLogo);
-        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_bottom);
+//        layout = findViewById(R.id.layout);
+//        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_bottom);
 
-        appLogo.startAnimation(animation);
+        //layout.startAnimation(animation);
         new Thread(new Runnable() {
             @Override
             public void run() {

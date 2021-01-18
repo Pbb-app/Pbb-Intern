@@ -41,4 +41,14 @@
     <color name="blue_grey_600">#546E7A</color>
     <color name="overlay_light_40">#66FFFFFF</color>
     <color name="overlay_light_50">#8FFFFFF0</color>
+    <color name="overlay_light_70">#B3FFFFFF</color>
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_60">#99000000</color>
+    <color name="overlay_dark_70">#B3000000</color>
+
+    <color name="overlay_dark_90">#E6000000</color>
 </resources>
