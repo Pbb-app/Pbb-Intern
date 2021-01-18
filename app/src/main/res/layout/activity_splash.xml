@@ -9,13 +9,13 @@
 
 
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         android:id="@+id/layout"
         android:layout_marginTop="450dp"
-        android:layout_marginBottom="175dp"
+
+        android:background="@color/special"
         android:orientation="vertical"
-      android:background="@color/overlay_dark_30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,28 +25,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Plan Unforgettable"
+
             android:paddingLeft="8dp"
-            android:gravity="center"
+            android:text="Plan Unforgettable"
             android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:textSize="35sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adventure Trips"
+
             android:paddingLeft="8dp"
-            android:gravity="center"
+            android:text="Adventure Trips"
             android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:textSize="35sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/splash_text"
-            android:paddingTop="26dp"
             android:paddingLeft="8dp"
+            android:paddingTop="26dp"
             android:paddingRight="8dp"
+            android:text="@string/splash_text"
             android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:paddingBottom="20dp"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
