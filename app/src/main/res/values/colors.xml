@@ -51,4 +51,5 @@
     <color name="overlay_dark_70">#B3000000</color>
     <color name="special">#7A474747</color>
     <color name="overlay_dark_90">#E6000000</color>
+    <color name="blue_grey_800">#37474F</color>
 </resources>
