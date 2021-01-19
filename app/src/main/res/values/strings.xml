@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PackBagBuddy</string>
     <string name="already_a_member">Already a Member?</string>
-    <string name="signin">signIn</string>
+    <string name="signin">Sign In</string>
     <string name="login">Login</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -20,8 +20,6 @@
     <string name="join_packbagbuddy">Join PackBagBuddy</string>
     <string name="last_name">Last Name</string>
     <string name="first_name">First Name</string>
-    <string name="email">Email</string>
-    <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="signup">SIGNUP</string>
@@ -58,7 +56,6 @@
     <string name="view_details">view details</string>
     <string name="title">Title</string>
     <string name="register">Register</string>
-    <string name="name">Name</string>
     <string name="city">City</string>
     <string name="web">Web</string>
     <string name="comp">Comp</string>
@@ -452,4 +449,8 @@ If you have any questions about these Terms or any App Store Sourced Application
     <string name="report">Report a Problem</string>
     <string name="url">Page URL/link</string>
     <string name="prob">Explain the problem</string>
+    <string name="welcome">Welcome</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
 </resources>
