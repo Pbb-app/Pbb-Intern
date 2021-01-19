@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layoutbg"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Your Adventure!"
+            android:textColor="#292929"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keywords"
+            android:textColor="#292929"
+            android:textSize="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/etKeywords"
+            android:layout_width="370dp"
+            android:background="@drawable/etbackground"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawableRight="@drawable/ic_search"
+            android:textColorHint="#494949"
+            android:textColor="#292929"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textColor="#292929"
+            android:textSize="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/spDestination"
+            android:layout_width="370dp"
+            android:layout_height="40dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adventure Sport"
+            android:textColor="#292929"
+            android:textSize="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/spAdventureSport"
+            android:layout_width="370dp"
+            android:layout_height="40dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#000000"
+            android:backgroundTint="#DF009688"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
