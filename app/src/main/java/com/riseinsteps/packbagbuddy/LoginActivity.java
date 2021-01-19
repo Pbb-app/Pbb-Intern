@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseUser user;
     private GoogleSignInClient mGoogleSignInClient;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -189,5 +191,9 @@ public class LoginActivity extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    public void OpenSignUpPage(View view) {
+        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
     }
 }
