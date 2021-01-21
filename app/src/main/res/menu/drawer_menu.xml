@@ -12,15 +12,6 @@
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
 
-        <item
-            android:id="@+id/nav_explore"
-            android:icon="@drawable/ic_explore"
-            android:title="@string/explore_india" />
-
-        <item
-            android:id="@+id/nav_create_tour"
-            android:icon="@drawable/ic_create_tour"
-            android:title="@string/create_tour" />
 
         <item
             android:id="@+id/nav_myAccount"
@@ -30,31 +21,22 @@
         <item
             android:id="@+id/nav_cancel_booking"
             android:icon="@drawable/ic_cancel_booking"
-            android:title="Cancel Booking" />
+            android:title="Bookings" />
 
         <item
             android:id="@+id/nav_register_as_partner"
             android:icon="@drawable/ic_register_as_partner"
             android:title="Register as Partner" />
 
-        <item
-            android:id="@+id/nav_find_us"
-            android:icon="@drawable/ic_find_us"
-            android:title="@string/find_us" />
+
 
         <item
             android:id="@+id/nav_contact_us"
             android:icon="@drawable/ic_contact_us"
             android:title="Contact Us" />
 
-        <item
-            android:id="@+id/nav_about_us"
-            android:icon="@drawable/ic_about_us"
-            android:title="About Us" />
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_share"
-            android:title="@string/share_app" />
+
+
     </group>
 
 
