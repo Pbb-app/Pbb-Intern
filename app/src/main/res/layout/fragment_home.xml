@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorBackground"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/colorBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -14,8 +12,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/header_background"
         android:padding="10dp"
-        app:layout_constraintTop_toTopof="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tvDashboard"
@@ -47,10 +46,10 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/white_rectangle_background"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageMenu">
 
             <EditText
@@ -83,10 +82,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layout_constraintBottom_toBottomof="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutHeader">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,12 +98,12 @@
                 android:id="@+id/layoutExploreIndia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="@drawable/white_rectangle_background"
                 android:padding="15dp"
-                android:layout_marginLeft="40dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -126,7 +127,7 @@
                     android:text="Explore"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -135,10 +136,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:gravity="center"
-                android:orientation="vertical"
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/white_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -163,7 +164,7 @@
                     android:text="Create Tours"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -171,12 +172,12 @@
                 android:id="@+id/layoutBookings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="@drawable/white_rectangle_background"
                 android:padding="15dp"
-                android:layout_marginLeft="40dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutExploreIndia"
@@ -200,7 +201,7 @@
                     android:text="Bookings"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -209,10 +210,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:gravity="center"
-                android:orientation="vertical"
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/white_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -237,7 +238,7 @@
                     android:text="Offers"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -246,8 +247,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/layoutOffers"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutOffers">
 
                 <LinearLayout
                     android:id="@+id/ll_adventure_trip"
@@ -293,8 +296,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvLinearLayout"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearLayout">
 
                 <LinearLayout
                     android:id="@+id/ll_popular_sports"
@@ -339,9 +344,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
     </ScrollView>
