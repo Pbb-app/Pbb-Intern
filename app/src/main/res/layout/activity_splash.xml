@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
-
         android:background="@color/special"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,34 +21,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:paddingLeft="8dp"
-            android:text="Plan Unforgettable"
-            android:textColor="@android:color/white"
-            android:textSize="35sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:paddingLeft="8dp"
-            android:text="Adventure Trips"
-            android:textColor="@android:color/white"
-            android:textSize="35sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingTop="26dp"
-            android:paddingRight="8dp"
-            android:text="@string/splash_text"
-            android:textColor="@android:color/white"
-            android:paddingBottom="20dp"
-            android:textSize="20sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
