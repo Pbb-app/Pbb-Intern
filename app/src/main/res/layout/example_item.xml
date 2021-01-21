@@ -20,10 +20,8 @@
             android:textSize="17dp"
             android:gravity="left"
             android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:text="Line 1"
             android:textColor="#000000"
-            android:textSize="20dp" />
+             />
 
     </RelativeLayout>
 
