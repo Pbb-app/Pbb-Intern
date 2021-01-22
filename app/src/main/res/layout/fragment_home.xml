@@ -16,18 +16,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:background="@drawable/white_rectangle_background"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/etSearchElements"
@@ -61,11 +59,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="@id/etSearchElements"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutHeader"
         tools:ignore="NotSibling">

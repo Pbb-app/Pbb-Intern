@@ -3,15 +3,10 @@ package com.riseinsteps.packbagbuddy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -25,18 +20,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class LoginActivity extends AppCompatActivity {
-    public static final int RC_SIGN_IN = 101;
-
-    private EditText email, password;
-    private Button btnLogin;
-    private LinearLayout btnSignUp;
-    private TextView skipForNow, ForgotPwd;
-
-    private FirebaseAuth mAuth;
-    private GoogleSignInClient mGoogleSignInClient;
-
+    private EditText userEmail;
+    private EditText userPassword;
+    private FloatingActionButton userSignIn;
+    private TextView userSignUp, userForgotPassword;
 
 
     @Override
@@ -44,6 +34,60 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        userEmail = (EditText) findViewById(R.id.et_emailAddress);
+        userPassword = (EditText) findViewById(R.id.et_password);
+        userSignIn = (FloatingActionButton) findViewById(R.id.fab_signIn);
+        userSignUp = (TextView) findViewById(R.id.tv_SignUp);
+        userForgotPassword = (TextView) findViewById(R.id.tv_ForgotPassword);
+
+
+        // handle the user signIn
+        userSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = userEmail.getText().toString().trim();
+                String pwd = userPassword.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)) {
+                    userEmail.setError("Email Required for SignIn");
+                    return;
+                } else if (TextUtils.isEmpty(pwd)) {
+                    userPassword.setError("Password Required for SignIn");
+                    return;
+                } else {
+                    signIn(email, pwd);
+                }
+            }
+        });
+
+
+        // setting up the user sign up
+        userSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent userSignUpIntent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(userSignUpIntent);
+                finish();
+            }
+        });
+
+
+        // setting up the user forgot password
+        userForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotPasswordIntent = new Intent(LoginActivity.this, UserForgotPassword.class);
+                startActivity(forgotPasswordIntent);
+                finish();
+            }
+        });
+
 
     }
+
+    private void signIn(String email, String password) {
+
+    }
+
+
 }

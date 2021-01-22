@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layoutbg"
+    android:background="@drawable/signup_bg"
     tools:context=".LoginActivity">
 
     <TextView
@@ -26,118 +26,121 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/et_emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@android:color/transparent"
             android:hint="Email"
-            android:backgroundTint="@android:color/transparent"
             android:padding="15dp"
-            android:layout_marginStart="30dp"
-            android:textColorHint="#494949"
             android:textColor="#292929"
-            android:layout_marginEnd="30dp"
-            />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#494949"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="30dp"/>
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:backgroundTint="@android:color/transparent"
-            android:padding="15dp"
-            android:textColorHint="#494949"
-            android:textColor="#292929"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"/>
+            android:textColorHint="#494949" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#494949"
-            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="4dp"
-            android:layout_marginStart="30dp"/>
+            android:layout_marginEnd="30dp"
+            android:background="#494949" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Password"
+            android:padding="15dp"
+            android:textColor="#292929"
+            android:textColorHint="#494949" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:background="#494949" />
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_signIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fabCustomSize="80dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_round_arrow_forward_24"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="30dp"
-                android:elevation="0dp"
-                app:elevation="0dp"
-                android:backgroundTint="#DF009688"
-                android:layout_marginRight="30dp"
                 android:layout_centerInParent="true"
-                />
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#DF009688"
+                android:elevation="0dp"
+                android:src="@drawable/ic_round_arrow_forward_24"
+                app:elevation="0dp"
+                app:fabCustomSize="80dp" />
+
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:textColor="#191919"
-                android:layout_centerInParent="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp" />
+                android:layout_marginLeft="30dp"
+                android:text="Sign In"
+                android:textColor="#191919"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp">
 
             <TextView
                 android:id="@+id/tv_SignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
-                android:onClick="OpenSignUpPage"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:padding="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
-                android:layout_centerInParent="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true" />
+                android:padding="15dp"
+                android:text="Sign Up"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_ForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot Password"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:padding="15dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="15dp"
+                android:text="Forgot Password"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

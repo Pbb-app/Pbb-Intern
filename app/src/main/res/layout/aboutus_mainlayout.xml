@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who We Are"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t1"
+            android:layout_marginTop="20dp"
+
+            android:drawablePadding="10dp"
+            android:text="@string/at_packbagbuddy_we_re_all_about_ensuring_you_get_the_best_experience_you_can_through_your_tours"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/ic_true"
+            android:drawablePadding="10dp"
+            android:text="Best Price Guarantee"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/t3"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View01"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_true"
+            android:drawablePadding="10dp"
+            android:text="Best Customer Support"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/View02"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/t4"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View02"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_true"
+            android:drawablePadding="10dp"
+            android:text="Verified Operators"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/View03"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/t5"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View03"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_true"
+            android:drawablePadding="10dp"
+            android:text="Quick and Secure Payments"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/View04"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+
+            android:layout_below="@id/t6"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/t7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View04"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_true"
+            android:drawablePadding="10dp"
+            android:text="New Destinations Every Week"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/View05"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/t7"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/t8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/View05"
+            android:layout_marginTop="20dp"
+            android:text="What We Promise"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/t9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t8"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:text="We ensure you get the lowest price, best support, variety of tour destinations and amazingly quick and secure payments!"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/t10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t9"
+            android:layout_marginTop="20dp"
+            android:text="Know More"
+            android:textColor="@color/green"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/t11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:text="Want to know more?
+Contact Us and we will let you
+in and tell you our story!"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/t12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t11"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="WE ARE INCREDIBLY"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/t13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t12"
+            android:layout_centerHorizontal="true"
+            android:text="SOCIAL!"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton_about_us"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/t13"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+
+            android:clickable="true"
+            android:elevation="5dp"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
