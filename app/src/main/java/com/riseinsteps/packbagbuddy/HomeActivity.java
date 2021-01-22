@@ -67,12 +67,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
-            case R.id.nav_explore:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploreIndiaFragment()).commit();
-                break;
-            case R.id.nav_create_tour:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateTourFragment()).commit();
-                break;
+//            case R.id.nav_explore:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploreIndiaFragment()).commit();
+//                break;
+//            case R.id.nav_create_tour:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateTourFragment()).commit();
+//                break;
             case R.id.nav_myAccount:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
                 break;
@@ -83,18 +83,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_register_as_partner:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RegisterAsPartnerFragment()).commit();
                 break;
-            case R.id.nav_find_us:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FindUsFragment()).commit();
-                break;
-            case R.id.nav_contact_us:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUsFragment()).commit();
-                break;
-            case R.id.nav_about_us:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutUsFragment()).commit();
-                break;
-            case R.id.nav_share:
-                //setting the function of sharing this app
-                break;
+//            case R.id.nav_find_us:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FindUsFragment()).commit();
+//                break;
+//            case R.id.nav_contact_us:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUsFragment()).commit();
+//                break;
+//            case R.id.nav_about_us:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutUsFragment()).commit();
+//                break;
+//            case R.id.nav_share:
+//                //setting the function of sharing this app
+//                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

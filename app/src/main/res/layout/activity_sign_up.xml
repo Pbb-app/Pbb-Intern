@@ -39,15 +39,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:inputType="text"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:backgroundTint="@android:color/transparent"
             android:hint="@string/name"
+            android:inputType="text"
             android:padding="15dp"
             android:textColor="#292929"
-            android:textColorHint="#494949"
-            android:autofillHints="" />
+            android:textColorHint="#494949" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -62,14 +62,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:inputType="textEmailAddress"
             android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:backgroundTint="@android:color/transparent"
             android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:padding="15dp"
             android:textColor="#292929"
-            android:textColorHint="#494949"
-            android:autofillHints="" />
+            android:textColorHint="#494949" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -85,14 +85,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="6dp"
-            android:inputType="textPhonetic"
             android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:backgroundTint="@android:color/transparent"
             android:hint="@string/username"
+            android:inputType="textPhonetic"
             android:padding="15dp"
             android:textColor="#292929"
-            android:textColorHint="#494949"
-            android:autofillHints="" />
+            android:textColorHint="#494949" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -108,13 +108,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:backgroundTint="@android:color/transparent"
             android:hint="@string/phone_number"
             android:inputType="phone"
             android:padding="15dp"
             android:textColor="#292929"
-            android:textColorHint="#494949"
-            android:autofillHints="" />
+            android:textColorHint="#494949" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -171,17 +171,18 @@
             android:layout_marginTop="10dp">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#DF009688"
+                android:contentDescription="@string/todo"
                 android:elevation="0dp"
                 android:src="@drawable/ic_round_arrow_forward_24"
                 app:elevation="0dp"
-                app:fabCustomSize="80dp"
-                android:contentDescription="@string/todo" />
+                app:fabCustomSize="80dp" />
 
             <TextView
                 android:layout_width="wrap_content"
