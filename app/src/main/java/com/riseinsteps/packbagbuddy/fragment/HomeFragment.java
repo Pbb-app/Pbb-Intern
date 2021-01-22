@@ -47,99 +47,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        setAdventureTripRecyclerView(view);
-        setPopularSportRecyclerView(view);
-        setBannerViewPager(view);
 
 
-        layoutAdventureTrip = view.findViewById(R.id.ll_adventure_trip);
-        layoutAdventureTrip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(container.getContext(), AdventureTripActivity.class);
-                container.getContext().startActivity(intent);
-            }
-        });
 
 
-        layoutPopularSport = view.findViewById(R.id.ll_popular_sports);
-        layoutPopularSport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), PopularSportActivity.class);
-                view.getContext().startActivity(intent);
-            }
-        });
 
         return view;
     }
 
-    private void setBannerViewPager(View view) {
-        bannerModelList = new ArrayList<>();
-        bannerModelList.add(new BannerModel(1,
-                "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg"));
-        bannerModelList.add(new BannerModel(2,
-                "https://www.packbagbuddy.com/wp-content/uploads/2019/09/16-1.jpg"));
-        bannerModelList.add(new BannerModel(3,
-                "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-1-700x450.jpg"));
-        bannerModelList.add(new BannerModel(4,
-                "https://www.packbagbuddy.com/wp-content/uploads/2019/06/hamta-700x450.jpg"));
-        bannerModelList.add(new BannerModel(5,
-                "https://www.packbagbuddy.com/wp-content/uploads/2019/09/19-700x450.jpg"));
 
-        viewPager = view.findViewById(R.id.vp_home_page_banner);
-        bannerAdapter = new BannerAdapter(bannerModelList);
-        viewPager.setAdapter(bannerAdapter);
-
-
-    }
-
-    private void setAdventureTripRecyclerView(View view) {
-        adventureTripModelList = new ArrayList<>();
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        adventureTripModelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-
-
-        adventureTripRecyclerView = view.findViewById(R.id.rv_adventure_trips);
-        adventureTripRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
-        adventureTripAdapter = new AdventureTripAdapter(adventureTripModelList);
-        adventureTripRecyclerView.setAdapter(adventureTripAdapter);
-    }
-
-    private void setPopularSportRecyclerView(View view) {
-        popularSportModelList = new ArrayList<>();
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-        popularSportModelList.add(new PopularSportModel(1, "https://www.packbagbuddy.com/wp-content/uploads/2018/10/1-1-800x681.jpg",
-                "Trekking", 11));
-
-        popularSportRecyclerView = view.findViewById(R.id.rv_popular_sports);
-        popularSportRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
-        popularSportAdapter = new PopularSportAdapter(popularSportModelList);
-        popularSportRecyclerView.setAdapter(popularSportAdapter);
-    }
 }
