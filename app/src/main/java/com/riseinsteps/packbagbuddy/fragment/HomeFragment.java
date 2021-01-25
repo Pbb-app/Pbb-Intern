@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.riseinsteps.packbagbuddy.AdventureTripActivity;
-import com.riseinsteps.packbagbuddy.PopularSportActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.BannerAdapter;
