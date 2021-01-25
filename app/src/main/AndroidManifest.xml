@@ -11,14 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".TermsAndConditionActivity"></activity>
+        <activity android:name=".CreateTourActivity"></activity>
+        <activity android:name=".TermsAndConditionActivity" />
         <activity android:name=".LegalPolicyActivity" />
         <activity android:name=".CopyRightPolicyActivity" />
         <activity android:name=".CancellationAndRefundPolicyActivity" />
         <activity android:name=".PrivacyPolicyActivity" />
         <activity android:name=".LeaveYourInfo" />
         <activity android:name=".model.RulesAndRegulations" />
-        <activity android:name=".UserForgotPassword"></activity>
+        <activity android:name=".UserForgotPassword" />
         <activity android:name=".ItineraryActivity" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />

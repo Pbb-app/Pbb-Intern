@@ -11,12 +11,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.riseinsteps.packbagbuddy.fragment.AboutUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.CancelBookingFragment;
-import com.riseinsteps.packbagbuddy.fragment.ContactUsFragment;
-import com.riseinsteps.packbagbuddy.fragment.CreateTourFragment;
-import com.riseinsteps.packbagbuddy.fragment.ExploreIndiaFragment;
-import com.riseinsteps.packbagbuddy.fragment.FindUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
 import com.riseinsteps.packbagbuddy.fragment.MyAccountFragment;
 import com.riseinsteps.packbagbuddy.fragment.RegisterAsPartnerFragment;
