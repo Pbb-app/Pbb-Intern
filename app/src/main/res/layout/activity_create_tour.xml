@@ -1,9 +1,335 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateTourActivity">
+    android:background="@drawable/layoutbg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="false">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Your Own Tour!"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="#292929"
+        android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full name :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/etbackground"
+            android:ems="10"
+            android:textColor="#292929"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Location :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etYourLocation"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length of Stay :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:id="@+id/spLengthofStay"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. of people :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etNumberofPeople"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:hint="for eg. 7"
+            android:background="@drawable/etbackground"
+            android:textColor="#292929"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approx. budget(₹) per person:"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginLeft="20dp"
+            android:hint="for eg. 5000"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:background="@drawable/etbackground"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferred Accommodation :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:id="@+id/spAccommodation"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode of Travel :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/radio_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus"
+                android:textColor="#292929"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/radio_train"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Train"
+                android:textSize="18dp"
+                android:textColor="#292929"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/radio_flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flight"
+                android:textSize="18dp"
+                android:textColor="#292929"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/radio_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car, Jeep, etc."
+                android:textSize="18dp"
+                android:textColor="#292929"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other - Please specify under details"
+                android:textSize="18dp"
+                android:textColor="#292929"
+                android:onClick="onRadioButtonClicked"/>
+
+            </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggested Activities :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etSuggestedActivities"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/etbackground"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diving, trekking, etc."
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:textColor="#292929"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other Details :"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etOtherDetails"
+            android:layout_width="370dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:textColor="#292929"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/etbackground"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#292929"
+            android:backgroundTint="@color/colorTrendingStart"
+            android:layout_marginBottom="25dp"
+            android:text="Submit" />
+
+
+    </LinearLayout>
+</ScrollView>
