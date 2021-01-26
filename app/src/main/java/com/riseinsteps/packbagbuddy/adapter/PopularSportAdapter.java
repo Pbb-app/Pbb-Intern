@@ -11,27 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.riseinsteps.packbagbuddy.AdventureTripDetailActivity;
 import com.riseinsteps.packbagbuddy.PopularSportDetailActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.PopularSportModel;
 
 import java.util.List;
 
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.AVAILABILITYMONTH;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.DAYS;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.DESC;
 import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.ID;
 import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.IMAGEURL;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.NAMEOFSTATE;
 import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.NUMBEROFTOURS;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.RATING;
 import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.SPORTNAME;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPDEFAULTPRICE;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPDISCOUNTPERCENTAGE;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPIMAGEURL;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPNAME;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.TRIPSPECIALPRICE;
 
 public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapter.ViewHolder> {
 
@@ -54,9 +43,6 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
                 popularSportModelList.get(position).getNumberOfTours());
 
 
-
-
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,12 +56,6 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
                 holder.itemView.getContext().startActivity(intent);
             }
         });
-
-
-
-
-
-
 
 
     }

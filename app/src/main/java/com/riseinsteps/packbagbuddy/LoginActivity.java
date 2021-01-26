@@ -2,11 +2,8 @@ package com.riseinsteps.packbagbuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +17,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputLayout userEmail;
@@ -34,11 +30,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        userEmail =  findViewById(R.id.et_emailAddress);
+        userEmail = findViewById(R.id.et_emailAddress);
         userPassword = findViewById(R.id.et_password);
-        userSignIn =  findViewById(R.id.fab_signIn);
+        userSignIn = findViewById(R.id.fab_signIn);
         userSignUp = findViewById(R.id.tv_SignUp);
-        userForgotPassword =  findViewById(R.id.tv_ForgotPassword);
+        userForgotPassword = findViewById(R.id.tv_ForgotPassword);
 
 
         // handle the user signIn
@@ -85,9 +81,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void signIn(String email, String password)
-    {
-        mAuth=FirebaseAuth.getInstance();
+    private void signIn(String email, String password) {
+        mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

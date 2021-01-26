@@ -3,7 +3,6 @@ package com.riseinsteps.packbagbuddy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,17 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.riseinsteps.packbagbuddy.model.User;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private TextInputLayout name, email,  phoneNumber, password, confirmPassword;
+    private TextInputLayout name, email, phoneNumber, password, confirmPassword;
 
     private FirebaseAuth mAuth;
 

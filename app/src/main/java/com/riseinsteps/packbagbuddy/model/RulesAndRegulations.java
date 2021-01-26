@@ -2,15 +2,15 @@ package com.riseinsteps.packbagbuddy.model;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.riseinsteps.packbagbuddy.ExampleItem;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.RARAdapter;
 
 import java.util.ArrayList;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class RulesAndRegulations extends AppCompatActivity {
 

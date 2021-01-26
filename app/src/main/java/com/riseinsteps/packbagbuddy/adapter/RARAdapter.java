@@ -5,29 +5,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.riseinsteps.packbagbuddy.ExampleItem;
 import com.riseinsteps.packbagbuddy.R;
 
 import java.util.ArrayList;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-public class RARAdapter extends RecyclerView.Adapter<RARAdapter.ExampleViewHolder>{
+public class RARAdapter extends RecyclerView.Adapter<RARAdapter.ExampleViewHolder> {
 
     private ArrayList<ExampleItem> mExampleList;
 
-    public static class ExampleViewHolder extends RecyclerView.ViewHolder{
-
-        public TextView mTextView1;
-
-        public ExampleViewHolder(@NonNull View itemView) {
-            super(itemView);
-            mTextView1 = itemView.findViewById(R.id.textview);
-        }
-    }
-
-    public RARAdapter(ArrayList<ExampleItem> exampleList){
+    public RARAdapter(ArrayList<ExampleItem> exampleList) {
         mExampleList = exampleList;
     }
 
@@ -50,5 +40,15 @@ public class RARAdapter extends RecyclerView.Adapter<RARAdapter.ExampleViewHolde
     @Override
     public int getItemCount() {
         return mExampleList.size();
+    }
+
+    public static class ExampleViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView mTextView1;
+
+        public ExampleViewHolder(@NonNull View itemView) {
+            super(itemView);
+            mTextView1 = itemView.findViewById(R.id.textview);
+        }
     }
 }

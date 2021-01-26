@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
@@ -22,13 +21,10 @@ import com.riseinsteps.packbagbuddy.ExploreIndiaActivity;
 import com.riseinsteps.packbagbuddy.LatestOffersActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
-import com.riseinsteps.packbagbuddy.adapter.BannerAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
 import com.riseinsteps.packbagbuddy.model.AdventureTripModel;
-import com.riseinsteps.packbagbuddy.model.BannerModel;
 import com.riseinsteps.packbagbuddy.model.PopularSportModel;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
