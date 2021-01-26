@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".ExploreIndiaActivity"></activity>
+        <activity android:name=".AllPopularSportActivity"></activity>
+        <activity android:name=".AllAdventureTripActivity" />
+        <activity android:name=".LatestOffersActivity" />
+        <activity android:name=".BookingsActivity" />
+        <activity android:name=".ExploreIndiaActivity" />
         <activity android:name=".CreateTourActivity" />
         <activity android:name=".TermsAndConditionActivity" />
         <activity android:name=".LegalPolicyActivity" />

@@ -46,27 +46,12 @@ public class AdventureTripAdapter extends RecyclerView.Adapter<AdventureTripAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.setData(modelList.get(position).getTripImageURL(), modelList.get(position).getTripName(), modelList.get(position)
-                .getTripDiscountPercentage());
+        holder.setData(modelList.get(position).getTripImageURL(), modelList.get(position).getTripName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), AdventureTripDetailActivity.class);
 
-                intent.putExtra(String.valueOf(ID), modelList.get(position).getId());
-                intent.putExtra(TRIPNAME, modelList.get(position).getTripName());
-                intent.putExtra(TRIPDEFAULTPRICE, modelList.get(position).getTripDefaultPrice());
-                intent.putExtra(TRIPSPECIALPRICE, modelList.get(position).getTripSpecialPrice());
-                intent.putExtra(TRIPIMAGEURL, modelList.get(position).getTripImageURL());
-                intent.putExtra(DESC, modelList.get(position).getDescription());
-                intent.putExtra(DAYS, modelList.get(position).getDays());
-                intent.putExtra(NAMEOFSTATE, modelList.get(position).getNameOfState());
-                intent.putExtra(AVAILABILITYMONTH, modelList.get(position).getAvailabilityMonth());
-                intent.putExtra(RATING, modelList.get(position).getRating());
-                intent.putExtra(TRIPDISCOUNTPERCENTAGE, modelList.get(position).getTripDiscountPercentage());
-
-                holder.itemView.getContext().startActivity(intent);
             }
         });
     }
@@ -78,20 +63,17 @@ public class AdventureTripAdapter extends RecyclerView.Adapter<AdventureTripAdap
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView adventureTripImage;
-        private TextView specialDiscount;
-        private TextView tripName;
+        private TextView adventureTripName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             adventureTripImage = itemView.findViewById(R.id.iv_adventure_trip_image);
-            specialDiscount = itemView.findViewById(R.id.tv_adventure_trip_discount);
-            tripName = itemView.findViewById(R.id.tv_rip_detail_name);
+            adventureTripName = itemView.findViewById(R.id.tv_adventure_trip_name);
         }
 
-        private void setData(final String imageURL, final String name, final int Discount) {
+        private void setData(final String imageURL, final String name) {
             Glide.with(itemView.getContext()).load(imageURL).into(adventureTripImage);
-            tripName.setText(name);
-            specialDiscount.setText("Flat Rs." + Discount + " OFF");
+            adventureTripName.setText(name);
         }
     }
 }

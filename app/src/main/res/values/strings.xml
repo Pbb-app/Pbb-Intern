@@ -453,4 +453,5 @@ If you have any questions about these Terms or any App Store Sourced Application
     <string name="username">Username</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
+    <string name="search_elements">Search elements</string>
 </resources>

@@ -32,7 +32,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="Search elements"
+                android:hint="@string/search_elements"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:paddingStart="15dp"
@@ -86,10 +86,9 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="115dp"
+                    android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:padding="8dp"
                     android:src="@drawable/exploreindia"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="48dp"
@@ -123,10 +122,9 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="115dp"
+                    android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:padding="8dp"
                     android:src="@drawable/tours"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="48dp"
@@ -160,10 +158,9 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="115dp"
+                    android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:padding="8dp"
                     android:src="@drawable/bookonline"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="48dp"
@@ -197,10 +194,9 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="115dp"
+                    android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:padding="8dp"
                     android:src="@drawable/latestoffers"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="48dp"
@@ -242,7 +238,7 @@
                         android:paddingStart="16dp"
                         android:text="@string/adventure_trip"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/tv_view_all_adventure_trips"
@@ -254,7 +250,7 @@
                         android:paddingEnd="16dp"
                         android:text="@string/see_all"
                         android:textColor="#278DB5"
-                        android:textSize="14sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -263,6 +259,8 @@
                     android:id="@+id/rv_adventure_trips"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     tools:ignore="MissingConstraints" />
 
             </LinearLayout>
@@ -291,7 +289,7 @@
                         android:paddingStart="16dp"
                         android:text="@string/popular_sports"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/tv_view_all_popularSports"
@@ -303,7 +301,7 @@
                         android:paddingEnd="16dp"
                         android:text="@string/see_all"
                         android:textColor="#278DB5"
-                        android:textSize="14sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -312,7 +310,8 @@
                     android:id="@+id/rv_popular_sports"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     tools:ignore="MissingConstraints" />
 
             </LinearLayout>
