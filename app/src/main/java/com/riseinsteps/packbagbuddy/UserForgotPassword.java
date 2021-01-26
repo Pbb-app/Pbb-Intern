@@ -12,11 +12,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class UserForgotPassword extends AppCompatActivity
 {
-    EditText enteredEmail;
+    TextInputLayout enteredEmail;
     Button send;
     FirebaseAuth firebaseAuth;
 
@@ -31,7 +32,7 @@ public class UserForgotPassword extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                String userEmail= enteredEmail.getText().toString().trim();
+                String userEmail= enteredEmail.getEditText().getText().toString().trim();
                 if(userEmail.equals(""))
                 {
                     Toast.makeText(UserForgotPassword.this,"Enter Your Registered E-mail Id",Toast.LENGTH_SHORT).show();

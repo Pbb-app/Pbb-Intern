@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -20,7 +21,7 @@ import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText name, email, username, phoneNumber, password, confirmPassword;
+    private TextInputLayout name, email,  phoneNumber, password, confirmPassword;
 
     private FirebaseAuth mAuth;
 
@@ -31,33 +32,29 @@ public class SignUpActivity extends AppCompatActivity {
 
         name = findViewById(R.id.et_username);
         email = findViewById(R.id.et_emailAddress);
-        username = findViewById(R.id.et_userID);
         phoneNumber = findViewById(R.id.et_phone_number);
         password = findViewById(R.id.et_password);
         confirmPassword = findViewById(R.id.et_confirmPassword);
         FloatingActionButton userSignUp = findViewById(R.id.fab_signUp);
 
         userSignUp.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(name.getText().toString().trim())) {
+            if (TextUtils.isEmpty(name.getEditText().getText().toString().trim())) {
                 name.setError("Please fill the name");
-            } else if (TextUtils.isEmpty(email.getText().toString().trim())) {
+            } else if (TextUtils.isEmpty(email.getEditText().getText().toString().trim())) {
                 email.setError("Email Required for SignUp");
-            } else if (TextUtils.isEmpty(username.getText().toString().trim())) {
-                username.setError("Username Required for SignUp");
-            } else if (TextUtils.isEmpty(phoneNumber.getText().toString().trim())) {
+            } else if (TextUtils.isEmpty(phoneNumber.getEditText().getText().toString().trim())) {
                 phoneNumber.setError("Phone Number Required for SignUp");
-            } else if (TextUtils.isEmpty(password.getText().toString())) {
+            } else if (TextUtils.isEmpty(password.getEditText().getText().toString().trim())) {
                 password.setError("Password Required for SignUp");
-            } else if (TextUtils.isEmpty(confirmPassword.getText().toString())) {
+            } else if (TextUtils.isEmpty(confirmPassword.getEditText().getText().toString().trim())) {
                 confirmPassword.setError("Please Enter confirm password");
-            } else if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
+            } else if (!password.getEditText().getText().toString().trim().equals(confirmPassword.getEditText().getText().toString().trim())) {
                 confirmPassword.setError("Password not match");
             } else {
-                String tempName = name.getText().toString().trim();
-                String tempUserName = username.getText().toString().trim();
-                String tempPhn = phoneNumber.getText().toString().trim();
-                String tempEmail = email.getText().toString().trim().toLowerCase();
-                String tempPwd = password.getText().toString();
+                String tempName = name.getEditText().getText().toString().trim();
+                String tempPhn = phoneNumber.getEditText().getText().toString().trim();
+                String tempEmail = email.getEditText().getText().toString().trim();
+                String tempPwd = password.getEditText().getText().toString().trim();
 
                 //getting the firebase instance
                 mAuth = FirebaseAuth.getInstance();
