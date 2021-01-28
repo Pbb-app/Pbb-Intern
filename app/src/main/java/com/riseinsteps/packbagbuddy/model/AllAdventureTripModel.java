@@ -1,16 +1,16 @@
 package com.riseinsteps.packbagbuddy.model;
 
-public class PopularSportModel
+ public class AllAdventureTripModel
 {
     String image;
     String title;
     float rating;
     String cost;
 
-    public PopularSportModel()
+    public AllAdventureTripModel()
     {}
 
-    public PopularSportModel(String image,String title,float rating,String cost)
+    public AllAdventureTripModel(String image,String title,float rating,String cost)
     {
         this.image=image;
         this.title=title;

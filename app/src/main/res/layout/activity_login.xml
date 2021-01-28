@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/splashnew">
+    android:background="@drawable/background_login_signup">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -107,7 +107,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#6a492b"
+            android:backgroundTint="#2d3142"
             android:elevation="0dp"
             android:src="@drawable/ic_round_arrow_forward_24"
             app:elevation="0dp"
