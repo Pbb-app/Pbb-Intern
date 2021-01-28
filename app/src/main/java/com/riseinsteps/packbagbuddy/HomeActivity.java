@@ -11,8 +11,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.riseinsteps.packbagbuddy.fragment.AboutUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.CancelBookingFragment;
+import com.riseinsteps.packbagbuddy.fragment.ContactUsFragment;
 import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
+import com.riseinsteps.packbagbuddy.fragment.LegalPolicyFragment;
 import com.riseinsteps.packbagbuddy.fragment.MyAccountFragment;
 import com.riseinsteps.packbagbuddy.fragment.RegisterAsPartnerFragment;
 
@@ -63,22 +66,47 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.nav_home:
                 getSupportActionBar().setTitle("Home");
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
+
+//            case R.id.nav_bookings:
+//                getSupportActionBar().setTitle("Your Bookings");
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BookingFragment()).commit();
+//                break;
 //
-            case R.id.nav_myAccount:
-                getSupportActionBar().setTitle("My Account");
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
-                break;
             case R.id.nav_cancel_booking:
                 getSupportActionBar().setTitle("Cancel Booking");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CancelBookingFragment()).commit();
                 break;
 
+            case R.id.nav_myAccount:
+                getSupportActionBar().setTitle("My Account");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
+                break;
+
+//            case R.id.nav_report_problem:
+//                getSupportActionBar().setTitle("Report Problem");
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportProblemFragment()).commit();
+//                break;
+
             case R.id.nav_register_as_partner:
                 getSupportActionBar().setTitle("Register as Partner");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RegisterAsPartnerFragment()).commit();
+                break;
+
+            case R.id.nav_legal_policy:
+                getSupportActionBar().setTitle("Legal Policies");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LegalPolicyFragment()).commit();
+                break;
+
+            case R.id.nav_contact_us:
+                getSupportActionBar().setTitle("Contact Us");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUsFragment()).commit();
+                break;
+
+            case R.id.nav_about_us:
+                getSupportActionBar().setTitle("About Us");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutUsFragment()).commit();
                 break;
 
         }

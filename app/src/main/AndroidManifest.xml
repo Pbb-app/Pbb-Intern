@@ -22,9 +22,6 @@
             android:name=".TermsAndConditionActivity"
             android:parentActivityName=".LegalPolicyActivity" />
         <activity
-            android:name=".LegalPolicyActivity"
-            android:parentActivityName=".HomeActivity" />
-        <activity
             android:name=".CopyRightPolicyActivity"
             android:parentActivityName=".LegalPolicyActivity" />
         <activity

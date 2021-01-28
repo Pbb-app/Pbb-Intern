@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.riseinsteps.packbagbuddy.fragment.LegalPolicyFragment;
+
 public class TermsAndConditionActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -25,7 +27,7 @@ public class TermsAndConditionActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Intent intent = new Intent(TermsAndConditionActivity.this, LegalPolicyActivity.class);
+        Intent intent = new Intent(TermsAndConditionActivity.this, LegalPolicyFragment.class);
         startActivity(intent);
         finish();
         return true;

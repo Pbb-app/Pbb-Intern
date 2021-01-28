@@ -22,7 +22,6 @@ import com.riseinsteps.packbagbuddy.ChatBot;
 import com.riseinsteps.packbagbuddy.CreateTourActivity;
 import com.riseinsteps.packbagbuddy.ExploreIndiaActivity;
 import com.riseinsteps.packbagbuddy.LatestOffersActivity;
-import com.riseinsteps.packbagbuddy.LegalPolicyActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
@@ -35,7 +34,7 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     private View view;
 
-    private LinearLayout ExploreIndia, CreateTour, Policies, LatestOffers;
+    private LinearLayout ExploreIndia, CreateTour, LatestOffers;
     private LinearLayout AllAdventureTrips, AllPopularSports;
 
     private List<AdventureTripModel> adventureTripModelList;
@@ -54,7 +53,6 @@ public class HomeFragment extends Fragment {
 
         ExploreIndia = view.findViewById(R.id.layoutExploreIndia);
         CreateTour = view.findViewById(R.id.layoutCreateTour);
-        Policies = view.findViewById(R.id.layoutBookings);
         LatestOffers = view.findViewById(R.id.layoutOffers);
 
 
@@ -74,13 +72,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Policies.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent bookings = new Intent(view.getContext(), LegalPolicyActivity.class);
-                view.getContext().startActivity(bookings);
-            }
-        });
 
         LatestOffers.setOnClickListener(new View.OnClickListener() {
             @Override

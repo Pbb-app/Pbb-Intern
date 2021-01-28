@@ -209,18 +209,6 @@ in and tell you our story!"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton_about_us"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/t13"
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
-
-            android:clickable="true"
-            android:elevation="5dp"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
-
 
 
     </RelativeLayout>
