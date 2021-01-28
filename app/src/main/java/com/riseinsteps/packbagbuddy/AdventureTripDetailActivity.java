@@ -43,7 +43,6 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
 
         setTripViewPager();
 
-        tripName = findViewById(R.id.tv_trip_detail_name);
         tripName.setText(getIntent().getStringExtra(TRIPNAME));
 
 
@@ -54,7 +53,6 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
     }
 
     private void setOtherTourDetailsRecyclerView() {
-        otherTourDetailsRecyclerView = findViewById(R.id.rv_other_tour_details);
         otherTourDetailsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         otherTourDetailsModelList = new ArrayList<>();
         otherTourDetailsModelList.add(new OtherTourDetailsModel("Tour Duration", "5 Days, 4 Nights"));
@@ -71,7 +69,6 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
     }
 
     private void setTourDetailsRecyclerVie() {
-        tourDetailsRecyclerView = findViewById(R.id.rv_trip_detail);
         tourDetailsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         tourDetailsModelList = new ArrayList<>();
         tourDetailsModelList.add(new TourDetailsModel("https://www.flaticon.com/svg/vstatic/svg/1124/1124602.svg?token=exp=1610480404~hmac=dfeca12bbc243fec5246c0379355b7d9"
@@ -86,7 +83,6 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
     }
 
     private void setTripViewPager() {
-        TripViewPager = findViewById(R.id.vp_trip_gallery);
         modelList = new ArrayList<>();
         modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
                 , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",

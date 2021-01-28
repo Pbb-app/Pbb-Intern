@@ -6,11 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".LegalPolicyActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/search_home_page_bg"
         android:orientation="vertical"
-        android:background="@drawable/search_home_page_bg">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
@@ -21,77 +44,80 @@
                 android:id="@+id/imageLegalPolicy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/sunrise_image"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"/>
+                android:contentDescription="@string/todo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sunrise_image" />
 
             <TextView
                 android:id="@+id/legalPolicy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="40dp"
-                android:text="Legal Policies"
+                android:text="@string/legal_policies"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
         </FrameLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/legal1"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif"
-            android:id="@+id/textlegal"
-            ></TextView>
 
         <TextView
+            android:id="@+id/textlegal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
-            android:text="@string/legal2"
+            android:fontFamily="sans-serif"
+            android:text="@string/legal1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_terms_and_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="30dp"
             android:clickable="true"
-            android:textSize="15sp"
+            android:focusable="true"
             android:fontFamily="sans-serif"
-            android:id="@+id/textlegal2"
-            android:textColor="@color/teal_700" />
+            android:text="@string/legal2"
+            android:textColor="@color/teal_700"
+            android:textSize="15sp" />
+
         <TextView
+            android:id="@+id/tv_copyright_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:fontFamily="sans-serif"
             android:text="@string/legal3"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif"
-            android:id="@+id/textlegal3"
             android:textColor="@color/teal_700"
-            ></TextView>
+            android:textSize="15sp" />
+
         <TextView
+            android:id="@+id/tv_privacy_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:textColor="@color/teal_700"
+            android:fontFamily="sans-serif"
             android:text="@string/legal4"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif"
-            android:id="@+id/textlegal4"
-            ></TextView>
+            android:textColor="@color/teal_700"
+            android:textSize="15sp" />
+
         <TextView
+            android:id="@+id/tv_cancellation_and_refund"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:textColor="@color/teal_700"
-            android:text="@string/legal5"
-            android:textSize="15sp"
             android:fontFamily="sans-serif"
-            android:id="@+id/textlegal5"
-            ></TextView>
+            android:text="@string/legal5"
+            android:textColor="@color/teal_700"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,9 @@ package com.riseinsteps.packbagbuddy.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -15,10 +18,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
-import com.riseinsteps.packbagbuddy.BookingsActivity;
+import com.riseinsteps.packbagbuddy.ChatBot;
 import com.riseinsteps.packbagbuddy.CreateTourActivity;
 import com.riseinsteps.packbagbuddy.ExploreIndiaActivity;
 import com.riseinsteps.packbagbuddy.LatestOffersActivity;
+import com.riseinsteps.packbagbuddy.LegalPolicyActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
@@ -29,8 +33,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
+    private View view;
 
-    private LinearLayout ExploreIndia, CreateTour, Bookings, LatestOffers;
+    private LinearLayout ExploreIndia, CreateTour, Policies, LatestOffers;
     private LinearLayout AllAdventureTrips, AllPopularSports;
 
     private List<AdventureTripModel> adventureTripModelList;
@@ -44,11 +49,12 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+        setHasOptionsMenu(true);
 
         ExploreIndia = view.findViewById(R.id.layoutExploreIndia);
         CreateTour = view.findViewById(R.id.layoutCreateTour);
-        Bookings = view.findViewById(R.id.layoutBookings);
+        Policies = view.findViewById(R.id.layoutBookings);
         LatestOffers = view.findViewById(R.id.layoutOffers);
 
 
@@ -68,10 +74,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Bookings.setOnClickListener(new View.OnClickListener() {
+        Policies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent bookings = new Intent(view.getContext(), BookingsActivity.class);
+                Intent bookings = new Intent(view.getContext(), LegalPolicyActivity.class);
                 view.getContext().startActivity(bookings);
             }
         });
@@ -166,4 +172,23 @@ public class HomeFragment extends Fragment {
         popularSportRecyclerView.setAdapter(popularSportAdapter);
     }
 
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.home_screen_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_chatbot:
+                Intent intent = new Intent(view.getContext(), ChatBot.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
 }

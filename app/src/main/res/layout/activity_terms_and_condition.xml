@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TermsAndConditionActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:scrollbarSize="5sp"
-        tools:context=".TermsAndConditions"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
+        tools:context=".TermsAndConditions">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
@@ -27,15 +48,14 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/imageTnC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/todo"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sunrise_image" />
 
                 <TextView
-                    android:id="@+id/tnc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
@@ -47,7 +67,7 @@
             </FrameLayout>
 
             <TextView
-                android:id="@+id/texttnc"
+                android:id="@+id/tv_terms_and_conditions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -55,50 +75,51 @@
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc1"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
 
             <TextView
-                android:id="@+id/texttnc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc2"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
 
             <TextView
-                android:id="@+id/texttnc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc3"
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/texttnc4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc4"
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/texttnc5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc5"
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/texttnc6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -108,10 +129,11 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/texttnc7"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/tnc7"

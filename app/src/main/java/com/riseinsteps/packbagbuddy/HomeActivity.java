@@ -26,8 +26,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.include_toolbar);
         setSupportActionBar(toolbar);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -40,6 +41,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
+            getSupportActionBar().setTitle("Home");
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
@@ -60,39 +62,31 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
+                getSupportActionBar().setTitle("Home");
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
-//            case R.id.nav_explore:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExploreIndiaFragment()).commit();
-//                break;
-//            case R.id.nav_create_tour:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateTourFragment()).commit();
-//                break;
+//
             case R.id.nav_myAccount:
+                getSupportActionBar().setTitle("My Account");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
                 break;
             case R.id.nav_cancel_booking:
+                getSupportActionBar().setTitle("Cancel Booking");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CancelBookingFragment()).commit();
                 break;
 
             case R.id.nav_register_as_partner:
+                getSupportActionBar().setTitle("Register as Partner");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RegisterAsPartnerFragment()).commit();
                 break;
-//            case R.id.nav_find_us:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FindUsFragment()).commit();
-//                break;
-//            case R.id.nav_contact_us:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUsFragment()).commit();
-//                break;
-//            case R.id.nav_about_us:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutUsFragment()).commit();
-//                break;
-//            case R.id.nav_share:
-//                //setting the function of sharing this app
-//                break;
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }

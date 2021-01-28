@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class CreateTourActivity extends AppCompatActivity {
 
