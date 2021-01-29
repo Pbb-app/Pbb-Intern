@@ -35,14 +35,13 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_adventrous_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.popular_sport_row, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.setData(popularSportModelList.get(position).getImageUrl(), popularSportModelList.get(position).getName(),
-                popularSportModelList.get(position).getCost(), popularSportModelList.get(position).getRating());
+        holder.setData(popularSportModelList.get(position).getImageUrl(), popularSportModelList.get(position).getName());
 
 
 
@@ -56,23 +55,17 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView popularSportImage;
         private TextView title;
-        private TextView costtv;
-        private RatingBar ratingBar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            popularSportImage = itemView.findViewById(R.id.adventrous_image);
-            title = itemView.findViewById(R.id.adventrous_title);
-            costtv = itemView.findViewById(R.id.adventrous_cost);
-            ratingBar = itemView.findViewById(R.id.adventure_trip_rating);
+            popularSportImage = itemView.findViewById(R.id.iv_popular_sports_image);
+            title = itemView.findViewById(R.id.tv_sport_name);
         }
 
-        private void setData(final String imageURL, final String name, final String cost, final float rating ) {
+        private void setData(final String imageURL, final String name) {
             Glide.with(itemView.getContext()).load(imageURL).into(popularSportImage);
             title.setText(name);
-            costtv.setText(cost);
-            ratingBar.setRating(rating);
         }
     }
 }

@@ -30,7 +30,8 @@ public class AdventureTripActivity extends AppCompatActivity {
         setAllAdventureTripAdapter();
     }
 
-    private void setAllAdventureTripAdapter() {
+    private void setAllAdventureTripAdapter()
+    {
 
 
     }
