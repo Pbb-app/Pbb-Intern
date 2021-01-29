@@ -12,6 +12,16 @@
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
 
+        <item
+            android:id="@+id/nav_bookings"
+            android:icon="@drawable/booking"
+            android:title="Bookings" />
+
+
+        <item
+            android:id="@+id/nav_cancel_booking"
+            android:icon="@drawable/ic_cancel_booking"
+            android:title="Cancel Booking" />
 
         <item
             android:id="@+id/nav_myAccount"
@@ -19,15 +29,19 @@
             android:title="My Account" />
 
         <item
-            android:id="@+id/nav_cancel_booking"
-            android:icon="@drawable/ic_cancel_booking"
-            android:title="Bookings" />
+            android:id="@+id/nav_report_problem"
+            android:icon="@drawable/report_problem"
+            android:title="Report a Problem" />
 
         <item
             android:id="@+id/nav_register_as_partner"
             android:icon="@drawable/ic_register_as_partner"
             android:title="Register as Partner" />
 
+        <item
+            android:id="@+id/nav_legal_policy"
+            android:icon="@drawable/ic_policy"
+            android:title="Legal Policy" />
 
 
         <item
@@ -35,6 +49,10 @@
             android:icon="@drawable/ic_contact_us"
             android:title="Contact Us" />
 
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About Us" />
 
 
     </group>

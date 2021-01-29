@@ -55,7 +55,7 @@
     <string name="campfire">Campfire</string>
     <string name="view_details">view details</string>
     <string name="title">Title</string>
-    <string name="register">Register</string>
+    <string name="register">Register as Partner</string>
     <string name="city">City</string>
     <string name="web">Web</string>
     <string name="comp">Comp</string>
@@ -243,11 +243,10 @@ Policies are generally adopted by a governance body within an organization.
         <u>Terms and Conditions</u>
     </string>
     <string name="legal3">
-        \n <u>Copyright Policy</u></string>
-    <string name="legal4">
-        \n <u>Privacy Policy</u></string>
+        <u>Copyright Policy</u></string>
+    <string name="legal4"><u>Privacy Policy</u></string>
     <string name="legal5">
-\n <u>Cancellations and Refunds
+<u>Cancellations and Refunds
     </u>
     </string>
 
@@ -454,4 +453,6 @@ If you have any questions about these Terms or any App Store Sourced Application
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="search_elements">Search elements</string>
+    <string name="policies">Policies</string>
+    <string name="legal_policies">Legal Policies</string>
 </resources>

@@ -55,7 +55,7 @@
             <RatingBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/adventrous_rating"
+                android:id="@+id/adventure_trip_rating"
                 android:layout_marginTop="5dp"
                 android:numStars="5"
                 android:rating="4.5"
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rs. 1000"
-                android:textStyle="bold||italic"
+                android:textStyle="bold|italic"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:id="@+id/adventrous_cost"

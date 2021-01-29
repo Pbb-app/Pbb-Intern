@@ -1,14 +1,14 @@
 package com.riseinsteps.packbagbuddy;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LegalPolicyActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class ChatBot extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_legal_policy);
+        setContentView(R.layout.activity_chat_bot);
     }
 }

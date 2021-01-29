@@ -1,52 +1,47 @@
 package com.riseinsteps.packbagbuddy.model;
 
-public class PopularSportModel
-{
-    String image;
-    String title;
-    float rating;
-    String cost;
+public class PopularSportModel {
+    private int id;
+    private String imageURL;
+    private String sportName;
+    private int numberOfTours;
 
-    public PopularSportModel()
-    {}
-
-    public PopularSportModel(String image,String title,float rating,String cost)
-    {
-        this.image=image;
-        this.title=title;
-        this.rating=rating;
-        this.cost=cost;
+    public PopularSportModel(int id, String imageURL, String sportName, int numberOfTours) {
+        this.id = id;
+        this.imageURL = imageURL;
+        this.sportName = sportName;
+        this.numberOfTours = numberOfTours;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public int getNumberOfTours() {
+        return numberOfTours;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNumberOfTours(int numberOfTours) {
+        this.numberOfTours = numberOfTours;
     }
 
-    public void setRating(float rating) {
-        this.rating = rating;
+    public int getId() {
+        return id;
     }
 
-    public void setCost(String cost) {
-        this.cost = cost;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public String getTitle() {
-        return title;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
-    public float getRating() {
-        return rating;
+    public String getSportName() {
+        return sportName;
     }
 
-    public String getCost() {
-        return cost;
+    public void setSportName(String sportName) {
+        this.sportName = sportName;
     }
 }

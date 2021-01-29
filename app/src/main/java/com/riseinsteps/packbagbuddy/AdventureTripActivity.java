@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter;
-import com.riseinsteps.packbagbuddy.model.AdventureTripModel;
+import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdventureTripActivity extends AppCompatActivity {
     private RecyclerView adventureTripRecycleView;
-    private List<AdventureTripModel> modelList;
+    private List<TripModel> modelList;
     private AllAdventureTripAdapter tripAdapter;
     private Toolbar toolbar;
 
@@ -31,41 +31,7 @@ public class AdventureTripActivity extends AppCompatActivity {
     }
 
     private void setAllAdventureTripAdapter() {
-        adventureTripRecycleView = findViewById(R.id.rv_all_adventure_trips);
-        adventureTripRecycleView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        modelList = new ArrayList<>();
 
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-        modelList.add(new AdventureTripModel(1, "KedarNath Tour", "fsdhfsdhsdg", "8"
-                , 12458, 10245, "https://www.packbagbuddy.com/wp-content/uploads/2020/10/Kedarnath-Dham-Yatra-700x411.jpg",
-                "Uttarakhand", 2000, "OCt-NOV", 4.7f));
-
-
-        tripAdapter = new AllAdventureTripAdapter(modelList);
-        adventureTripRecycleView.setAdapter(tripAdapter);
 
     }
 }

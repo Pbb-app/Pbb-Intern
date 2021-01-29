@@ -10,16 +10,16 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.riseinsteps.packbagbuddy.R;
-import com.riseinsteps.packbagbuddy.model.AdventureTripModel;
+import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.List;
 
 public class TripDetailsAdapter extends PagerAdapter {
 
-    private List<AdventureTripModel> modelList;
+    private List<TripModel> modelList;
 
 
-    public TripDetailsAdapter(List<AdventureTripModel> modelList) {
+    public TripDetailsAdapter(List<TripModel> modelList) {
         this.modelList = modelList;
     }
 
@@ -39,7 +39,7 @@ public class TripDetailsAdapter extends PagerAdapter {
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.trip_gallery_banner, container, false);
 
         ImageView tripPhotos = view.findViewById(R.id.iv_trip_images);
-        Glide.with(container.getContext()).load(modelList.get(position).getTripImageURL()).into(tripPhotos);
+        Glide.with(container.getContext()).load(modelList.get(position).getImageUrl()).into(tripPhotos);
         container.addView(view);
         return view;
     }

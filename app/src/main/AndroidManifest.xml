@@ -11,21 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".AllPopularSportActivity"></activity>
+        <activity android:name=".ChatBot"></activity>
+        <activity android:name=".AllPopularSportActivity" />
         <activity android:name=".AllAdventureTripActivity" />
         <activity android:name=".LatestOffersActivity" />
         <activity android:name=".BookingsActivity" />
         <activity android:name=".ExploreIndiaActivity" />
         <activity android:name=".CreateTourActivity" />
-        <activity android:name=".TermsAndConditionActivity" />
-        <activity android:name=".LegalPolicyActivity" />
-        <activity android:name=".CopyRightPolicyActivity" />
-        <activity android:name=".CancellationAndRefundPolicyActivity" />
-        <activity android:name=".PrivacyPolicyActivity" />
+        <activity
+            android:name=".TermsAndConditionActivity"
+            android:parentActivityName=".LegalPolicyActivity" />
+        <activity
+            android:name=".CopyRightPolicyActivity"
+            android:parentActivityName=".LegalPolicyActivity" />
+        <activity
+            android:name=".CancellationAndRefundPolicyActivity"
+            android:parentActivityName=".LegalPolicyActivity" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:parentActivityName=".LegalPolicyActivity" />
         <activity android:name=".LeaveYourInfo" />
         <activity android:name=".model.RulesAndRegulations" />
         <activity android:name=".UserForgotPassword" />
-        <activity android:name=".ItineraryActivity" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />
         <activity android:name=".AdventureTripDetailActivity" />
