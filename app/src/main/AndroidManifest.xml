@@ -33,7 +33,6 @@
         <activity android:name=".LeaveYourInfo" />
         <activity android:name=".model.RulesAndRegulations" />
         <activity android:name=".UserForgotPassword" />
-        <activity android:name=".ItineraryActivity" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />
         <activity android:name=".AdventureTripDetailActivity" />

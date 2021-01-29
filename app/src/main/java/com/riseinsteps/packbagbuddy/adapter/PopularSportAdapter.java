@@ -1,6 +1,5 @@
 package com.riseinsteps.packbagbuddy.adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.riseinsteps.packbagbuddy.PopularSportDetailActivity;
 import com.riseinsteps.packbagbuddy.R;
-import com.riseinsteps.packbagbuddy.model.PopularSportModel;
+import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.List;
 
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.ID;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.IMAGEURL;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.NUMBEROFTOURS;
-import static com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter.SPORTNAME;
-
 public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapter.ViewHolder> {
 
-    private List<PopularSportModel> popularSportModelList;
+    private List<TripModel> popularSportModelList;
 
-    public PopularSportAdapter(List<PopularSportModel> popularSportModelList) {
+    public PopularSportAdapter(List<TripModel> popularSportModelList) {
         this.popularSportModelList = popularSportModelList;
     }
 
@@ -39,24 +32,7 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.setData(popularSportModelList.get(position).getImageURL(), popularSportModelList.get(position).getSportName(),
-                popularSportModelList.get(position).getNumberOfTours());
-
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), PopularSportDetailActivity.class);
-
-                intent.putExtra(String.valueOf(ID), popularSportModelList.get(position).getId());
-                intent.putExtra(IMAGEURL, popularSportModelList.get(position).getImageURL());
-                intent.putExtra(SPORTNAME, popularSportModelList.get(position).getSportName());
-                intent.putExtra(NUMBEROFTOURS, popularSportModelList.get(position).getNumberOfTours());
-
-                holder.itemView.getContext().startActivity(intent);
-            }
-        });
-
+        holder.setData(popularSportModelList.get(position).getImageUrl(), popularSportModelList.get(position).getName());
 
     }
 
@@ -68,20 +44,19 @@ public class PopularSportAdapter extends RecyclerView.Adapter<PopularSportAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView popularSportImage;
         private TextView sportName;
-        private TextView numOfTours;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             popularSportImage = itemView.findViewById(R.id.iv_popular_sports_image);
             sportName = itemView.findViewById(R.id.tv_sport_name);
-            numOfTours = itemView.findViewById(R.id.tv_numOfTours);
+
         }
 
-        private void setData(final String imageURL, final String name, final int tours) {
+        private void setData(final String imageURL, final String name) {
             Glide.with(itemView.getContext()).load(imageURL).into(popularSportImage);
             sportName.setText(name);
-            numOfTours.setText(tours + " Tours");
+
         }
     }
 }

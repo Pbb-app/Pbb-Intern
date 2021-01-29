@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splashnew">
+    android:background="@drawable/background_login_signup">
 
 
     <ImageView
@@ -146,7 +146,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="#6a492b"
+            android:backgroundTint="#2d3142"
             android:contentDescription="@string/todo"
             android:elevation="0dp"
             android:src="@drawable/ic_round_arrow_forward_24"

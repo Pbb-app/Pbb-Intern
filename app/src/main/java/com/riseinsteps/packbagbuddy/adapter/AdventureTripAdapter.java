@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.riseinsteps.packbagbuddy.R;
-import com.riseinsteps.packbagbuddy.model.AdventureTripModel;
+import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.List;
 
 public class AdventureTripAdapter extends RecyclerView.Adapter<AdventureTripAdapter.ViewHolder> {
 
-    private List<AdventureTripModel> modelList;
+    private List<TripModel> modelList;
 
-    public AdventureTripAdapter(List<AdventureTripModel> modelList) {
+    public AdventureTripAdapter(List<TripModel> modelList) {
         this.modelList = modelList;
     }
 
@@ -32,7 +32,7 @@ public class AdventureTripAdapter extends RecyclerView.Adapter<AdventureTripAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.setData(modelList.get(position).getTripImageURL(), modelList.get(position).getTripName());
+        holder.setData(modelList.get(position).getImageUrl(), modelList.get(position).getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
