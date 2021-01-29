@@ -23,11 +23,13 @@ public class TripModel {
     private String tourDetails;
     private String rulesAndRegulation;
     private String cancellationAndRefund;
+    private float rating;
+    private String cost;
 
     public TripModel(String name, String desc, String days, String imageUrl, float trip_default_price, float trip_special_price,
                      String nameOfState, String availability, String startingPoint, String destinationPoint, int minAgeRequire,
                      int totalSeats, String quickFacts, String placesToVisit, String accommodation, String meal, String transportation,
-                     String itinerary, String tourDetails, String rulesAndRegulation, String cancellationAndRefund) {
+                     String itinerary, String tourDetails, String rulesAndRegulation, String cancellationAndRefund, float rating, String cost) {
         this.name = name;
         this.desc = desc;
         this.days = days;
@@ -49,6 +51,20 @@ public class TripModel {
         this.tourDetails = tourDetails;
         this.rulesAndRegulation = rulesAndRegulation;
         this.cancellationAndRefund = cancellationAndRefund;
+        this.rating = rating;
+        this.cost=cost;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public float getRating() {
+        return rating;
     }
 
     public void setId(int id) {
