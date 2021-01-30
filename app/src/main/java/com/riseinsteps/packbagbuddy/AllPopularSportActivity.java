@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
+import com.riseinsteps.packbagbuddy.adapter.AllPopularSportsAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
@@ -18,7 +19,7 @@ public class AllPopularSportActivity extends AppCompatActivity
 {
     private RecyclerView  popularSportRecyclerView;
     private List<TripModel> popularSportList;
-    private PopularSportAdapter popularSportAdapter;
+    private AllPopularSportsAdapter popularSportAdapter;
 
 
     @Override
@@ -66,7 +67,7 @@ public class AllPopularSportActivity extends AppCompatActivity
                 6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
                 "Details", "Rules", "Refund",4.2f,"2000"));
 
-        popularSportAdapter = new PopularSportAdapter(popularSportList);
+        popularSportAdapter = new AllPopularSportsAdapter(popularSportList);
         popularSportRecyclerView.setAdapter(popularSportAdapter);
     }
 
