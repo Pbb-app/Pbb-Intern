@@ -107,7 +107,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#F78418"
+            android:backgroundTint="#f37121"
             android:elevation="0dp"
             android:src="@drawable/ic_round_arrow_forward_24"
             app:elevation="0dp"
