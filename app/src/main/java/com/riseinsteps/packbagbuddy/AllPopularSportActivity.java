@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,12 +21,17 @@ public class AllPopularSportActivity extends AppCompatActivity
     private RecyclerView  popularSportRecyclerView;
     private List<TripModel> popularSportList;
     private AllPopularSportsAdapter popularSportAdapter;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_popular_sport);
+        toolbar = findViewById(R.id.include_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Popular Sports");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setPopularSportRecyclerview();
 
     }

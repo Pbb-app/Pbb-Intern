@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,12 +22,17 @@ public class AllAdventureTripActivity extends AppCompatActivity
     private RecyclerView adventureTripRecyclerView1;
     private List<TripModel> adventureTripList;
     private AllAdventureTripAdapter  AllAdventureTripAdapter;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_adventure_trip);
+        toolbar = findViewById(R.id.include_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Adventrous Trips");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setAdventureTripRecyclerview();
     }
     private void setAdventureTripRecyclerview() {
