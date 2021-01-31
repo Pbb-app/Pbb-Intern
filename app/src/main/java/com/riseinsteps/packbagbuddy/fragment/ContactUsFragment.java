@@ -82,7 +82,7 @@ public class ContactUsFragment extends Fragment {
         sendEmail.setType("plain/text");
 
 
-        sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"netcomproperty@gmail.com"});
+        sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"vishalchaudhary1975@gmail.com"});
 
 
 
