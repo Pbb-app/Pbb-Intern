@@ -7,17 +7,18 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class AllAdventureTripAdapter extends RecyclerView.Adapter<AllAdventureTripAdapter.ViewHolder> {
+
+
+public class AllPopularSportsAdapter extends RecyclerView.Adapter<AllPopularSportsAdapter.ViewHolder> {
     public static final int ID = 0;
     public static final String TRIPNAME = "com.riseinsteps.packbagbuddy.TRIPNAME";
     public static final String DESC = "com.riseinsteps.packbagbuddy.DESC";
@@ -36,7 +37,7 @@ public class AllAdventureTripAdapter extends RecyclerView.Adapter<AllAdventureTr
 
     private List<TripModel> modelList;
 
-    public AllAdventureTripAdapter(List<TripModel> modelList) {
+    public AllPopularSportsAdapter(List<TripModel> modelList) {
         this.modelList = modelList;
     }
 

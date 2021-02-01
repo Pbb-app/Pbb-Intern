@@ -260,7 +260,7 @@
                     android:id="@+id/rv_adventure_trips"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="16dp"
+                    android:paddingStart="10dp"
                     android:paddingEnd="16dp"
                     tools:ignore="MissingConstraints" />
 
@@ -279,7 +279,7 @@
                     android:id="@+id/ll_popular_sports"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     tools:ignore="MissingConstraints">
 
@@ -311,7 +311,7 @@
                     android:id="@+id/rv_popular_sports"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="16dp"
+                    android:paddingStart="10dp"
                     android:paddingEnd="16dp"
                     tools:ignore="MissingConstraints" />
 

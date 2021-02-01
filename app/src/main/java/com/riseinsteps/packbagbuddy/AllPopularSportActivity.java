@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
+import com.riseinsteps.packbagbuddy.adapter.AllPopularSportsAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,13 +20,18 @@ public class AllPopularSportActivity extends AppCompatActivity
 {
     private RecyclerView  popularSportRecyclerView;
     private List<TripModel> popularSportList;
-    private PopularSportAdapter popularSportAdapter;
+    private AllPopularSportsAdapter popularSportAdapter;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_popular_sport);
+        toolbar = findViewById(R.id.include_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Popular Sports");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setPopularSportRecyclerview();
 
     }
@@ -66,7 +73,7 @@ public class AllPopularSportActivity extends AppCompatActivity
                 6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
                 "Details", "Rules", "Refund",4.2f,"2000"));
 
-        popularSportAdapter = new PopularSportAdapter(popularSportList);
+        popularSportAdapter = new AllPopularSportsAdapter(popularSportList);
         popularSportRecyclerView.setAdapter(popularSportAdapter);
     }
 
