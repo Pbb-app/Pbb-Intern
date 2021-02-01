@@ -59,4 +59,7 @@
     <color name="overlay_light_20">#33FFFFFF</color>
     <color name="overlay_light_30">#4DFFFFFF</color>
     <color name="indigo_800_overlay">#E6283593</color>
+
+    <color name="duskYellow">#ffd700</color>
+    <color name="lightGrey">#a6a6a6</color>
 </resources>

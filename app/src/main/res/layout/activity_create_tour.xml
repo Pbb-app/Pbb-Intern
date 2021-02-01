@@ -22,9 +22,10 @@
 
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="false"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -34,15 +35,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Full name :"
                 android:textColor="#292929"
@@ -50,9 +50,8 @@
 
             <EditText
                 android:id="@+id/etName"
-                android:layout_width="370dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -62,10 +61,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="E-mail :"
                 android:textColor="#292929"
@@ -73,9 +71,8 @@
 
             <EditText
                 android:id="@+id/etEmail"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -84,10 +81,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Phone Number :"
                 android:textColor="#292929"
@@ -95,9 +91,8 @@
 
             <EditText
                 android:id="@+id/etPhone"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -106,10 +101,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Destination :"
                 android:textColor="#292929"
@@ -117,9 +111,8 @@
 
             <EditText
                 android:id="@+id/etDestination"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -129,10 +122,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Your Location :"
                 android:textColor="#292929"
@@ -140,9 +132,8 @@
 
             <EditText
                 android:id="@+id/etYourLocation"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -152,10 +143,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Length of Stay :"
                 android:textColor="#292929"
@@ -163,18 +153,16 @@
 
             <Spinner
                 android:id="@+id/spLengthofStay"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:padding="5dp"
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="No. of people :"
                 android:textColor="#292929"
@@ -182,9 +170,8 @@
 
             <EditText
                 android:id="@+id/etNumberofPeople"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -194,10 +181,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Approx. budget(₹) per person:"
                 android:textColor="#292929"
@@ -205,10 +191,8 @@
 
             <EditText
                 android:id="@+id/etBudget"
-                android:layout_width="370dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"                android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
                 android:hint="for eg. 5000"
@@ -217,10 +201,9 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Preferred Accommodation :"
                 android:textColor="#292929"
@@ -228,17 +211,15 @@
 
             <Spinner
                 android:id="@+id/spAccommodation"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Mode of Travel :"
                 android:textColor="#292929"
@@ -247,7 +228,6 @@
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical">
 
@@ -299,10 +279,9 @@
             </RadioGroup>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Suggested Activities :"
                 android:textColor="#292929"
@@ -310,9 +289,8 @@
 
             <EditText
                 android:id="@+id/etSuggestedActivities"
-                android:layout_width="370dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -322,19 +300,17 @@
                 android:textColor="#292929" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:text="Diving, trekking, etc."
                 android:textColor="#292929"
                 android:textSize="16dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="Other Details :"
                 android:textColor="#292929"
@@ -342,9 +318,8 @@
 
             <EditText
                 android:id="@+id/etOtherDetails"
-                android:layout_width="370dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/etbackground"
                 android:ems="10"
@@ -355,9 +330,8 @@
 
             <Button
                 android:id="@+id/buttonSubmit"
-                android:layout_width="370dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="25dp"
                 android:backgroundTint="@color/colorTrendingStart"

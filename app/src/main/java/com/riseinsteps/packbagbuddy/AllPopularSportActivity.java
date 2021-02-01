@@ -1,75 +1,80 @@
 package com.riseinsteps.packbagbuddy;
 
 import android.os.Bundle;
+import android.view.View;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
+import com.riseinsteps.packbagbuddy.adapter.AllPopularSportsAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
-import com.riseinsteps.packbagbuddy.model.PopularSportModel;
+import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AllPopularSportActivity extends AppCompatActivity
 {
-    ArrayList<PopularSportModel> mList;
-    DatabaseReference myRef;
-    RecyclerView recyclerView;
-    PopularSportAdapter adapter;
+    private RecyclerView  popularSportRecyclerView;
+    private List<TripModel> popularSportList;
+    private AllPopularSportsAdapter popularSportAdapter;
+    private Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_popular_sport);
-        mList= new ArrayList<>();
-        myRef= FirebaseDatabase.getInstance().getReference();
-        ClearAll();
-        GetDataFromFireBase();
+        toolbar = findViewById(R.id.include_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Popular Sports");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setPopularSportRecyclerview();
+
     }
-    private void GetDataFromFireBase()
-    {
-        Query query = myRef.child("");
+    private void setPopularSportRecyclerview() {
+        popularSportRecyclerView = findViewById(R.id.recyclerViewPopularSport);
+        popularSportRecyclerView.setHasFixedSize(true);
+        popularSportRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ClearAll();
-//                for(DataSnapshot Snapshot: dataSnapshot.getChildren()  ){
-//                    PopularSportModel message = new PopularSportModel();
-//                    message.setImage(Snapshot.child("image").getValue().toString());
-//                    message.setTitle(Snapshot.child("title").getValue().toString());
-//                    message.setRating((Float) Snapshot.child("rating").getValue());
-//                    mList.add(message);
-//                }
-//                adapter= new PopularSportAdapter(mList);
-                recyclerView.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
-            }
+        popularSportList = new ArrayList<>();
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-            }
-        });
-    }
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-    private void ClearAll()
-    {
-        if(mList!=null)
-            mList.clear();
+        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-        if(adapter!=null){
-            adapter.notifyDataSetChanged();
-        }
-
-        mList= new ArrayList<>();
+        popularSportAdapter = new AllPopularSportsAdapter(popularSportList);
+        popularSportRecyclerView.setAdapter(popularSportAdapter);
     }
 
 }

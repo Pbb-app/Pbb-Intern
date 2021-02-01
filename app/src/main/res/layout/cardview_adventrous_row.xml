@@ -4,23 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
-    app:cardCornerRadius="40dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="30dp"
+
+>
 
     <ImageView
         android:id="@+id/adventrous_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:src="@drawable/a">
 
     </ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -29,16 +30,16 @@
             android:src="@drawable/ic_baseline_arrow_forward_24"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
         </ImageView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="55dp"
             android:layout_marginBottom="5dp"
             >
 
@@ -56,9 +57,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/adventure_trip_rating"
+                android:background="@color/grey_60"
                 android:layout_marginTop="5dp"
                 android:numStars="5"
                 android:rating="4.5"
+                android:progressTint="@color/duskYellow"
+                android:progressBackgroundTint="@color/white"
                 style = "?android:attr/ratingBarStyleSmall">
             </RatingBar>
 
