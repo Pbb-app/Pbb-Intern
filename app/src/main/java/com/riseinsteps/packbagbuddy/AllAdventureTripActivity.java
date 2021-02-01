@@ -1,77 +1,73 @@
 package com.riseinsteps.packbagbuddy;
 
 import android.os.Bundle;
+import android.view.View;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-import com.riseinsteps.packbagbuddy.adapter.AllAdventureTripAdapter;
+import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
+import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+//home fragment
 public class AllAdventureTripActivity extends AppCompatActivity
 {
-    ArrayList<TripModel> mList;
-    DatabaseReference myRef;
-    RecyclerView recyclerView;
-    AllAdventureTripAdapter adapter;
+    private RecyclerView adventureTripRecyclerView;
+    private List<TripModel> adventureTripList;
+    private AdventureTripAdapter adventureTripAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_adventure_trip);
-        mList= new ArrayList<>();
-        myRef= FirebaseDatabase.getInstance().getReference();
-        ClearAll();
-        GetDataFromFireBase();
-
+        setAdventureTripRecyclerview();
     }
+    private void setAdventureTripRecyclerview() {
+        adventureTripRecyclerView = findViewById(R.id.recyclerViewAdventrousTrips);
+        adventureTripRecyclerView.setHasFixedSize(true);
+        adventureTripRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-    private void GetDataFromFireBase()
-    {
-        Query query = myRef.child("");
+        adventureTripList = new ArrayList<>();
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ClearAll();
-                for(DataSnapshot Snapshot: dataSnapshot.getChildren()  ){
-//                    AllAdventureTripModel message = new AllAdventureTripModel();
-//                    message.setImage(Snapshot.child("image").getValue().toString());
-//                    message.setTitle(Snapshot.child("title").getValue().toString());
-//                    message.setRating((Float) Snapshot.child("rating").getValue());
-//                    mList.add(message);
-                }
-//                adapter= new AllAdventureTripAdapter(mList);
-                recyclerView.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
-            }
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-            }
-        });
-    }
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-    private void ClearAll()
-    {
-        if(mList!=null)
-            mList.clear();
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-        if(adapter!=null){
-            adapter.notifyDataSetChanged();
-        }
+        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
+                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
+                "Details", "Rules", "Refund",4.2f,"2000"));
 
-        mList= new ArrayList<>();
+        adventureTripAdapter = new AdventureTripAdapter(adventureTripList);
+        adventureTripRecyclerView.setAdapter(adventureTripAdapter);
+
+
     }
 
 }
