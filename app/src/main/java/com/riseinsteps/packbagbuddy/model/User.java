@@ -1,12 +1,14 @@
 package com.riseinsteps.packbagbuddy.model;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class User {
     private String name;
     private String email;
     private String userName;
     private String phoneNumber;
 
-    public User(String name, String email, String userName, String phoneNumber) {
+    public User(String name,  String phoneNumber) {
         this.name = name;
         this.email = email;
         this.userName = userName;

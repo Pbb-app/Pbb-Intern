@@ -8,7 +8,8 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity
+{
 
     private LinearLayout layout;
     private Animation animation;

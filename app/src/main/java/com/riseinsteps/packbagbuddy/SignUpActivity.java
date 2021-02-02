@@ -5,11 +5,17 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.riseinsteps.packbagbuddy.model.User;
 
 import java.util.Objects;
 
@@ -18,11 +24,16 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputLayout name, email, phoneNumber, password, confirmPassword;
 
     private FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("User");
+        mAuth=FirebaseAuth.getInstance();
 
         name = findViewById(R.id.et_username);
         email = findViewById(R.id.et_emailAddress);
@@ -44,19 +55,36 @@ public class SignUpActivity extends AppCompatActivity {
                 confirmPassword.setError("Please Enter confirm password");
             } else if (!password.getEditText().getText().toString().trim().equals(confirmPassword.getEditText().getText().toString().trim())) {
                 confirmPassword.setError("Password not match");
-            } else {
+            }
+
+            else
+                {
                 String tempName = name.getEditText().getText().toString().trim();
                 String tempPhn = phoneNumber.getEditText().getText().toString().trim();
                 String tempEmail = email.getEditText().getText().toString().trim();
                 String tempPwd = password.getEditText().getText().toString().trim();
 
-                //getting the firebase instance
-                mAuth = FirebaseAuth.getInstance();
                 mAuth.createUserWithEmailAndPassword(tempEmail, tempPwd).addOnCompleteListener(SignUpActivity.this, task -> {
-                    if (task.isSuccessful()) {
-                        Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
-                        startActivity(intent);
-                        finish();
+                    if (task.isSuccessful())
+                    {
+                        User information = new User(tempName,tempPhn);
+
+                        FirebaseDatabase.getInstance()
+                                .getReference("User")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(information).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task)
+                            {
+                                Toast.makeText(SignUpActivity.this, "SignUp Done:" , Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+
+
                     } else {
                         String error = Objects.requireNonNull(task.getException()).toString();
                         Toast.makeText(SignUpActivity.this, "SignUp failed:" + error, Toast.LENGTH_LONG).show();
