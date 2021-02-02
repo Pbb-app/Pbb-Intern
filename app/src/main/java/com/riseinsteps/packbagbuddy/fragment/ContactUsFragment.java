@@ -50,7 +50,8 @@ public class ContactUsFragment extends Fragment {
         // Initializing the varriaous views
         initComponents();
 
-        // Setting the OnClickListner on send Message Button
+        // Setting
+        // the OnClickListner on send Message Button
 
         send_message.setOnClickListener(view1 -> {
             // Function for checking the input from user
