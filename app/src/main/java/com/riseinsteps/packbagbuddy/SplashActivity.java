@@ -8,16 +8,21 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity
-{
+
+import com.google.firebase.auth.FirebaseAuth;
+
+public class SplashActivity extends AppCompatActivity {
+
 
     private LinearLayout layout;
     private Animation animation;
+    FirebaseAuth mauth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        mauth=FirebaseAuth.getInstance();
 
         // for hiding the status bar from the top
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -35,9 +40,19 @@ public class SplashActivity extends AppCompatActivity
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(i);
-                finish();
+
+
+                if(mauth.getCurrentUser()!=null) {
+                    Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                else{
+                    Intent i = new Intent(SplashActivity.this, SignUpActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+
             }
         }).start();
 

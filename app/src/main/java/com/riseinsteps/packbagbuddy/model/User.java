@@ -8,7 +8,13 @@ public class User {
     private String userName;
     private String phoneNumber;
 
-    public User(String name,  String phoneNumber) {
+
+    public User(){
+
+    }
+
+    public User(String name, String email, String userName, String phoneNumber) {
+
         this.name = name;
         this.email = email;
         this.userName = userName;
