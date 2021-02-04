@@ -1,5 +1,6 @@
 package com.riseinsteps.packbagbuddy.fragment;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import com.riseinsteps.packbagbuddy.LoginActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.User;
 
@@ -40,6 +43,7 @@ public class MyAccountFragment extends Fragment {
     TextView tvFullName, tvUserEmailId, tvUserPhone, tvUserName;
     private FirebaseAuth mAuth;
     View view;
+    Button signout;
 
     @Nullable
     @Override
@@ -56,7 +60,15 @@ public class MyAccountFragment extends Fragment {
             Toast.makeText(getActivity(), "Please Sign In with official id", Toast.LENGTH_SHORT).show();
         }
 
-
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                mAuth.signOut();
+                Intent intent= new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
@@ -70,6 +82,7 @@ public class MyAccountFragment extends Fragment {
                 username = user.getUserName();
                 emailId = user.getEmail();
                 phoneNumber = user.getPhoneNumber();
+
                 //Uri photoUrl = user.getPhotoUrl();
 
                 tvFullName.setText(name);
@@ -93,6 +106,7 @@ public class MyAccountFragment extends Fragment {
         tvUserEmailId = view.findViewById(R.id.tvUserEmailid);
         tvUserPhone = view.findViewById(R.id.tvUserPhone);
         profileImage = view.findViewById(R.id.profileimage);
+        signout= view.findViewById(R.id.btnsignout);
         tvUserName = view.findViewById(R.id.tvUserName);
 
     }
