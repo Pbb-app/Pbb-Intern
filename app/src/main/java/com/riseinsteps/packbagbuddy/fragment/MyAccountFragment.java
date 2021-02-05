@@ -37,7 +37,7 @@ public class MyAccountFragment extends Fragment {
     String name, emailId, phoneNumber, username;
     Uri photoUrl;
     ImageView profileImage;
-    TextView tvFullName, tvUserEmailId, tvUserPhone, tvUserName;
+    TextView tvFullName, tvUserEmailId, tvUserPhone;
     private FirebaseAuth mAuth;
     View view;
 
@@ -67,13 +67,13 @@ public class MyAccountFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 name = user.getName();
-                username = user.getUserName();
+              //  username = user.getUserName();
                 emailId = user.getEmail();
                 phoneNumber = user.getPhoneNumber();
                 //Uri photoUrl = user.getPhotoUrl();
 
                 tvFullName.setText(name);
-                tvUserName.setText(username);
+                //tvUserName.setText(username);
                 tvUserPhone.setText(phoneNumber);
                 tvUserEmailId.setText(emailId);
                 //Glide.with(this).load(photoUrl).into(profileImage);
@@ -93,7 +93,7 @@ public class MyAccountFragment extends Fragment {
         tvUserEmailId = view.findViewById(R.id.tvUserEmailid);
         tvUserPhone = view.findViewById(R.id.tvUserPhone);
         profileImage = view.findViewById(R.id.profileimage);
-        tvUserName = view.findViewById(R.id.tvUserName);
+      //  tvUserName = view.findViewById(R.id.tvUserName);
 
     }
 }

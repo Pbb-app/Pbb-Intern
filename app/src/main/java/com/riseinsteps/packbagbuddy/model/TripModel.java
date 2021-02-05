@@ -26,6 +26,11 @@ public class TripModel {
     private float rating;
     private String cost;
 
+    public TripModel(String name,String imageUrl){
+        this.name=name;
+        this.imageUrl=imageUrl;
+    }
+
     public TripModel(String name, String desc, String days, String imageUrl, float trip_default_price, float trip_special_price,
                      String nameOfState, String availability, String startingPoint, String destinationPoint, int minAgeRequire,
                      int totalSeats, String quickFacts, String placesToVisit, String accommodation, String meal, String transportation,
