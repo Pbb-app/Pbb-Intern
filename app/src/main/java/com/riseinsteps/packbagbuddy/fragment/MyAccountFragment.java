@@ -122,7 +122,8 @@ public class MyAccountFragment extends Fragment {
         });
     }
 
-    private void fetchDetatils() {
+    private void fetchDetatils()
+    {
         databaseReference = FirebaseDatabase.getInstance().getReference("user/" + mCurrentUser.getUid());
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
