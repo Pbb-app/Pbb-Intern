@@ -38,6 +38,7 @@ import com.google.firebase.storage.UploadTask;
 import com.riseinsteps.packbagbuddy.LoginActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.User;
+import com.squareup.picasso.Picasso;
 
 
 public class MyAccountFragment extends Fragment {
@@ -59,8 +60,18 @@ public class MyAccountFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_my_account, container, false);
-        storageReference= FirebaseStorage.getInstance().getReference();
         initComponenet();
+        mAuth= FirebaseAuth.getInstance();
+        storageReference= FirebaseStorage.getInstance().getReference();
+        StorageReference image_ref= storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"/profile_image");
+        image_ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri)
+            {
+                Picasso.get().load(uri).into(profileImage);
+            }
+        });
+
         mCurrentUser = mAuth.getCurrentUser();
         if (mCurrentUser != null) {
 
@@ -99,19 +110,27 @@ public class MyAccountFragment extends Fragment {
             if(resultCode == Activity.RESULT_OK)
             {
                 Uri imageUri= data.getData();
-                profileImage.setImageURI(imageUri);
+//                profileImage.setImageURI(imageUri);
                 storeImageToFireBase(imageUri);
+
             }
         }
     }
 
     private void storeImageToFireBase(Uri imageUri)
     {
-        StorageReference filerefrence = storageReference.child("profile_image");
+        StorageReference filerefrence = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"/profile_image");
         filerefrence.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(getContext(),"Image Uploaded",Toast.LENGTH_SHORT).show();
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+            {
+                filerefrence.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri)
+                    {
+                        Picasso.get().load(uri).into(profileImage);
+                    }
+                });
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
