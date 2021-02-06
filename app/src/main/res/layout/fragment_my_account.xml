@@ -26,16 +26,16 @@
                 android:layout_marginLeft="30dp"
                 />
 
-            <TextView
-                android:id="@+id/tvUserName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UserName"
-                android:textColor="#000000"
-                android:textSize="25dp"
-                android:layout_marginTop="85dp"
-                android:layout_marginLeft="70dp"
-                />
+<!--            <TextView-->
+<!--                android:id="@+id/tvUserName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="UserName"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="25dp"-->
+<!--                android:layout_marginTop="85dp"-->
+<!--                android:layout_marginLeft="70dp"-->
+<!--                />-->
 
 
         </LinearLayout>
