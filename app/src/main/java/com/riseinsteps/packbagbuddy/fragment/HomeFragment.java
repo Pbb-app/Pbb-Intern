@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
 import com.riseinsteps.packbagbuddy.ChatBot;
@@ -33,8 +35,8 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     private View view;
 
-    private LinearLayout ExploreIndia, CreateTour, LatestOffers;
-    private LinearLayout AllAdventureTrips, AllPopularSports;
+    FloatingActionButton exploreIndia, createTour, latestOffers;
+    private RelativeLayout AllAdventureTrips, AllPopularSports;
 
     private RecyclerView adventureTripRecyclerView, popularSportRecyclerView;
     private List<TripModel> adventureTripList, popularSportList;
@@ -48,12 +50,12 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         setHasOptionsMenu(true);
 
-        ExploreIndia = view.findViewById(R.id.layoutExploreIndia);
-        CreateTour = view.findViewById(R.id.layoutCreateTour);
-        LatestOffers = view.findViewById(R.id.layoutOffers);
+        exploreIndia= view.findViewById(R.id.exploreIndia);
+        createTour= view.findViewById(R.id.bookings);
+        latestOffers = view.findViewById(R.id.latestOffers);
 
 
-        ExploreIndia.setOnClickListener(new View.OnClickListener() {
+        exploreIndia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent exploreIndia = new Intent(view.getContext(), ExploreIndiaActivity.class);
@@ -61,7 +63,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        CreateTour.setOnClickListener(new View.OnClickListener() {
+        createTour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent createTour = new Intent(view.getContext(), CreateTourActivity.class);
@@ -70,7 +72,7 @@ public class HomeFragment extends Fragment {
         });
 
 
-        LatestOffers.setOnClickListener(new View.OnClickListener() {
+        latestOffers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent latestOffers = new Intent(view.getContext(), LatestOffersActivity.class);
@@ -107,7 +109,7 @@ public class HomeFragment extends Fragment {
 
 
     private void setAdventureTripRecyclerview(View view) {
-        adventureTripRecyclerView = view.findViewById(R.id.rv_adventure_trips);
+        adventureTripRecyclerView = view.findViewById(R.id.adventrous_recycler_home);
         adventureTripRecyclerView.setHasFixedSize(true);
         adventureTripRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
 
@@ -148,8 +150,9 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void setPopularSportRecyclerview(View view) {
-        popularSportRecyclerView = view.findViewById(R.id.rv_popular_sports);
+    private void setPopularSportRecyclerview(View view)
+    {
+        popularSportRecyclerView = view.findViewById(R.id.popular_recycler_home);
         popularSportRecyclerView.setHasFixedSize(true);
         popularSportRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
 
