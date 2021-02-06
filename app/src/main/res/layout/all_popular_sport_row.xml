@@ -13,8 +13,8 @@
         tools:ignore="UselessParent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="195dp"
+            android:layout_height="145dp"
             android:alpha="0.8"
             android:background="@drawable/campfiree">
 

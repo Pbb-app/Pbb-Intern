@@ -1,15 +1,23 @@
 package com.riseinsteps.packbagbuddy.model;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class User {
     private String name;
     private String email;
-    private String userName;
+   // private String userName;
     private String phoneNumber;
 
-    public User(String name, String email, String userName, String phoneNumber) {
+
+    public User(){
+
+    }
+
+    public User(String name, String email, String phoneNumber) {
+
         this.name = name;
         this.email = email;
-        this.userName = userName;
+        //this.userName = userName;
         this.phoneNumber = phoneNumber;
     }
 
@@ -29,13 +37,13 @@ public class User {
         this.email = email;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+//    public String getUserName() {
+//        return userName;
+//    }
+//
+//    public void setUserName(String userName) {
+//        this.userName = userName;
+//    }
 
     public String getPhoneNumber() {
         return phoneNumber;

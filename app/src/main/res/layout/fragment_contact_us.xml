@@ -1,143 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background"
-    android:fillViewport="false">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_30" />
 
-        <ImageView
-            android:id="@+id/ivContactUs"
-            android:layout_width="292dp"
-            android:layout_height="114dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/name" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/indigo_800_overlay" />
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <TextView
-            android:id="@+id/tvContactUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Contact Us"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/toolbar"
+    android:layout_margin="@dimen/spacing_mlarge">
 
-        <ImageView
-            android:id="@+id/ivCall"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/ic_contact_us" />
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="@dimen/spacing_xmlarge"
+        android:text="CONTACT US"
+        android:gravity="center"
 
-        <TextView
-            android:id="@+id/tvPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:gravity="center_horizontal"
-            android:text="PHONE \n Ring us from 10:00 AM to 6:00 PM. \n We’ll be happy to assist you!"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="italic" />
+        android:textSize="25sp"
 
+        android:textColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/tvNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="+91 7874127809"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="18dp" />
+</LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:clipToPadding="false"
+        android:layout_marginTop="80dp"
+        android:padding="@dimen/spacing_mlarge"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <ImageView
-            android:id="@+id/ivEmail"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/ic_email" />
-
-        <TextView
-            android:id="@+id/tvMail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="EMAIL \n Mail us your issues. \n We’ll get back in 24 hrs or less, promise!"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/tvEmailid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="contact@packbagbuddy.com"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="18dp" />
-
-        <ImageView
-            android:id="@+id/ivAdd"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/map" />
-
-        <TextView
-            android:id="@+id/tvAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="           ADDRESS \n Ghatlodia, Ahmedabad"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-
-        <TextView
-            android:id="@+id/tvViewOnGoogle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:text="View on Google"
-            android:textColor="@color/design_default_color_primary_dark"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/btnInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/teal_700"
-            android:text="Leave us your Info" />
-
-        <TextView
-            android:id="@+id/textview"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:gravity="center"
-            android:text="We will get back to you..."
-            android:textColor="#000000"
-            android:textSize="15dp" />
+            android:orientation="vertical">
 
 
-    </LinearLayout>
-</ScrollView>
+            <EditText
+                android:id="@+id/name"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/edit_text_round_bg_overlay_white"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:hint="Your Name"
+                android:textColorHint="@color/white"
+                android:textColor="@android:color/white" />
+
+
+
+
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/edit_text_round_bg_overlay_white"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:hint="Your Email"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/edit_text_round_bg_overlay_white"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:hint="Your Number"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/message"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxxxlarge"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/edit_text_round_bg_overlay_white"
+               android:gravity="start"
+
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:hint="Your Message"
+                android:textColorHint="@color/white" />
+
+
+            <Button
+                android:id="@+id/send_message"
+
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/btn_rounded_accent"
+                android:text="SEND YOUR MESSAGE"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
