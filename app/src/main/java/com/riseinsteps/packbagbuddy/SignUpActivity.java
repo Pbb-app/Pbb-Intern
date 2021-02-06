@@ -24,9 +24,7 @@ import java.util.Objects;
 public class SignUpActivity extends AppCompatActivity {
 
     private TextInputLayout name, email, phoneNumber, password, confirmPassword;
-
     private FirebaseAuth mAuth;
-
     FirebaseDatabase database;
     String tempName;
     String tempPhn;
