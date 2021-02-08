@@ -236,18 +236,18 @@ The following types of images cannot be uploaded on the website:
 
     <string name="legal1"><i>Policies</i> means a course or principle of action adopted or proposed by an organization or individual.
 Policies are generally adopted by a governance body within an organization.
-   \n \n\n    Below are the policies that govern PackBagBuddy and its users –
-\n
+   \nBelow are the policies that govern PackBagBuddy and its users –
+
     </string>
     <string name="legal2">
-        <u>Terms and Conditions</u>
+        Terms and Conditions
     </string>
     <string name="legal3">
-        <u>Copyright Policy</u></string>
-    <string name="legal4"><u>Privacy Policy</u></string>
+        Copyright Policy</string>
+    <string name="legal4">Privacy Policy</string>
     <string name="legal5">
-<u>Cancellations and Refunds
-    </u>
+Cancellations and Refunds
+
     </string>
 
     <string name="tnc1">PackBagBuddy (hereafter referred to as “PackBagBuddy”,”we”, “us”, or “our”) provides an online platform that connects Operators who have knowledge and experience with a particular travel destination or activity with Travellers seeking to experience such destinations and activities (collectively with the Site and Application (each as defined below), the “Services”).

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/canclebooking_background" />
+        android:src="@drawable/backgroundimage" />
 
 
     <androidx.appcompat.widget.Toolbar
@@ -129,8 +129,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
+                android:textStyle="bold"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="#008A5F"
+                android:backgroundTint="#FF6E5C"
                 android:text="Cancle Booking"
                 android:textColor="@color/white">
 
