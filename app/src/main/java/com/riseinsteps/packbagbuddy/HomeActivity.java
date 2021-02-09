@@ -18,6 +18,7 @@ import com.riseinsteps.packbagbuddy.fragment.HomeFragment;
 import com.riseinsteps.packbagbuddy.fragment.LegalPolicyFragment;
 import com.riseinsteps.packbagbuddy.fragment.MyAccountFragment;
 import com.riseinsteps.packbagbuddy.fragment.RegisterAsPartnerFragment;
+import com.riseinsteps.packbagbuddy.fragment.ReportProlemFragmet;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
@@ -84,10 +85,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyAccountFragment()).commit();
                 break;
 
-//            case R.id.nav_report_problem:
-//                getSupportActionBar().setTitle("Report Problem");
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportProblemFragment()).commit();
-//                break;
+          case R.id.nav_report_problem:
+                getSupportActionBar().setTitle("Report Problem");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportProlemFragmet()).commit();
+                break;
 
             case R.id.nav_register_as_partner:
                 getSupportActionBar().setTitle("Register as Partner");
