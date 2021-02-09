@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +25,12 @@ public class LoginActivity extends AppCompatActivity {
     private FloatingActionButton userSignIn;
     private TextView userSignUp, userForgotPassword;
     private FirebaseAuth mAuth;
-
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        progressBar=findViewById(R.id.progress_circular);
         userEmail = findViewById(R.id.et_emailAddress);
         userPassword = findViewById(R.id.et_password);
         userSignIn = findViewById(R.id.fab_signIn);
@@ -51,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                     userPassword.setError("Password Required for SignIn");
                     return;
                 } else {
+                    progressBar.setVisibility(View.VISIBLE);
                     signIn(email, pwd);
                 }
             }
@@ -88,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            progressBar.setVisibility(View.INVISIBLE);
                             // Sign in success, update UI with the signed-in user's information
                             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                             FirebaseUser user = mAuth.getCurrentUser();

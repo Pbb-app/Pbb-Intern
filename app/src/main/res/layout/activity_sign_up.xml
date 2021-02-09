@@ -160,6 +160,12 @@
             android:src="@drawable/ic_round_arrow_forward_24"
             app:elevation="0dp"
             app:fabCustomSize="80dp" />
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
 
         <TextView
             android:layout_width="wrap_content"

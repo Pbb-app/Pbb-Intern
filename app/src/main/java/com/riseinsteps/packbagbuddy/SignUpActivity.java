@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,13 +32,13 @@ public class SignUpActivity extends AppCompatActivity {
     String tempPhn;
     String tempEmail;
     String tempPwd;
-
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+         progressBar=findViewById(R.id.progress_circular);
         mAuth = FirebaseAuth.getInstance();
 
         name = findViewById(R.id.et_username);
@@ -65,6 +67,7 @@ public class SignUpActivity extends AppCompatActivity {
                 tempPhn = phoneNumber.getEditText().getText().toString().trim();
                 tempEmail = email.getEditText().getText().toString().trim();
                 tempPwd = password.getEditText().getText().toString().trim();
+                progressBar.setVisibility(View.VISIBLE);
             create_user();
                 //getting the firebase instance
 
@@ -117,7 +120,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 Toast.makeText(SignUpActivity.this, "User data is added successefully", Toast.LENGTH_SHORT).show();
 
                                 // To Display new Activity
-
+                                progressBar.setVisibility(View.INVISIBLE);
                                 Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
                                 startActivity(intent);
                                 finish();
