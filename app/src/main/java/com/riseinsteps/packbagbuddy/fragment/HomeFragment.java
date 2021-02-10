@@ -32,7 +32,8 @@ import com.riseinsteps.packbagbuddy.model.TripModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment
+{
     private View view;
 
     FloatingActionButton exploreIndia, createTour, latestOffers;
