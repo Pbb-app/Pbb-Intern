@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/layoutbg">
+    android:background="@drawable/backgrounda"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backgrounda" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
@@ -21,325 +26,278 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <ScrollView
+    <TextView
+        android:id="@+id/th"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="false"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3">
+        android:text="Create Your Tour"
+        android:layout_below="@id/appBarLayout3"
+       android:textSize="25dp"
+       android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"/>
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="430dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/th"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/backgroundaaa"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_below="@id/toolbar"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_mlarge"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="20dp"
-                android:text="Full name :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:text=""
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="E-mail :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Phone Number :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etPhone"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="phone"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Destination :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etDestination"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:text=""
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Your Location :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etYourLocation"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:text=""
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Length of Stay :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <Spinner
-                android:id="@+id/spLengthofStay"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="No. of people :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etNumberofPeople"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:hint="for eg. 7"
-                android:inputType="number"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Approx. budget(₹) per person:"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etBudget"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:hint="for eg. 5000"
-                android:inputType="number"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Preferred Accommodation :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <Spinner
-                android:id="@+id/spAccommodation"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Mode of Travel :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/radio_bus"
-                    android:layout_width="wrap_content"
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Name"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Email"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Contect Number"
+                    android:inputType="phone"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Destination"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etYourLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Your Location"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <Spinner
+                    android:id="@+id/spLengthofStay"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:textColor="#292929" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etNumberofPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Number of people(for eg. 7)"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Approx. budget(₹) per person"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Bus"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="8dp"
+                    android:text="Preferred Accommodation :"
                     android:textColor="#292929"
-                    android:textSize="18dp" />
+                    android:textSize="15dp" />
+                <Spinner
+                    android:id="@+id/spAccommodation"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#292929" />
 
-                <RadioButton
-                    android:id="@+id/radio_train"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Train"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="8dp"
+                    android:text="Mode of Travel :"
                     android:textColor="#292929"
-                    android:textSize="18dp" />
-
-                <RadioButton
-                    android:id="@+id/radio_flight"
-                    android:layout_width="wrap_content"
+                    android:textSize="15dp" />
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Flight"
-                    android:textColor="#292929"
-                    android:textSize="18dp" />
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/radio_car"
-                    android:layout_width="wrap_content"
+                    <RadioButton
+                        android:id="@+id/radio_bus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Bus"
+                        android:textColor="#292929"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_train"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Train"
+                        android:textColor="#292929"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_flight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Flight"
+                        android:textColor="#292929"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Car, Jeep, etc."
+                        android:textColor="#292929"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Other - Please specify under details"
+                        android:textColor="#292929"
+                        android:textSize="15dp" />
+
+                </RadioGroup>
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etSuggestedActivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Suggested Activities"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Car, Jeep, etc."
+                    android:layout_gravity="left"
+                    android:text="Diving, trekking, etc."
                     android:textColor="#292929"
-                    android:textSize="18dp" />
-
-                <RadioButton
-                    android:id="@+id/radio_other"
-                    android:layout_width="wrap_content"
+                    android:textSize="10dp" />
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/etOtherDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Other Details"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Other - Please specify under details"
-                    android:textColor="#292929"
-                    android:textSize="18dp" />
-
-            </RadioGroup>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Suggested Activities :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etSuggestedActivities"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:text=""
-                android:textColor="#292929" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="Diving, trekking, etc."
-                android:textColor="#292929"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="8dp"
-                android:text="Other Details :"
-                android:textColor="#292929"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/etOtherDetails"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/etbackground"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:padding="5dp"
-                android:textColor="#292929" />
-
-            <Button
-                android:id="@+id/buttonSubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="25dp"
-                android:backgroundTint="@color/colorTrendingStart"
-                android:text="Submit"
-                android:textColor="#292929" />
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#008A5F"
+                    android:text="Create Your Tour"
+                    android:textColor="@color/white">
+                </Button>
 
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>
