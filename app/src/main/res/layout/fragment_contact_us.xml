@@ -37,9 +37,7 @@
         android:layout_height="@dimen/spacing_xmlarge"
         android:text="CONTACT US"
         android:gravity="center"
-
         android:textSize="25sp"
-
         android:textColor="@color/black"/>
 
 </LinearLayout>
@@ -111,8 +109,7 @@
                 android:layout_height="@dimen/spacing_xxxxlarge"
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:background="@drawable/edit_text_round_bg_overlay_white"
-               android:gravity="start"
-
+                android:gravity="start"
                 android:minHeight="@dimen/spacing_xmlarge"
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
