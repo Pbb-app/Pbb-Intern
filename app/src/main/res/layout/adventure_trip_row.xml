@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="@+id/iv_adventure_trip_image" >
 
 
-        <TextView                 
+        <TextView
             android:id="@+id/tv_adventure_trip_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
