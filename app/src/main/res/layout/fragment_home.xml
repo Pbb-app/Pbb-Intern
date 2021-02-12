@@ -66,7 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#dcedc8"
             android:layout_gravity="center"
             android:padding="10dp">
 
@@ -155,7 +154,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#dcedc8"
             android:padding="10dp"
             android:orientation="vertical">
 
@@ -172,7 +170,8 @@
                     android:layout_height="wrap_content"
                     android:text="Popular Sports"
                     android:textColor="@color/black"
-                    android:textSize="16sp"></TextView>
+                    android:textStyle="bold"
+                    android:textSize="19sp"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -180,7 +179,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignBaseline="@+id/tvpopularSports"
                     android:text="View All"
-                    android:textSize="10dp"></TextView>
+                    android:textColor="@color/green"
+                    android:textSize="12dp"></TextView>
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -198,7 +198,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="#dcedc8"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -213,7 +212,8 @@
                     android:layout_height="wrap_content"
                     android:text="Adventrous Trips"
                     android:textColor="@color/black"
-                    android:textSize="16sp"></TextView>
+                    android:textStyle="bold"
+                    android:textSize="19sp"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +221,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignBaseline="@id/tvadventroustrips"
                     android:text="View All"
-                    android:textSize="10dp"></TextView>
+                    android:textColor="@color/green"
+                    android:textSize="12dp"></TextView>
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
