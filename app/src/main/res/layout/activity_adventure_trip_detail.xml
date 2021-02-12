@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layoutbg"
+
     tools:context=".AdventureTripDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -15,11 +15,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
 
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -30,66 +32,80 @@
         android:fillViewport="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.0">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_trip_detail_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="@font/montserrat"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_trip_detail_name"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:fontFamily="@font/montserrat"
-                    android:text="KedarNath"
-                    android:textSize="16sp" />
-
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="?android:ratingBarStyleSmall"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:numStars="5"
-                    android:rating="4.3" />
-
-            </LinearLayout>
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/gray"
+                android:progressTint="@color/duskYellow"
+                android:rating="4.3" />
+        </LinearLayout>
 
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_trip_gallery"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="8dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/kedarnath_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/save" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle2"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
 
                 <LinearLayout
                     android:id="@+id/layout_itinerary"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_itinerary"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="17dp"
+                        android:clickable="true"
                         android:src="@drawable/car"
                         tools:ignore="NestedWeights" />
 
@@ -97,98 +113,107 @@
                         android:id="@+id/tv_itinerary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Itinerary" />
+                        android:text="Itinerary"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_rules_and_regulation"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="17dp"
                         android:layout_weight="3"
+                        android:clickable="true"
                         android:src="@drawable/rulesandregulation" />
 
                     <TextView
                         android:id="@+id/tv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Rules" />
+                        android:text="Rules"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_cancellation_and_refund"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
                         android:src="@drawable/money" />
 
                     <TextView
                         android:id="@+id/tv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Cancellation" />
+                        android:text="Cancellation"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_maps"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_maps"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="17dp"
                         android:layout_weight="3"
+                        android:clickable="true"
                         android:src="@drawable/map" />
 
                     <TextView
                         android:id="@+id/tv_maps"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Maps" />
+                        android:text="Maps"
+                        android:textColor="@color/black" />
                 </LinearLayout>
+        </LinearLayout>
 
 
-            </LinearLayout>
 
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_trip_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="25dp"
                 android:orientation="vertical"
-                android:padding="4dp">
+                android:padding="16dp">
 
 
                 <TextView
@@ -212,27 +237,31 @@
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_other_tour_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
-
         </LinearLayout>
-
 
     </ScrollView>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/black"
+
+            android:textColor="@color/white"
         android:text="Book Now"
-        android:textColor="#000000"
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="@id/ScrollviewAd"
-        tools:ignore="MissingConstraints,NotSibling" />
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_other_tour_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/layout_gradient_1"
+            tools:ignore="MissingConstraints" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

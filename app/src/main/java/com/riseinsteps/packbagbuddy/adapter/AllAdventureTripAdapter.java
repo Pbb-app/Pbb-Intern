@@ -1,5 +1,7 @@
 package com.riseinsteps.packbagbuddy.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.riseinsteps.packbagbuddy.AdventureTripDetailActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
@@ -51,9 +54,16 @@ public class AllAdventureTripAdapter extends RecyclerView.Adapter<AllAdventureTr
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.setData(modelList.get(position).getImageUrl(), modelList.get(position).getName(),
                 modelList.get(position).getCost(), modelList.get(position).getRating());
-
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(v.getContext(),AdventureTripDetailActivity.class);
+                i.putExtra("name","Kedarnath");
+                v.getContext().startActivity(i);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {

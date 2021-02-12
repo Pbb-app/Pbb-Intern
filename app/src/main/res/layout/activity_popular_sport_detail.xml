@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layoutbg"
     tools:context=".PopularSportDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -15,9 +14,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-<include
-    android:id="@+id/include_toolbar"
-    layout="@layout/toolbar" />
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -35,14 +37,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/tv_trip_detail_name"
@@ -51,7 +53,9 @@
                     android:layout_weight="4"
                     android:fontFamily="@font/montserrat"
                     android:text="KedarNath"
-                    android:textSize="16sp" />
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <RatingBar
                     android:id="@+id/ratingBar"
@@ -60,35 +64,57 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:numStars="5"
-                    android:rating="4.3" />
+                    android:rating="4.3"
+                    android:progressTint="@color/duskYellow"
+                    />
 
             </LinearLayout>
 
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_trip_gallery"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+            <ImageView
+                android:id="@+id/activity_image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="8dp" />
-
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/save" />
+</LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle2"
+                android:layout_marginTop="-25dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:layout_marginTop="20dp"
+                    tools:ignore="MissingConstraints">
+
 
                 <LinearLayout
                     android:id="@+id/layout_itinerary"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_itinerary"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="17dp"
+                        android:clickable="true"
                         android:src="@drawable/car"
                         tools:ignore="NestedWeights" />
 
@@ -96,91 +122,103 @@
                         android:id="@+id/tv_itinerary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Itinerary" />
+                        android:text="Itinerary"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_rules_and_regulation"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="17dp"
                         android:layout_weight="3"
+                        android:clickable="true"
                         android:src="@drawable/rulesandregulation" />
 
                     <TextView
                         android:id="@+id/tv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Rules" />
+                        android:text="Rules"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_cancellation_and_refund"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
                         android:src="@drawable/money" />
 
                     <TextView
                         android:id="@+id/tv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Cancellation" />
+                        android:textStyle="bold"
+                        android:text="Cancellation"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:id="@+id/layout_maps"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_maps"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="17dp"
                         android:layout_weight="3"
+                        android:clickable="true"
                         android:src="@drawable/map" />
 
                     <TextView
                         android:id="@+id/tv_maps"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
                         android:gravity="center"
-                        android:text="Maps" />
+                        android:textStyle="bold"
+                        android:text="Maps"
+                        android:textColor="@color/black" />
                 </LinearLayout>
-
-
             </LinearLayout>
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_trip_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,9 +226,43 @@
                 android:layout_marginTop="16dp"
                 android:orientation="vertical"
                 android:padding="4dp">
-
-
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/startingDestination"
+                 android:textStyle="bold"
+                 android:textSize="14sp"
+                 ></TextView>
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/endDestination"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    ></TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stateofDestination"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/tour_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tour Details"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tour_details_desc"
+                    android:textStyle="bold"
+                    android:textSize="14sp"></TextView>
+                <TextView
+                    android:id="@+id/quick_facts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quick Facts"
@@ -204,22 +276,71 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:padding="4dp"
-                    android:text="Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem ispum Lorem . "
                     android:textAlignment="textStart"
                     android:textColor="#151515"
                     android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
 
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_other_tour_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/duration"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/minAge"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        ></TextView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/availability"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    ></TextView>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/numofSeats"
+    android:textStyle="bold"
+    android:textSize="14sp"
+    ></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/actual_Cost"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discount_Cost"
+        android:textStyle="bold"
+        android:textSize="14sp"
+    ></TextView>
+</LinearLayout>
 
         </LinearLayout>
-
-
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
     <Button
@@ -227,9 +348,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
         android:text="Book Now"
-        android:textColor="#000000"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/ScrollviewAd"
         tools:ignore="MissingConstraints,NotSibling" />
 

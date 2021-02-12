@@ -15,9 +15,13 @@
 
 
     <color name="orange">#E23B22</color>
+    <color name="lightOrange">#FF8C69</color>
+    <color name="salmon">#ffa089</color>
+    <color name="mintGreen">#98ff98</color>
     <color name="darkgreen">#274A43</color>
     <color name="green">#56C295</color>
     <color name="gray">#B5CEC9</color>
+    <color name="white_t">#00FFFFFF</color>
 
     <color name="drakgrey">#A9A9A9</color>
 

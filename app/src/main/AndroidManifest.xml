@@ -37,13 +37,14 @@
         <activity android:name=".UserForgotPassword" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />
-        <activity android:name=".AdventureTripDetailActivity" />
+        <activity android:name=".AdventureTripDetailActivity"></activity>
         <activity android:name=".PopularSportActivity" />
         <activity android:name=".AdventureTripActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SplashActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
