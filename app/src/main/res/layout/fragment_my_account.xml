@@ -11,10 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layoutbg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rellay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/imgUser"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileimage"
@@ -26,68 +41,55 @@
                 android:layout_marginLeft="30dp"
                 />
 
-<!--            <TextView-->
-<!--                android:id="@+id/tvUserName"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="UserName"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="25dp"-->
-<!--                android:layout_marginTop="85dp"-->
-<!--                android:layout_marginLeft="70dp"-->
-<!--                />-->
+                android:src="@drawable/userrlogo"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileimage"
+                android:layout_marginLeft="-22dp"
+                android:layout_marginTop="-35dp"
+                android:layout_toRightOf="@id/profileimage"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_camera" />
 
 
-        </LinearLayout>
+
+
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/tvUserDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Info"
+            android:layout_below="@+id/imgUser"
+            android:layout_centerHorizontal="true"
+            android:text="User Name"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:layout_marginTop="40dp"
-            android:textColor="#000000"
-            android:layout_marginLeft="30dp"
-            android:gravity="left"
-            />
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue_grey_800"/>
 
-        <TextView
-            android:id="@+id/tvFullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="User Full Name"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
-            android:gravity="left"
-            />
 
-        <TextView
-            android:id="@+id/tvUserEmailid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="User Email Id"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="30dp"
-            android:gravity="left"
-            />
 
-        <TextView
-            android:id="@+id/tvUserPhone"
-            android:layout_width="wrap_content"
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rellay">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User Phone Number"
-            android:textSize="20dp"
-            android:layout_marginTop="15dp"
-            android:textColor="#000000"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
-            android:gravity="left"
-            />
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
 
         <Button
             android:id="@+id/btnEditprofile"
@@ -100,6 +102,116 @@
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/apricot"
             android:text="Edit Profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue_grey_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#009688"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue_grey_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="emailild@gmail.com"
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#009688"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue_grey_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91 9876543212"
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#009688"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/teal_700"
+                android:text="Sign Out" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
 
         <Button
             android:id="@+id/btnsignout"
