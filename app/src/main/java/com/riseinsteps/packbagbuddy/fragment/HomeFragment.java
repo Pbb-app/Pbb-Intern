@@ -9,7 +9,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -42,15 +41,16 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     private View view;
 
-    FloatingActionButton exploreIndia, createTour, latestOffers;
+    private FloatingActionButton exploreIndia, createTour, latestOffers;
     private RelativeLayout AllAdventureTrips, AllPopularSports;
 
     private RecyclerView adventureTripRecyclerView, popularSportRecyclerView;
     private List<TripModel> adventureTripList, popularSportList;
     private AdventureTripAdapter adventureTripAdapter;
     private PopularSportAdapter popularSportAdapter;
+    private DatabaseReference databaseReference;
 
-    DatabaseReference databaseReference;
+
 
 
     @Nullable
@@ -129,54 +129,23 @@ public class HomeFragment extends Fragment {
         // Fetching the data from firebase for adventure trip list
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Adventrous Trips");
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    String name= (String) dataSnapshot.child("name").getValue();
-                    String image_url=(String) dataSnapshot.child("Image").getValue();
-                    Log.v(name+" "+image_url,"checking database");
-                    adventureTripList.add(new TripModel(name,image_url));
-                }
+         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+             @Override
+             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
+                     String name= (String) dataSnapshot.child("name").getValue();
+                     String image_url=(String) dataSnapshot.child("Image").getValue();
+                     Log.v(name+" "+image_url,"checking database");
+                     adventureTripList.add(new TripModel(name,image_url));
+                 }
                 adventureTripAdapter.notifyDataSetChanged();
-            }
+             }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-
-        // ending of fetching of data
-    /*    adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        adventureTripAdapter = new AdventureTripAdapter(adventureTripList);
-        adventureTripRecyclerView.setAdapter(adventureTripAdapter);
-*/
+             @Override
+             public void onCancelled(@NonNull DatabaseError error) {
+                 Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+             }
+         });
 
     }
 
@@ -191,8 +160,6 @@ public class HomeFragment extends Fragment {
 
 
         // fetching the data for popular sports from firebase
-
-
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Popular Sports");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -213,40 +180,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
-        // fetching end
-
-        /*
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
-                , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
-                6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
-                "Details", "Rules", "Refund",4.2f,"2000"));
-      */
 
     }
 
