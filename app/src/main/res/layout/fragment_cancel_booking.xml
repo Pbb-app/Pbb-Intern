@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/backgroundimage" />
+        android:src="@drawable/backgrounda" />
 
 
     <androidx.appcompat.widget.Toolbar
@@ -27,21 +27,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
+        android:text="CANCEL BOOKING"
+       android:layout_below="@id/toolbar"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="430dp"
+        android:layout_height="530dp"
+        android:layout_below="@id/t"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/transferent_background"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Cancel Booking"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@android:color/black"/>
+        android:background="@drawable/backgroundaaa"
+        android:orientation="vertical">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -70,6 +70,7 @@
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:background="@drawable/edit_text_round_bg_outline"
                 android:minHeight="@dimen/spacing_xmlarge"
+                android:layout_marginRight="10dp"
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="Name"
@@ -84,6 +85,7 @@
                 android:background="@drawable/edit_text_round_bg_outline"
                 android:minHeight="@dimen/spacing_xmlarge"
                 android:paddingLeft="@dimen/spacing_middle"
+                android:layout_marginRight="10dp"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="E-mail"
                 android:textColorHint="@android:color/black"
@@ -96,6 +98,7 @@
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:background="@drawable/edit_text_round_bg_outline"
                 android:minHeight="@dimen/spacing_xmlarge"
+                android:layout_marginRight="10dp"
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="Phone Number"
@@ -111,21 +114,8 @@
                 android:minHeight="@dimen/spacing_xmlarge"
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
-                android:hint="Order ID"
-                android:inputType="number"
-                android:textColorHint="@android:color/black"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_outline"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Payment ID"
+                android:hint="Phone Number"
+                android:layout_marginRight="10dp"
                 android:inputType="number"
                 android:textColorHint="@android:color/black"
                 android:textColor="@android:color/black" />
@@ -139,7 +129,7 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:background="@drawable/edit_text_round_bg_outline"
-
+                android:layout_marginRight="10dp"
 
                  android:gravity="start"
                 android:minHeight="@dimen/spacing_xmlarge"
@@ -157,8 +147,9 @@
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#008A5F"
-                android:text="Cancel Booking"
+                android:text="Cancle Booking"
                 android:textColor="@color/white">
 
             </Button>

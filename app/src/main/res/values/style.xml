@@ -24,4 +24,9 @@
         <item name="colorControlNormal">@color/duskYellow</item>
         <item name="colorControlActivated">@color/duskYellow</item>
     </style>
+<style name="ri" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">10dp</item>
+
+</style>
 </resources>

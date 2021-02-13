@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="6dp"
 
-    <ImageView
+    android:background="@color/grey_3"
+    android:layout_marginRight="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_adventure_trip_image"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:contentDescription="@string/todo"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_launcher_background" />
+        android:adjustViewBounds="true"
+        app:shapeAppearanceOverlay="@style/ri"
+        android:src="@drawable/sunrise_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/tv_adventure_trip_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adventure Name"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="204dp"
+        android:gravity="center"
+        android:background="@drawable/imageradius"
+        app:layout_constraintEnd_toEndOf="@+id/iv_adventure_trip_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_adventure_trip_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_adventure_trip_image" >
 
-</LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_adventure_trip_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/zip_lining"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

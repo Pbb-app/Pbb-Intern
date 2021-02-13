@@ -9,12 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/image_30" />
+        android:src="@drawable/backgrounda" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/indigo_800_overlay" />
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,118 +21,124 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:contentInsetStartWithNavigation="0dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/toolbar"
-    android:layout_margin="@dimen/spacing_mlarge">
-
     <TextView
+        android:id="@+id/t"
         android:layout_width="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:layout_height="@dimen/spacing_xmlarge"
+        android:layout_height="wrap_content"
         android:text="CONTACT US"
-        android:gravity="center"
-
-        android:textSize="25sp"
-
-        android:textColor="@color/black"/>
-
-</LinearLayout>
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:clipToPadding="false"
-        android:layout_marginTop="80dp"
-        android:padding="@dimen/spacing_mlarge"
-        android:scrollbars="none"
-        android:scrollingCache="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"/>
 
-        <LinearLayout
+
+    <LinearLayout
+        android:layout_width="430dp"
+        android:layout_height="530dp"
+        android:layout_below="@id/t"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/backgroundaaa"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_mlarge"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-            <EditText
-                android:id="@+id/name"
-                style="@style/EditText.Flat.Grey"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_overlay_white"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Your Name"
-                android:textColorHint="@color/white"
-                android:textColor="@android:color/white" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Your Name"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
 
 
 
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Your Email"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:hint="Phone Number"
+                    android:layout_marginRight="10dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
 
 
-            <EditText
-                android:id="@+id/email"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_overlay_white"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Your Email"
-                android:textColorHint="@color/white" />
 
-            <EditText
-                android:id="@+id/phoneNumber"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_overlay_white"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Your Number"
-                android:textColorHint="@color/white" />
+                <EditText
+                    android:id="@+id/message"
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:layout_marginRight="10dp"
+                    android:hint="Your Message"
+                    android:gravity="start"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/grey_40"
+                    android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/message"
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xxxxlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_overlay_white"
-               android:gravity="start"
+                <Button
+                    android:id="@+id/send_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#008A5F"
+                    android:text="Contact Us"
+                    android:textColor="@color/white">
 
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Your Message"
-                android:textColorHint="@color/white" />
+                </Button>
+            </LinearLayout>
 
-
-            <Button
-                android:id="@+id/send_message"
-
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="-4dp"
-                android:layout_marginRight="-4dp"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/btn_rounded_accent"
-                android:text="SEND YOUR MESSAGE"
-                android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 </RelativeLayout>

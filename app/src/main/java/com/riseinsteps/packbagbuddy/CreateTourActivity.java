@@ -31,6 +31,7 @@ public class CreateTourActivity extends AppCompatActivity {
         spAccommodation = findViewById(R.id.spAccommodation);
 
         final ArrayList<String> s1 = new ArrayList<>();
+        s1.add("Length of Stay");
         s1.add("1 Day");
         s1.add("2-5 Days");
         s1.add("6-10 Days");

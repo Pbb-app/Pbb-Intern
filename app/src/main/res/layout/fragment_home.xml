@@ -67,7 +67,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#dcedc8"
             android:layout_gravity="center"
             android:padding="10dp">
 
@@ -151,12 +150,41 @@
                     android:text="Latest Tours"
                     android:textSize="10sp"></TextView>
             </LinearLayout>
-        </LinearLayout>
 
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/girlimage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_get_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Find your Trip"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.895"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="0.238" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#dcedc8"
             android:padding="10dp"
             android:orientation="vertical">
 
@@ -173,7 +201,8 @@
                     android:layout_height="wrap_content"
                     android:text="Popular Sports"
                     android:textColor="@color/black"
-                    android:textSize="16sp"></TextView>
+                    android:textStyle="bold"
+                    android:textSize="19sp"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,7 +210,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignBaseline="@+id/tvpopularSports"
                     android:text="View All"
-                    android:textSize="10dp"></TextView>
+                    android:textColor="@color/green"
+                    android:textSize="12dp"></TextView>
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -199,7 +229,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="#dcedc8"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -214,7 +243,8 @@
                     android:layout_height="wrap_content"
                     android:text="Adventrous Trips"
                     android:textColor="@color/black"
-                    android:textSize="16sp"></TextView>
+                    android:textStyle="bold"
+                    android:textSize="19sp"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -222,7 +252,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignBaseline="@id/tvadventroustrips"
                     android:text="View All"
-                    android:textSize="10dp"></TextView>
+                    android:textColor="@color/green"
+                    android:textSize="12dp"></TextView>
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -235,7 +266,45 @@
 
         </LinearLayout>
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trusted Partners"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="22sp"></TextView>
+</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/paytm"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/razorpay"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/godutch"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/cred"/>
+</LinearLayout>
     </LinearLayout>
 
 </ScrollView>
