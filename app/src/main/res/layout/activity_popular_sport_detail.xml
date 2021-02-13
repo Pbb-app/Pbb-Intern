@@ -47,15 +47,16 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/tv_trip_detail_name"
+                    android:id="@+id/tv_sport_detail_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:fontFamily="@font/montserrat"
-                    android:text="KedarNath"
                     android:textAllCaps="true"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+
+                    />
 
                 <RatingBar
                     android:id="@+id/ratingBar"
@@ -75,13 +76,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
             <ImageView
-                android:id="@+id/activity_image"
+                android:id="@+id/activity_image_sport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/save" />
+                android:src="@drawable/save"
+                 />
 </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +95,7 @@
                 <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="350dp"
-                    android:layout_height="40dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:baselineAligned="true"
                     android:orientation="horizontal"
@@ -102,33 +104,6 @@
                     tools:ignore="MissingConstraints">
 
 
-                <LinearLayout
-                    android:id="@+id/layout_itinerary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_itinerary"
-                        android:layout_width="match_parent"
-                        android:layout_height="17dp"
-                        android:clickable="true"
-                        android:src="@drawable/car"
-                        tools:ignore="NestedWeights" />
-
-                    <TextView
-                        android:id="@+id/tv_itinerary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:text="Itinerary"
-                        android:textStyle="bold"
-                        android:textColor="@color/black" />
-
-                </LinearLayout>
 
 
                 <LinearLayout
@@ -142,7 +117,7 @@
                     <ImageView
                         android:id="@+id/iv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="17dp"
+                        android:layout_height="30dp"
                         android:layout_weight="3"
                         android:clickable="true"
                         android:src="@drawable/rulesandregulation" />
@@ -150,7 +125,7 @@
                     <TextView
                         android:id="@+id/tv_rules_and_regulation"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
@@ -171,7 +146,7 @@
                     <ImageView
                         android:id="@+id/iv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="17dp"
+                        android:layout_height="30dp"
                         android:layout_weight="1"
                         android:clickable="true"
                         android:src="@drawable/money" />
@@ -179,7 +154,7 @@
                     <TextView
                         android:id="@+id/tv_cancellation_and_Refund"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
@@ -188,34 +163,6 @@
                         android:textColor="@color/black" />
                 </LinearLayout>
 
-
-                <LinearLayout
-                    android:id="@+id/layout_maps"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_maps"
-                        android:layout_width="match_parent"
-                        android:layout_height="17dp"
-                        android:layout_weight="3"
-                        android:clickable="true"
-                        android:src="@drawable/map" />
-
-                    <TextView
-                        android:id="@+id/tv_maps"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:text="Maps"
-                        android:textColor="@color/black" />
-                </LinearLayout>
             </LinearLayout>
 
 
@@ -225,118 +172,124 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical"
-                android:padding="4dp">
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
              <TextView
+                 android:layout_marginTop="10dp"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:id="@+id/startingDestination"
+                 android:id="@+id/CampRegion"
+                 android:fontFamily="@font/montserrat"
                  android:textStyle="bold"
-                 android:textSize="14sp"
+                 android:textColor="@color/black"
+                 android:textSize="18sp"
                  ></TextView>
                 <TextView
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/endDestination"
+                    android:id="@+id/Availability"
+                    android:fontFamily="@font/montserrat"
                     android:textStyle="bold"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
                     ></TextView>
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/stateofDestination"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    ></TextView>
-                <TextView
-                    android:id="@+id/tour_details"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/activities"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tour Details"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Adventure Sports and Activities:"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
                 <TextView
+                    android:layout_marginTop="7dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tour_details_desc"
-                    android:textStyle="bold"
-                    android:textSize="14sp"></TextView>
-                <TextView
-                    android:id="@+id/quick_facts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Quick Facts"
+                    android:fontFamily="@font/montserrat"
+                    android:id="@+id/tv_adventure_sports"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp"></TextView>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Cost"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    ></TextView>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/Days"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/Nights"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        ></TextView>
+
 
                 <TextView
-                    android:id="@+id/tv_quick_facts_desc"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/accomodation"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                     />
+
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/meal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:padding="4dp"
-                    android:textAlignment="textStart"
-                    android:textColor="#151515"
-                    android:textSize="14sp" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+<!--                    android:textAlignment="textStart"-->
 
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/duration"
-                        android:textStyle="bold"
-                        android:textSize="14sp"
-                        ></TextView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/minAge"
-                        android:textStyle="bold"
-                        android:textSize="14sp"
-                        ></TextView>
-                </LinearLayout>
                 <TextView
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/availability"
+                    android:fontFamily="@font/montserrat"
+                    android:id="@+id/Places_to_visit_title"
                     android:textStyle="bold"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="Places To Visit:"
                     ></TextView>
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/numofSeats"
-    android:textStyle="bold"
-    android:textSize="14sp"
-    ></TextView>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/actual_Cost"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        ></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/discount_Cost"
-        android:textStyle="bold"
-        android:textSize="14sp"
-    ></TextView>
-</LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:id="@+id/Places_to_visit"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        ></TextView>
+
+
 
         </LinearLayout>
             </LinearLayout>

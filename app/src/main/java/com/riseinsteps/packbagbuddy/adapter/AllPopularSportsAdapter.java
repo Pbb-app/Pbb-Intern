@@ -1,5 +1,6 @@
 package com.riseinsteps.packbagbuddy.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.riseinsteps.packbagbuddy.AdventureTripDetailActivity;
+import com.riseinsteps.packbagbuddy.PopularSportDetailActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.model.TripModel;
 
@@ -53,7 +56,14 @@ public class AllPopularSportsAdapter extends RecyclerView.Adapter<AllPopularSpor
         holder.setData(modelList.get(position).getImageUrl(), modelList.get(position).getName(),
                 modelList.get(position).getCost(), modelList.get(position).getRating());
 
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(v.getContext(),PopularSportDetailActivity.class);
+                i.putExtra("name_sport",modelList.get(position).getName());
+                v.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override

@@ -58,7 +58,7 @@ public class AllAdventureTripAdapter extends RecyclerView.Adapter<AllAdventureTr
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(v.getContext(),AdventureTripDetailActivity.class);
-                i.putExtra("name","Kedarnath");
+                i.putExtra("name",modelList.get(position).getName());
                 v.getContext().startActivity(i);
             }
         });

@@ -3,17 +3,19 @@
     package="com.riseinsteps.packbagbuddy">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name = "com.riseinsteps.packbagbuddy.PackbagBuddyApp"
+        android:name=".PackbagBuddyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PackBagBuddy">
-        <activity android:name=".ChatBot"></activity>
+        <activity android:name=".RefundTripActivity"></activity>
+        <activity android:name=".RulesTripActivity" />
+        <activity android:name=".ChatBot" />
         <activity android:name=".AllPopularSportActivity" />
         <activity android:name=".AllAdventureTripActivity" />
         <activity android:name=".LatestOffersActivity" />
@@ -37,14 +39,13 @@
         <activity android:name=".UserForgotPassword" />
         <activity android:name=".TourDetails" />
         <activity android:name=".PopularSportDetailActivity" />
-        <activity android:name=".AdventureTripDetailActivity"></activity>
+        <activity android:name=".AdventureTripDetailActivity" />
         <activity android:name=".PopularSportActivity" />
         <activity android:name=".AdventureTripActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SplashActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -26,8 +26,8 @@ public class TripDetailsModel {
     private float rating;
     private String Cost;
 
-    TripDetailsModel(){
-
+    public TripDetailsModel(String From){
+this.From=From;
     }
 
     public TripDetailsModel(int id, String name, String desc, String duration, String image, float trip_default_price, float trip_special_price, String nameOfState, String availability, String to, String from, int minAge, int totalSeats, String quickFacts, String placesToVisit, String accommodation, String meal, String transportation, String itinerary, String tourDetails, String rules, String cancellationAndRefund, float rating, String cost) {

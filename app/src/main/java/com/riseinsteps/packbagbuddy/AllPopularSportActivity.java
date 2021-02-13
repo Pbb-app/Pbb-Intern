@@ -45,7 +45,7 @@ public class AllPopularSportActivity extends AppCompatActivity
                 , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
                 6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
                 "Details", "Rules", "Refund",4.2f,"2000"));
-        popularSportList.add(new TripModel("Kedarnath", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
+        popularSportList.add(new TripModel(" CHADAR FROZEN RIVER TREK", "Desc", "12", "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg"
                 , 2536.12f, 1000.2f, "Odhisa", "Always", "Delhi", "Himachal Pradesh",
                 6, 12, "Quick Facts", "Lonavala", "Accommodation", "MEal", "bus", "ITinereary",
                 "Details", "Rules", "Refund",4.2f,"2000"));
