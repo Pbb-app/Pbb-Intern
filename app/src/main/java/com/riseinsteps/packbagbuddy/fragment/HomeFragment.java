@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
+import com.riseinsteps.packbagbuddy.BookingsActivity;
 import com.riseinsteps.packbagbuddy.ChatBot;
 import com.riseinsteps.packbagbuddy.CreateTourActivity;
 import com.riseinsteps.packbagbuddy.ExploreIndiaActivity;
@@ -67,7 +68,7 @@ public class HomeFragment extends Fragment {
         exploreIndia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent exploreIndia = new Intent(view.getContext(), ExploreIndiaActivity.class);
+                Intent exploreIndia = new Intent(view.getContext(), ExploreIndiaActivity.class);    //change here
                 view.getContext().startActivity(exploreIndia);
             }
         });
@@ -75,7 +76,7 @@ public class HomeFragment extends Fragment {
         createTour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent createTour = new Intent(view.getContext(), CreateTourActivity.class);
+                Intent createTour = new Intent(view.getContext(), BookingsActivity.class);
                 view.getContext().startActivity(createTour);
             }
         });

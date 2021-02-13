@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourBookingDetailed">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/include_toolbar"
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/locationiv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/background_login_signup"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+
+        <TextView
+            android:id="@+id/titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:textSize="36sp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"/>
+
+
+        <TextView
+            android:id="@+id/subtitletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Sub Title"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:padding="5dp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+
+            <ImageView
+                android:id="@+id/amount_image"
+                android:layout_width="29dp"
+                android:layout_height="23dp"
+                android:src="@drawable/rupee" />
+
+
+
+            <TextView
+                android:id="@+id/costtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Cost"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+
+                android:layout_marginStart="10dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/durationtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:hint="Duration"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/datetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/duration"
+                android:hint="Date"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip details"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Location :"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/fromdestinationtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="From destination"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To destination :"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/todestinationtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="To destination"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:textColor="#000000"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of people:"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/counttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="No of people"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/statustv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Status"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate your Trip :"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_gravity="center_vertical"
+                />
+
+
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your reviews"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"/>
+
+
+x        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Review"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/green"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

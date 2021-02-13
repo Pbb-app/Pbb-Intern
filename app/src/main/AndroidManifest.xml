@@ -15,6 +15,7 @@
         android:theme="@style/Theme.PackBagBuddy">
         <activity android:name=".RefundTripActivity"></activity>
         <activity android:name=".RulesTripActivity" />
+        <activity android:name=".YourBookingDetailed"></activity>
         <activity android:name=".ChatBot" />
         <activity android:name=".AllPopularSportActivity" />
         <activity android:name=".AllAdventureTripActivity" />
