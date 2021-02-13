@@ -27,7 +27,7 @@
         android:id="@+id/t"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CONTACT US"
+        android:text="Cancle Booking"
         android:layout_below="@id/toolbar"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -71,6 +71,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
+            <EditText
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:background="@drawable/edit_text_round_bg_outline"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:hint="Booking Number"
+                android:textColorHint="@color/grey_40"
+                android:textColor="@android:color/black" />
 
             <EditText
                 style="@style/EditText.Flat.Grey"
@@ -83,7 +97,8 @@
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="Name"
-                android:textColorHint="@android:color/black"
+
+                android:textColorHint="@color/grey_40"
                 android:textColor="@android:color/black" />
 
             <EditText
@@ -97,22 +112,9 @@
                 android:layout_marginRight="10dp"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="E-mail"
-                android:textColorHint="@android:color/black"
+                android:textColorHint="@color/grey_40"
                 android:textColor="@android:color/black" />
 
-            <EditText
-                style="@style/EditText.Flat.Grey"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:background="@drawable/edit_text_round_bg_outline"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="@dimen/spacing_middle"
-                android:paddingRight="@dimen/spacing_middle"
-                android:hint="Phone Number"
-                android:textColorHint="@android:color/black"
-                android:textColor="@android:color/black" />
 
             <EditText
                 style="@style/EditText.Flat.Grey"
@@ -124,9 +126,10 @@
                 android:paddingLeft="@dimen/spacing_middle"
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="Phone Number"
+
                 android:layout_marginRight="10dp"
                 android:inputType="number"
-                android:textColorHint="@android:color/black"
+                android:textColorHint="@color/grey_40"
                 android:textColor="@android:color/black" />
 
 
@@ -146,7 +149,7 @@
                 android:paddingRight="@dimen/spacing_middle"
                 android:hint="Reason of Cancellation"
                 android:inputType="textMultiLine"
-                android:textColorHint="@android:color/black"
+                android:textColorHint="@color/grey_40"
                 android:textColor="@android:color/black" />
 
             <Button
