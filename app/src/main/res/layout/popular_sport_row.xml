@@ -39,8 +39,6 @@ android:background="@color/grey_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginLeft="40dp"
-            android:layout_gravity="center"
             android:src="@drawable/ic_create_tour" />
 
         <TextView

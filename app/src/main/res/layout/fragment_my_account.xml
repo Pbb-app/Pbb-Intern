@@ -41,7 +41,7 @@
                 android:layout_marginLeft="30dp"
                 />
 
-                android:src="@drawable/userrlogo"/>
+
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -147,6 +147,7 @@
                     android:textColor="@color/blue_grey_600"/>
 
                 <TextView
+                    android:id="@+id/tvUserEmailid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="emailild@gmail.com"
@@ -178,6 +179,7 @@
                     android:textColor="@color/blue_grey_600"/>
 
                 <TextView
+                    android:id="@+id/tvUserPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+91 9876543212"
