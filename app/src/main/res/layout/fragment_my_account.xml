@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/layoutbg"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="false">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layoutbg"
+    android:background="@drawable/canclebooking_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
 
     <RelativeLayout
         android:id="@+id/rellay"
@@ -36,12 +24,11 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/logo"
+                app:civ_border_width="1dp"
                 android:layout_marginLeft="30dp"
                 />
-
-                android:src="@drawable/userrlogo"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -91,17 +78,7 @@
             android:layout_marginRight="30dp"
             android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnEditprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/darkgreen"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/apricot"
-            android:text="Edit Profile" />
+        
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,6 +86,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
@@ -116,10 +94,11 @@
                     android:textColor="@color/blue_grey_600"/>
 
                 <TextView
+                    android:id="@+id/fullname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Full Name"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:fontFamily="sans-serif-light"
                     android:textColor="#009688"/>
 
@@ -140,6 +119,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvEmailid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"
@@ -147,10 +127,11 @@
                     android:textColor="@color/blue_grey_600"/>
 
                 <TextView
+                    android:id="@+id/tvyouremail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="emailild@gmail.com"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:fontFamily="sans-serif-light"
                     android:textColor="#009688"/>
 
@@ -171,6 +152,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/contact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Contact"
@@ -178,10 +160,11 @@
                     android:textColor="@color/blue_grey_600"/>
 
                 <TextView
+                    android:id="@+id/yourcontact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+91 9876543212"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:fontFamily="sans-serif-light"
                     android:textColor="#009688"/>
 
@@ -210,32 +193,6 @@
 
 
     </RelativeLayout>
-
 </RelativeLayout>
 
-        <Button
-            android:id="@+id/btnsignout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/apricot"
-            android:textColor="@color/darkgreen"
-            android:layout_marginTop="15dp"
-            android:text="Sign Out" />
 
-        <Button
-            android:id="@+id/btnChangeImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/apricot"
-            android:textColor="@color/darkgreen"
-            android:layout_marginTop="15dp"
-            android:text="Change Image" />
-
-    </LinearLayout>
-</ScrollView>
