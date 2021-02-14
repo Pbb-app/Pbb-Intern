@@ -12,12 +12,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+//import com.google.firebase.firestore.DocumentReference;
+//import com.google.firebase.firestore.DocumentSnapshot;
+//import com.google.firebase.firestore.EventListener;
+//import com.google.firebase.firestore.FirebaseFirestore;
+//import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -50,17 +57,32 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initComponent();
 
-        storageReference = FirebaseStorage.getInstance().getReference();
-        StorageReference image_ref = storageReference.child("Adventrous Trips/"+sports+"/Image");
-        image_ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("Adventrous Trips/"+sports+"/Image");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onSuccess(Uri uri) {
-                final String stringUri;
-                stringUri = uri.toString();
-                //Glide.with(AdventureTripDetailActivity.this).load(uri).placeholder(R.drawable.save).dontAnimate().into(activity_image);
-                Picasso.get().load(uri).into(activity_image);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String image_url= (String) snapshot.getValue();
+                Glide.with(AdventureTripDetailActivity.this).load(image_url).placeholder(R.drawable.save).dontAnimate().into(activity_image);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
+
+
+//        storageReference = FirebaseStorage.getInstance().getReference();
+//        StorageReference image_ref = storageReference.child("Adventrous Trips/"+sports+"/Image");
+//        image_ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//            @Override
+//            public void onSuccess(Uri uri) {
+//                final String stringUri;
+//                stringUri = uri.toString();
+//                //Glide.with(AdventureTripDetailActivity.this).load(uri).placeholder(R.drawable.save).dontAnimate().into(activity_image);
+//                Picasso.get().load(uri).into(activity_image);
+//            }
+//        });
         fetchDetails();
         TextView rules=(TextView) findViewById(R.id.tv_rules_and_regulation);
         TextView refund=(TextView) findViewById(R.id.tv_cancellation_and_Refund);
@@ -119,26 +141,27 @@ public class AdventureTripDetailActivity extends AppCompatActivity {
                     tv_quick_facts_desc.setText(" 1. Accommodation: "+Accommodation+ "\n\n 2. Camp Duration: "+Camp_dur+"\n\n 3. Camp Region: "
                             +Camp_reg+"\n\n 4. Meal: "+meal+"\n\n 5. Places to Visit: \n i. "+visit1 +"\n ii. "+visit2+"\n iii. "+visit3);
 
-                    String from=snapshot.child("from").getValue().toString();
-                    startingDestination.setText("From: "+from);
+                        String from = snapshot.child("from").getValue().toString();
+                        startingDestination.setText("From: " + from);
 
-                    String to=snapshot.child("to").getValue().toString();
-                    endDestination.setText("To:  " +to);
+                        String to = snapshot.child("to").getValue().toString();
+                        endDestination.setText("To:  " + to);
 
-                    String tourdetails1=(String)snapshot.child("Tour Details/Departure & Return Location").getValue();
-                    String tourdetails2=(String)snapshot.child("Tour Details/Reporting Time").getValue();
-                    tour_details_desc.setText(" 1.Departure & Return Location: "+tourdetails1+"\n 2.Reporting Time: "+tourdetails2+"\n");
+                        String tourdetails1 = (String) snapshot.child("Tour Details/Departure & Return Location").getValue();
+                        String tourdetails2 = (String) snapshot.child("Tour Details/Reporting Time").getValue();
+                        tour_details_desc.setText(" 1.Departure & Return Location: " + tourdetails1 + "\n 2.Reporting Time: " + tourdetails2 + "\n");
 
-                    String MinAge=(String)snapshot.child("Min Age").getValue();
-                    minAge.setText("Minimum Age:  "+ MinAge);
+                        String MinAge = (String) snapshot.child("Min Age").getValue();
+                        minAge.setText("Minimum Age:  " + MinAge);
 
-                    String numSeats=(String)snapshot.child("Total Seats").getValue();
-                    numofSeats.setText("Total Seats: "+numSeats+"\n");
+                        String numSeats = (String) snapshot.child("Total Seats").getValue();
+                        numofSeats.setText("Total Seats: " + numSeats + "\n");
 
-                    String cost=snapshot.child("Cost").getValue().toString();
-                    actual_Cost.setText("Cost:  "+cost);
+                        String cost = snapshot.child("Cost").getValue().toString();
+                        actual_Cost.setText("Cost:  " + cost);
+                    }
                 //}
-            }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

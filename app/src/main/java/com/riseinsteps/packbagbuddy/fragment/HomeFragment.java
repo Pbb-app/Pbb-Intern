@@ -172,6 +172,26 @@ public class HomeFragment extends Fragment {
     }
 
 
+
+//    @Override
+//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//        inflater.inflate(R.menu.home_screen_menu, menu);
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.nav_chatbot:
+//                Intent intent = new Intent(view.getContext(), ChatBot.class);
+//                startActivity(intent);
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//
+//    }
+
 //    @Override
 //    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
 //        super.onCreateOptionsMenu(menu, inflater);
@@ -189,4 +209,5 @@ public class HomeFragment extends Fragment {
 //                return super.onOptionsItemSelected(item);
 //        }
 //    }
+
 }
