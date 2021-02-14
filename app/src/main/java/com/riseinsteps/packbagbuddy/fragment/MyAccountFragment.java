@@ -149,6 +149,7 @@ public class MyAccountFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 name = user.getName();
+                Log.v("hello",name);
               //  username = user.getUserName();
                 emailId = user.getEmail();
                 phoneNumber = user.getPhoneNumber();
