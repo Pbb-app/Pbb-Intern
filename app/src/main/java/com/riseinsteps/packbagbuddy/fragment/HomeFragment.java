@@ -28,9 +28,6 @@ import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
 import com.riseinsteps.packbagbuddy.BookingsActivity;
 import com.riseinsteps.packbagbuddy.ChatBot;
-import com.riseinsteps.packbagbuddy.CreateTourActivity;
-import com.riseinsteps.packbagbuddy.ExploreIndiaActivity;
-import com.riseinsteps.packbagbuddy.LatestOffersActivity;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
@@ -39,11 +36,10 @@ import com.riseinsteps.packbagbuddy.model.TripModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment
-{
+public class HomeFragment extends Fragment {
     private View view;
 
-    private FloatingActionButton exploreIndia, createTour, latestOffers;
+    private FloatingActionButton exploreIndia, bookings;
     private RelativeLayout AllAdventureTrips, AllPopularSports;
 
     private RecyclerView adventureTripRecyclerView, popularSportRecyclerView;
@@ -62,31 +58,22 @@ public class HomeFragment extends Fragment
         setHasOptionsMenu(true);
 
         exploreIndia = view.findViewById(R.id.exploreIndia);
-        createTour = view.findViewById(R.id.bookings);
-        latestOffers = view.findViewById(R.id.latestOffers);
+        bookings = view.findViewById(R.id.bookings);
 
 
         exploreIndia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent exploreIndia = new Intent(view.getContext(), ExploreIndiaActivity.class);    //change here
+                Intent exploreIndia = new Intent(view.getContext(), AllAdventureTripActivity.class);    //change here
                 view.getContext().startActivity(exploreIndia);
             }
         });
 
-        createTour.setOnClickListener(new View.OnClickListener() {
+        bookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent createTour = new Intent(view.getContext(), BookingsActivity.class);
                 view.getContext().startActivity(createTour);
-            }
-        });
-
-
-        latestOffers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent latestOffers = new Intent(view.getContext(), LatestOffersActivity.class);
             }
         });
 
@@ -182,8 +169,8 @@ public class HomeFragment extends Fragment
             }
         });
 
-
     }
+
 
 
 //    @Override
@@ -204,4 +191,23 @@ public class HomeFragment extends Fragment
 //        }
 //
 //    }
+
+//    @Override
+//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//        inflater.inflate(R.menu.home_screen_menu, menu);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.nav_chatbot:
+//                Intent intent = new Intent(view.getContext(), ChatBot.class);
+//                startActivity(intent);
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
+
 }
