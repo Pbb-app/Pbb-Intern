@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:visibility="gone"
             android:padding="10dp">
 
             <LinearLayout
@@ -125,31 +124,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/latestOffers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:backgroundTint="#f37121"
-                    android:elevation="0dp"
-                    android:src="@drawable/ic_baseline_airplane_ticket_24" />
-
-                <TextView
-                    android:id="@+id/latesttours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Latest Tours"
-                    android:textSize="10sp"></TextView>
-            </LinearLayout>
 
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout

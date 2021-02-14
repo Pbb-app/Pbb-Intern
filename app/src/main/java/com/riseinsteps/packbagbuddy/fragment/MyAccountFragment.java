@@ -167,7 +167,7 @@ public class MyAccountFragment extends Fragment {
 
     public void initComponenet() {
         mAuth = FirebaseAuth.getInstance();
-        tvFullName = view.findViewById(R.id.tvFullName);
+        tvFullName = view.findViewById(R.id.fullname);
         tvUserEmailId = view.findViewById(R.id.tvUserEmailid);
         tvUserPhone = view.findViewById(R.id.tvUserPhone);
         profileImage = view.findViewById(R.id.profileimage);
