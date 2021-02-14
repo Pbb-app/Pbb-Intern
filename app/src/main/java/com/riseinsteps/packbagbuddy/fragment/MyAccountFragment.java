@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -124,6 +125,12 @@ public class MyAccountFragment extends Fragment {
                     public void onSuccess(Uri uri)
                     {
                         Picasso.get().load(uri).into(profileImage);
+                        NavigationView navigationView=getActivity().findViewById(R.id.nav_view);
+                        View headerView = navigationView.getHeaderView(0);
+
+                        ImageView nav_userImage=headerView.findViewById(R.id.user_profile_image);
+                        Picasso.get().load(uri).into(nav_userImage);
+
                     }
                 });
             }
