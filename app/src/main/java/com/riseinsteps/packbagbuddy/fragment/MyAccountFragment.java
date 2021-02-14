@@ -9,19 +9,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +27,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -43,17 +38,18 @@ import com.squareup.picasso.Picasso;
 
 public class MyAccountFragment extends Fragment {
 
-    FirebaseUser mCurrentUser;
+    private FirebaseUser mCurrentUser;
     private DatabaseReference databaseReference;
-    StorageReference storageReference;
-    FirebaseDatabase database;
-    String name, emailId, phoneNumber, username;
-    Uri photoUrl;
-    ImageView profileImage;
-    TextView tvFullName, tvUserEmailId, tvUserPhone;
+    private StorageReference storageReference;
+    private FirebaseDatabase database;
+    private String name, emailId, phoneNumber, username;
+    private Uri photoUrl;
+    private ImageView profileImage;
+    private TextView tvFullName, tvUserEmailId, tvUserPhone;
     private FirebaseAuth mAuth;
-    View view;
-    Button signout, btnImageChange;
+    private View view;
+    private Button signout;
+    private ImageView btnImageChange;
 
     @Nullable
     @Override
@@ -61,13 +57,12 @@ public class MyAccountFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_my_account, container, false);
         initComponenet();
-        mAuth= FirebaseAuth.getInstance();
-        storageReference= FirebaseStorage.getInstance().getReference();
-        StorageReference image_ref= storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"/profile_image");
+        mAuth = FirebaseAuth.getInstance();
+        storageReference = FirebaseStorage.getInstance().getReference();
+        StorageReference image_ref = storageReference.child("users/" + mAuth.getCurrentUser().getUid() + "/profile_image");
         image_ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
-            public void onSuccess(Uri uri)
-            {
+            public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(profileImage);
             }
         });
@@ -178,14 +173,12 @@ public class MyAccountFragment extends Fragment {
         tvUserPhone = view.findViewById(R.id.tvUserPhone);
         profileImage = view.findViewById(R.id.profileimage);
 
-      //  tvUserName = view.findViewById(R.id.tvUserName);
+        //  tvUserName = view.findViewById(R.id.tvUserName);
 
 
-
-
-        signout= view.findViewById(R.id.btnsignout);
-        //tvUserName = view.findViewById(R.id.tvUserName);
-        btnImageChange= view.findViewById(R.id.btnChangeImage);
+        signout = view.findViewById(R.id.ms_Signout);
+//        //tvUserName = view.findViewById(R.id.tvUserName);
+        btnImageChange = view.findViewById(R.id.btnChangeImage);
 
     }
 }
