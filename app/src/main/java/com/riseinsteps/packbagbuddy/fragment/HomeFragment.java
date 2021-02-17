@@ -28,6 +28,8 @@ import com.riseinsteps.packbagbuddy.AllAdventureTripActivity;
 import com.riseinsteps.packbagbuddy.AllPopularSportActivity;
 import com.riseinsteps.packbagbuddy.BookingsActivity;
 import com.riseinsteps.packbagbuddy.ChatBot;
+import com.riseinsteps.packbagbuddy.MyListAdapter;
+import com.riseinsteps.packbagbuddy.MyListData;
 import com.riseinsteps.packbagbuddy.R;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
@@ -42,7 +44,7 @@ public class HomeFragment extends Fragment {
     private FloatingActionButton exploreIndia, bookings;
     private RelativeLayout AllAdventureTrips, AllPopularSports;
 
-    private RecyclerView adventureTripRecyclerView, popularSportRecyclerView;
+    private RecyclerView adventureTripRecyclerView, popularSportRecyclerView,trecyclerview;
     private List<TripModel> adventureTripList, popularSportList;
     private AdventureTripAdapter adventureTripAdapter;
     private PopularSportAdapter popularSportAdapter;
@@ -60,6 +62,28 @@ public class HomeFragment extends Fragment {
         exploreIndia = view.findViewById(R.id.exploreIndia);
         bookings = view.findViewById(R.id.bookings);
 
+        trecyclerview = (RecyclerView) view.findViewById(R.id.TrustedPartners_r);
+
+
+        MyListData[] myListData = new MyListData[] {
+                new MyListData("Email",R.drawable.paytm),
+                new MyListData("Info", R.drawable.razorpay),
+                new MyListData("Delete",R.drawable.godutch),
+                new MyListData("Dialer", R.drawable.cred),
+
+        };
+
+
+        MyListAdapter adapter = new MyListAdapter(myListData);
+        trecyclerview.setHasFixedSize(true);
+        trecyclerview.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        trecyclerview.setAdapter(adapter);
+
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL); // set Horizontal Orientation
+        trecyclerview.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
 
         exploreIndia.setOnClickListener(new View.OnClickListener() {
             @Override
