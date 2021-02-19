@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     private LinearLayout layout;
     private Animation animation;
     FirebaseAuth mauth;
+    ImageView logo, logoname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +31,18 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         layout = findViewById(R.id.layout);
+        logo = findViewById(R.id.logo);
+        logoname = findViewById(R.id.logoname);
 
-//        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_bottom);
+        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_bottom);
+        logoname.startAnimation(animation);
+        logo.startAnimation(animation);
 
-        //layout.startAnimation(animation);
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
