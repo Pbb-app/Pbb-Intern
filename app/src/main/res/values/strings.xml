@@ -476,4 +476,7 @@ If you have any questions about these Terms or any App Store Sourced Application
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
+    <string name="linkemail"><a href="contact@packbagbuddy.com" >contact@packbagbuddy.com</a></string>
+    <string name="numbere"><a href="+91 78741 27809" >+91 78741 27809</a></string>
+    <string name="copy_right">© PackBagBuddy 2020. All Rights \nReserved</string>
 </resources>
