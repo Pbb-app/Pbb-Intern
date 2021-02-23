@@ -31,9 +31,12 @@ import com.riseinsteps.packbagbuddy.ChatBot;
 import com.riseinsteps.packbagbuddy.MyListAdapter;
 import com.riseinsteps.packbagbuddy.MyListData;
 import com.riseinsteps.packbagbuddy.R;
+import com.riseinsteps.packbagbuddy.SliderAdapter;
+import com.riseinsteps.packbagbuddy.SliderData;
 import com.riseinsteps.packbagbuddy.adapter.AdventureTripAdapter;
 import com.riseinsteps.packbagbuddy.adapter.PopularSportAdapter;
 import com.riseinsteps.packbagbuddy.model.TripModel;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +52,9 @@ public class HomeFragment extends Fragment {
     private AdventureTripAdapter adventureTripAdapter;
     private PopularSportAdapter popularSportAdapter;
     private DatabaseReference databaseReference;
-
+    String url1 = "https://cdn.pixabay.com/photo/2019/07/25/17/09/camp-4363073_960_720.png";
+    String url2 = "https://www.packbagbuddy.com/wp-content/uploads/2019/09/11-3-700x450.jpg";
+    String url3 = "https://cdn.hipwallpaper.com/i/40/41/yB7N0g.jpg";
 
 
 
@@ -63,6 +68,40 @@ public class HomeFragment extends Fragment {
         bookings = view.findViewById(R.id.bookings);
 
         trecyclerview = (RecyclerView) view.findViewById(R.id.TrustedPartners_r);
+
+
+        // we are creating array list for storing our image urls.
+        ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
+
+        // initializing the slider view.
+        SliderView sliderView = view.findViewById(R.id.slider);
+
+        // adding the urls inside array list
+        sliderDataArrayList.add(new SliderData(url1));
+        sliderDataArrayList.add(new SliderData(url2));
+        sliderDataArrayList.add(new SliderData(url3));
+
+        // passing this array list inside our adapter class.
+        SliderAdapter sadapter = new SliderAdapter(getActivity().getApplicationContext(), sliderDataArrayList);
+
+        // below method is used to set auto cycle direction in left to
+        // right direction you can change according to requirement.
+        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
+
+        // below method is used to
+        // setadapter to sliderview.
+        sliderView.setSliderAdapter(sadapter);
+
+        // below method is use to set
+        // scroll time in seconds.
+        sliderView.setScrollTimeInSec(3);
+
+        // to set it scrollable automatically
+        // we use below method.
+        sliderView.setAutoCycle(true);
+
+        // to start autocycle below method is used.
+        sliderView.startAutoCycle();
 
 
         MyListData[] myListData = new MyListData[] {
